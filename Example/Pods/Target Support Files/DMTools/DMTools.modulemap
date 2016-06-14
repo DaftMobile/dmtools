@@ -1,0 +1,6 @@
+framework module DMTools {
+  umbrella header "DMTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

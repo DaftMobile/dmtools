@@ -1,0 +1,22 @@
+{
+  "name": "DMTools",
+  "version": "0.1.0",
+  "summary": "A short description of DMTools.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DMTools",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Michal Dabrowski": "michal.dabrowski@daftcode.pl"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DMTools.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DMTools/Classes/**/*"
+}

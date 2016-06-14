@@ -1,0 +1,6 @@
+framework module Pods_DMTools_Tests {
+  umbrella header "Pods-DMTools_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DMTools'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DMTools.'
+  s.summary          = 'Shared Tools for DaftMobile coding.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -20,12 +20,13 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
+'This are the shared tools for DafTMobile'
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/DMTools'
+  s.homepage         = 'https://gitlab.int.daftcode.pl/daftmobile/dmtools'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = 'COMMERCIAL'
   s.author           = { 'Michal Dabrowski' => 'michal.dabrowski@daftcode.pl' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/DMTools.git', :tag => s.version.to_s }
+  s.source           = { :git => 'ssh://git@gitlab.int.daftcode.pl:2200/daftmobile/dmtools.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
