@@ -1,0 +1,6 @@
+use_frameworks!
+target 'DMTools_Tests' do
+  pod 'DMTools', :path => '../'
+  
+  
+end
