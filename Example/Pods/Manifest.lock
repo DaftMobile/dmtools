@@ -1,16 +1,16 @@
 PODS:
-  - DMTools (0.1.0)
+  - DMTools (0.1.1)
 
 DEPENDENCIES:
   - DMTools (from `../`)
 
 EXTERNAL SOURCES:
   DMTools:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  DMTools: 0c616dbeacb5d5187b4964960fa309080f52bd5f
+  DMTools: c833b0ea2e89eb8ebd63d0fe7b1c5efd4633ddc0
 
 PODFILE CHECKSUM: 341728aa9d9689109be953057cbd84bf8cec2841
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
