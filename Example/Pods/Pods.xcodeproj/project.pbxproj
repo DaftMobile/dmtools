@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0943089EDDDBD7C61BBF923ACCF65D27 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C4FB93B69AA9EB2D0E3939FFEB9E0 /* UIColorExt.swift */; };
+		0EC4ED381D1AD7930055929D /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC4ED371D1AD7930055929D /* UITableView+Extensions.swift */; };
 		127070B2EC0C2B43781EDF65B1DC6F6B /* RandomTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51567082D3C945A7D71B08CC1678AEF1 /* RandomTools.swift */; };
 		1FD6E171B14EBAA7CD2B68CC749600DA /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1584FF8FDA1737DAD4DE32337A174 /* CGFloat+Extensions.swift */; };
 		2C221CB82B217CA6203C19EBFAEB21D9 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591EBCEEC6F71B568F18C426BB8D74A /* Int+Extensions.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EC4ED371D1AD7930055929D /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		13A6CA5E1C07FC023603374473311E65 /* Pods_DMTools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		181BF823698B418BAE1B92DA54BA132B /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1B41D97FD8D1831413F6D86E2D09E97F /* Pods-DMTools_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DMTools_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				51567082D3C945A7D71B08CC1678AEF1 /* RandomTools.swift */,
 				7BAA1FCBC5E3AB98DC8AD6B910D67A23 /* String+Extensions.swift */,
 				8D6C4FB93B69AA9EB2D0E3939FFEB9E0 /* UIColorExt.swift */,
+				0EC4ED371D1AD7930055929D /* UITableView+Extensions.swift */,
 				181BF823698B418BAE1B92DA54BA132B /* UIView+Extensions.swift */,
 			);
 			path = Classes;
@@ -307,6 +310,7 @@
 				2C221CB82B217CA6203C19EBFAEB21D9 /* Int+Extensions.swift in Sources */,
 				BD3D11AC5DA1C4B22710E2667296BBD0 /* NSDate+Extensions.swift in Sources */,
 				A6C8792FFF0E7A0F32209C145F4769F8 /* Operators.swift in Sources */,
+				0EC4ED381D1AD7930055929D /* UITableView+Extensions.swift in Sources */,
 				127070B2EC0C2B43781EDF65B1DC6F6B /* RandomTools.swift in Sources */,
 				AE5C87DBCDFB99AC671D7097B86B0DC2 /* String+Extensions.swift in Sources */,
 				0943089EDDDBD7C61BBF923ACCF65D27 /* UIColorExt.swift in Sources */,
