@@ -1,19 +1,16 @@
 {
   "name": "DMTools",
-  "version": "0.1.0",
-  "summary": "A short description of DMTools.",
+  "version": "0.1.1",
+  "summary": "Shared Tools for DaftMobile coding.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/DMTools",
-  "license": {
-    "type": "MIT",
-    "file": "LICENSE"
-  },
+  "homepage": "https://gitlab.int.daftcode.pl/daftmobile/dmtools",
+  "license": "COMMERCIAL",
   "authors": {
     "Michal Dabrowski": "michal.dabrowski@daftcode.pl"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/DMTools.git",
-    "tag": "0.1.0"
+    "git": "ssh://git@gitlab.int.daftcode.pl:2200/daftmobile/dmtools.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
