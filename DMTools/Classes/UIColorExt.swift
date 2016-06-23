@@ -1,9 +1,6 @@
 //
-//  UIColorExt.swift
-//  MapUseDemo
-//
-//  Created by Kajetan Dąbrowski on 09/06/16.
-//  Copyright © 2016 DaftMobile. All rights reserved.
+//  Created by DaftMobile Sp z o. o.
+//  Copyright (c) 2015 DaftMobile. All rights reserved.
 //
 
 import UIKit

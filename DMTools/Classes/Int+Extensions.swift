@@ -1,5 +1,5 @@
 //
-//  Created by Daftmobile on 16.04.2015.
+//  Created by DaftMobile Sp z o. o.
 //  Copyright (c) 2015 DaftMobile. All rights reserved.
 //
 
@@ -88,11 +88,15 @@ extension Int: Randomable {
 	}
 }
 
-infix operator ** {
-	associativity left
-	precedence 160
-}
-
-public func ** (lhs: UInt, rhs: UInt) -> UInt {
-	return Array(count: Int(rhs), repeatedValue: lhs).reduce(1, combine: *)
+public extension Int {
+	public func factorial() -> Int {
+		assert(self >= 0, "Cannot compute factorial of a negative number :(")
+		var toReturn = 1
+		var counter = self
+		while counter > 1 {
+			toReturn *= counter
+			counter -= 1
+		}
+		return toReturn
+	}
 }

@@ -1,9 +1,6 @@
 //
-//  NSDate+Extensions.swift
-//  DaftCode
-//
-//  Created by Patryk on 09/06/16.
-//  Copyright © 2016 DaftMobile. All rights reserved.
+//  Created by DaftMobile Sp z o. o.
+//  Copyright (c) 2015 DaftMobile. All rights reserved.
 //
 
 import Foundation
