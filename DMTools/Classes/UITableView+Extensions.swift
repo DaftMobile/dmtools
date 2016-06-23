@@ -8,14 +8,14 @@
 
 import Foundation
 
-extension UITableView {
+public extension UITableView {
 
 	/**
 	Returns indexPath for last row in table view
 
 	- returns: indexPath for last row in table view, nil if table view is empty
 	*/
-	func indexPathForLastRow() -> NSIndexPath? {
+	public func indexPathForLastRow() -> NSIndexPath? {
 		if numberOfSections == 0 {
 			return nil
 		}
