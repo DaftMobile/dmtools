@@ -10,7 +10,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   DMTools:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   DMTools: c833b0ea2e89eb8ebd63d0fe7b1c5efd4633ddc0
