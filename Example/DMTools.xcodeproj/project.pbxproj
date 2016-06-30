@@ -10,6 +10,7 @@
 		607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ArrayPermutationsSpec.swift */; };
 		6D9B011106A48AD51FE89616 /* Pods_DMTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408FD32C2378BCC496A78C99 /* Pods_DMTools_Tests.framework */; };
 		A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */; };
+		A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C010041D25179F0089D57B /* WeakArraySpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		6EC3E337C8831C847028CA01 /* Pods-DMTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMTools_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMTools_Tests/Pods-DMTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		78D743F88C65DF25687B4C0B /* Pods-DMTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMTools_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMTools_Tests/Pods-DMTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntFactorialSpec.swift; sourceTree = "<group>"; };
+		A3C010041D25179F0089D57B /* WeakArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArraySpec.swift; sourceTree = "<group>"; };
 		BB0C63379BD5B913531B326D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C095926F6C0BAB546C3AEC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				607FACEB1AFB9204008FA782 /* ArrayPermutationsSpec.swift */,
 				A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				A3C010041D25179F0089D57B /* WeakArraySpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */,
+				A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

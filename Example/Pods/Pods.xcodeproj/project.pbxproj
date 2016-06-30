@@ -78,6 +78,7 @@
 		A35648BD1D1BD1B000859B20 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35648B21D1BD1B000859B20 /* String+Extensions.swift */; };
 		A35648BE1D1BD1B000859B20 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35648B31D1BD1B000859B20 /* UITableView+Extensions.swift */; };
 		A35648BF1D1BD1B000859B20 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35648B41D1BD1B000859B20 /* UIView+Extensions.swift */; };
+		A3C010071D2517A90089D57B /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C010061D2517A90089D57B /* WeakArray.swift */; };
 		A66A501B9B5B54DC6B995585F0FD577C /* DMTools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4F88E504DEA3B762CC90D7FC7CCC02 /* DMTools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9DA3829FA747E599023EF1394CD2EB5 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52EE8B047FE8CD02361440CD0F74AD9 /* BeVoid.swift */; };
 		AE53B0E62A6E98CBFE81BAB4F33D2A7D /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769EA8917378C65768ECB242AB423D0 /* UIColorExt.swift */; };
@@ -235,6 +236,7 @@
 		A35648B21D1BD1B000859B20 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A35648B31D1BD1B000859B20 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		A35648B41D1BD1B000859B20 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		A3C010061D2517A90089D57B /* WeakArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
 		A52EE8B047FE8CD02361440CD0F74AD9 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
 		A7C286F75DE8C1F3ECFAB166779C6A55 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/Nimble/Adapters/ObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
 		A83DC6EE685FE5B140613B18C80ACD9C /* NSString+QCKSelectorName.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+QCKSelectorName.m"; path = "Sources/Quick/NSString+QCKSelectorName.m"; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				A35648B41D1BD1B000859B20 /* UIView+Extensions.swift */,
 				B313C4F16ED120F9EA6537CA775691F5 /* ArrayPermutations.swift */,
 				0769EA8917378C65768ECB242AB423D0 /* UIColorExt.swift */,
+				A3C010061D2517A90089D57B /* WeakArray.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A35648BF1D1BD1B000859B20 /* UIView+Extensions.swift in Sources */,
+				A3C010071D2517A90089D57B /* WeakArray.swift in Sources */,
 				120AE5D2EAF8A0281EF42E2EA5CFBA2C /* DMTools-dummy.m in Sources */,
 				A35648BB1D1BD1B000859B20 /* Operators.swift in Sources */,
 				A35648B81D1BD1B000859B20 /* CGVector+Extensions.swift in Sources */,
