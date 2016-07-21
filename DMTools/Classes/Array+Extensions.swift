@@ -94,3 +94,51 @@ public extension Array {
 	}
 
 }
+
+
+extension Array where Element: Equatable {
+
+	/**
+	Access the `index`th element safely
+
+	- returns: The `index`th element if exists, nil if not
+	*/
+
+	func elementAtIndex(index: Int) -> Element? {
+		if !((0...lastIndex) ~= index) || count == 0 {
+			return nil
+		}
+		return self[index]
+	}
+
+
+	/**
+	Access the element before `elem` in parameter if is contained
+
+	- parameter elem: The element to return one before
+
+	- returns: The element before `elem` if exists, nil if not
+	*/
+
+	func elementBefore(elem: Element) -> Element? {
+		guard let prevIndex = indexOf(elem)?.predecessor() else {
+			return nil
+		}
+		return elementAtIndex(prevIndex)
+	}
+
+	/**
+	Access the element after `elem` in parameter if is contained
+
+	- parameter elem: The element to return one after
+
+	- returns: The element after `elem` if exists, nil if not
+	*/
+
+	func elementAfter(elem: Element) -> Element? {
+		guard let nextIndex = indexOf(elem)?.successor() else {
+			return nil
+		}
+		return elementAtIndex(nextIndex)
+	}
+}
