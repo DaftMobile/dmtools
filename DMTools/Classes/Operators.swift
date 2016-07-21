@@ -1,8 +1,5 @@
 //
-//  Operators.swift
-//  FingerHero
-//
-//  Created by Kajetan Dąbrowski on 19.05.2015.
+//  Created by DaftMobile Sp z o. o.
 //  Copyright (c) 2015 DaftMobile. All rights reserved.
 //
 
@@ -44,3 +41,23 @@ public func / (lhs: NSTimeInterval, rhs: CGFloat) -> NSTimeInterval {
 public func * (lhs: NSTimeInterval, rhs: CGFloat) -> NSTimeInterval {
 	return NSTimeInterval(Double(lhs) * Double(rhs))
 }
+
+//MARK: Exponentiation
+
+infix operator ** {
+associativity left
+precedence 160
+}
+
+/**
+Exponentiation operator
+
+- parameter lhs:	base
+- parameter rhs:	exponent
+
+- returns: lhs to the power of rhs
+*/
+public func ** (lhs: UInt, rhs: UInt) -> UInt {
+	return Array(count: Int(rhs), repeatedValue: lhs).reduce(1, combine: *)
+}
+
