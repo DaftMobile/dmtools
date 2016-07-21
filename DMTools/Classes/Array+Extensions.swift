@@ -96,7 +96,7 @@ public extension Array {
 }
 
 
-extension Array where Element: Equatable {
+public extension Array where Element: Equatable {
 
 	/**
 	Access the `index`th element safely
@@ -104,7 +104,7 @@ extension Array where Element: Equatable {
 	- returns: The `index`th element if exists, nil if not
 	*/
 
-	func elementAtIndex(index: Int) -> Element? {
+	public func elementAtIndex(index: Int) -> Element? {
 		if !((0...lastIndex) ~= index) || count == 0 {
 			return nil
 		}
@@ -120,7 +120,7 @@ extension Array where Element: Equatable {
 	- returns: The element before `elem` if exists, nil if not
 	*/
 
-	func elementBefore(elem: Element) -> Element? {
+	public func elementBefore(elem: Element) -> Element? {
 		guard let prevIndex = indexOf(elem)?.predecessor() else {
 			return nil
 		}
@@ -135,7 +135,7 @@ extension Array where Element: Equatable {
 	- returns: The element after `elem` if exists, nil if not
 	*/
 
-	func elementAfter(elem: Element) -> Element? {
+	public func elementAfter(elem: Element) -> Element? {
 		guard let nextIndex = indexOf(elem)?.successor() else {
 			return nil
 		}
