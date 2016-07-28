@@ -43,4 +43,21 @@ public extension UIView {
 	public func viewCopy() -> UIView {
 		return NSKeyedUnarchiver.unarchiveObjectWithData(NSKeyedArchiver.archivedDataWithRootObject(self).copy() as! NSData) as! UIView
 	}
+	
+	/**
+	Adds shake animation to the receiver
+	
+	- parameter offset:		shake animation max offset. default value 15.0
+	- parameter duration:	entire duration of the animation. Use 0.5 for best effect
+	*/
+	private func shake(offset offset: CGFloat = 15.0, duration duration: CFTimeInterval = 0.5) {
+		let shakeOffsets: [CGFloat] = [-1, 1, -1, 1, -0.5, 0.5, -0.25, 0.25, 0]
+		let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+		animation.duration = duration
+		animation.values = shakeOffsets.map {offset * $0}
+		animation.removedOnCompletion = true
+		layer.removeAnimationForKey("shake")
+		layer.addAnimation(animation, forKey: "shake")
+	}
 }
