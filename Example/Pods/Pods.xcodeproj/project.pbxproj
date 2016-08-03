@@ -67,6 +67,7 @@
 		A18E791645056D5563206104A3E3AD87 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970DA4AB066879DA184213B424870595 /* PostNotification.swift */; };
 		A1F69DD3961B60955EFD28E2BDF446E8 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = D3AFC5F9A1761CD9D531BCA1C100AA6F /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A29F9994216947F54F9C355E3D5D1B79 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3480736B9221D3CC9BEBD487930B4FD2 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
+		A31CF5521D52483100F9D3F2 /* UIBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CF5511D52483100F9D3F2 /* UIBezierPath+Extensions.swift */; };
 		A35648B51D1BD1B000859B20 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35648AA1D1BD1B000859B20 /* Array+Extensions.swift */; };
 		A35648B61D1BD1B000859B20 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35648AB1D1BD1B000859B20 /* CGFloat+Extensions.swift */; };
 		A35648B71D1BD1B000859B20 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35648AC1D1BD1B000859B20 /* CGPoint+Extensions.swift */; };
@@ -225,6 +226,7 @@
 		9EBB75B641349590983492BDE1226103 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		9EE89ED860658A696433A663EFFBC649 /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/Quick/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
 		A1474DB694C67A1CABB7194D53E6B727 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
+		A31CF5511D52483100F9D3F2 /* UIBezierPath+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Extensions.swift"; sourceTree = "<group>"; };
 		A35648AA1D1BD1B000859B20 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		A35648AB1D1BD1B000859B20 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		A35648AC1D1BD1B000859B20 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				A35648AA1D1BD1B000859B20 /* Array+Extensions.swift */,
+				B313C4F16ED120F9EA6537CA775691F5 /* ArrayPermutations.swift */,
 				A35648AB1D1BD1B000859B20 /* CGFloat+Extensions.swift */,
 				A35648AC1D1BD1B000859B20 /* CGPoint+Extensions.swift */,
 				A35648AD1D1BD1B000859B20 /* CGVector+Extensions.swift */,
@@ -436,10 +439,10 @@
 				A35648B01D1BD1B000859B20 /* Operators.swift */,
 				A35648B11D1BD1B000859B20 /* RandomTools.swift */,
 				A35648B21D1BD1B000859B20 /* String+Extensions.swift */,
+				A31CF5511D52483100F9D3F2 /* UIBezierPath+Extensions.swift */,
+				0769EA8917378C65768ECB242AB423D0 /* UIColorExt.swift */,
 				A35648B31D1BD1B000859B20 /* UITableView+Extensions.swift */,
 				A35648B41D1BD1B000859B20 /* UIView+Extensions.swift */,
-				B313C4F16ED120F9EA6537CA775691F5 /* ArrayPermutations.swift */,
-				0769EA8917378C65768ECB242AB423D0 /* UIColorExt.swift */,
 				A3C010061D2517A90089D57B /* WeakArray.swift */,
 			);
 			path = Classes;
@@ -748,6 +751,7 @@
 				A35648BC1D1BD1B000859B20 /* RandomTools.swift in Sources */,
 				A35648B71D1BD1B000859B20 /* CGPoint+Extensions.swift in Sources */,
 				A35648B51D1BD1B000859B20 /* Array+Extensions.swift in Sources */,
+				A31CF5521D52483100F9D3F2 /* UIBezierPath+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
