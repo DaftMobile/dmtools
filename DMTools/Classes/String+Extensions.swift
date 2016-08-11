@@ -17,6 +17,20 @@ public extension String {
 		if localizedString == self {print("-------- UNLOCALIZED STRING \(self) --------")}
 		return localizedString
 	}
+	
+	/**
+	Localizes with format. Use REVERSE to reverse format array. IE in Japanese when you want 30 out of 10 instead of 10 out of 30
+	Expects format string to be located in localizable.strings with exact number of arguments as provided.
+	
+	- parameter arguments:	format arguments
+	- parameter reverse:		should it reverse
+	
+	- returns: localized string.
+	*/
+	func localizeWithFormat(arguments arguments: CVarArgType..., reverse: Bool = false) -> String {
+		let arguments = (reverse ? arguments.reverse() : arguments)
+		return String.init(format: self.localize(), arguments: arguments)
+	}
 
 
 	/**
