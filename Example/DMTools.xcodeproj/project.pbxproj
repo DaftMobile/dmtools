@@ -13,6 +13,7 @@
 		A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */; };
 		A3A8C41C1D5CCCF400665EDB /* StringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */; };
 		A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C010041D25179F0089D57B /* WeakArraySpec.swift */; };
+		A3D340B91D5E221A00489BAE /* AttributedStringParsingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntFactorialSpec.swift; sourceTree = "<group>"; };
 		A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSpec.swift; sourceTree = "<group>"; };
 		A3C010041D25179F0089D57B /* WeakArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArraySpec.swift; sourceTree = "<group>"; };
+		A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringParsingSpec.swift; sourceTree = "<group>"; };
 		BB0C63379BD5B913531B326D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C095926F6C0BAB546C3AEC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				A3C010041D25179F0089D57B /* WeakArraySpec.swift */,
 				A31CF5531D52487500F9D3F2 /* UIBezierPathSpec.swift */,
+				A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */,
 				A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */,
+				A3D340B91D5E221A00489BAE /* AttributedStringParsingSpec.swift in Sources */,
 				A3A8C41C1D5CCCF400665EDB /* StringSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
