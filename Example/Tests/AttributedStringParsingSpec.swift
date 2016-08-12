@@ -33,7 +33,7 @@ class AttributedStringParsingSpec: QuickSpec {
 				
 				beforeEach {
 					let startString = "This is a string"
-					sut = NSAttributedString.parse(startString, attributes: baseAttributes, parsedSymbols: [])
+					sut = NSAttributedString.parse(startString, attributes: baseAttributes, separatorSymbols: [])
 					
 				}
 				
@@ -64,7 +64,7 @@ class AttributedStringParsingSpec: QuickSpec {
 				
 				beforeEach {
 					let startString = "This ^is a^ string"
-					sut = NSAttributedString.parse(startString, attributes: baseAttributes, parsedSymbols: [specialMark], additionalAttributes: additionalAttributes)
+					sut = NSAttributedString.parse(startString, attributes: baseAttributes, separatorSymbols: [specialMark], additionalAttributes: additionalAttributes)
 					
 				}
 				
@@ -96,8 +96,8 @@ class AttributedStringParsingSpec: QuickSpec {
 				let boldFont = UIFont.boldSystemFontOfSize(14)
 				
 				beforeEach {
-					let startString = "<b>This</b> is a string and <b>this</b> should be <b>bolo</b>."
-					sut = NSAttributedString.parse(startString, attributes: baseAttributes, parsedSymbols: ["<b>", "</b>"], additionalAttributes: [NSFontAttributeName: boldFont])
+					let startString = "<b>This<b> is a string and <b>this<b> should be <b>bolo<b>."
+					sut = NSAttributedString.parse(startString, attributes: baseAttributes, separatorSymbols: ["<b>"], additionalAttributes: [NSFontAttributeName: boldFont])
 				}
 				
 				it("have the same string inside") {
@@ -118,6 +118,72 @@ class AttributedStringParsingSpec: QuickSpec {
 							expect(sut.attribute(NSFontAttributeName, atIndex: i, effectiveRange: nil) as? UIFont).to(equal(baseFont))
 						}
 					})
+				}
+			}
+			
+			context("when there are two different attributes") {
+				
+				beforeEach {
+					let startString = "<red>0<red><blue>1<blue>"
+					sut = NSAttributedString.parse(startString, attributes: [:], separatorsAndAttributesInside: ["<red>": [NSForegroundColorAttributeName: UIColor.redColor()], "<blue>": [NSForegroundColorAttributeName: UIColor.blueColor()]])
+				}
+				
+				it("have the same string inside") {
+					expect(sut.string).to(equal("01"))
+				}
+				
+				it("should have correct attributes for 0") {
+					let attributes = sut.attributesAtIndex(0, effectiveRange: nil)
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.redColor()))
+				}
+				
+				it("should have correct attributes for 1") {
+					let attributes = sut.attributesAtIndex(1, effectiveRange: nil)
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.blueColor()))
+				}
+				
+			}
+			
+			context("when there are three different attributes") {
+				let boldFont = UIFont.boldSystemFontOfSize(14)
+				
+				beforeEach {
+					let startString = "<red>0<red><blue>1<blue><green>2<green><red>3<red><bold>4<bold>"
+					sut = NSAttributedString.parse(startString, attributes: baseAttributes, separatorsAndAttributesInside: ["<red>": [NSForegroundColorAttributeName: UIColor.redColor()], "<blue>": [NSForegroundColorAttributeName: UIColor.blueColor()], "<green>": [NSForegroundColorAttributeName: UIColor.greenColor()], "<bold>": [NSFontAttributeName: boldFont]])
+				}
+				
+				it("have the same string inside") {
+					expect(sut.string).to(equal("01234"))
+				}
+				
+				it("should have correct attributes for 0") {
+					let attributes = sut.attributesAtIndex(0, effectiveRange: nil)
+					expect(attributes[NSFontAttributeName] as? UIFont).to(equal(baseFont))
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.redColor()))
+				}
+				
+				it("should have correct attributes for 1") {
+					let attributes = sut.attributesAtIndex(1, effectiveRange: nil)
+					expect(attributes[NSFontAttributeName] as? UIFont).to(equal(baseFont))
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.blueColor()))
+				}
+				
+				it("should have correct attributes for 2") {
+					let attributes = sut.attributesAtIndex(2, effectiveRange: nil)
+					expect(attributes[NSFontAttributeName] as? UIFont).to(equal(baseFont))
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.greenColor()))
+				}
+				
+				it("should have correct attributes for 3") {
+					let attributes = sut.attributesAtIndex(3, effectiveRange: nil)
+					expect(attributes[NSFontAttributeName] as? UIFont).to(equal(baseFont))
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.redColor()))
+				}
+				
+				it("should have correct attributes for 4") {
+					let attributes = sut.attributesAtIndex(4, effectiveRange: nil)
+					expect(attributes[NSFontAttributeName] as? UIFont).to(equal(boldFont))
+					expect(attributes[NSForegroundColorAttributeName] as? UIColor).to(equal(UIColor.whiteColor()))
 				}
 			}
 		}

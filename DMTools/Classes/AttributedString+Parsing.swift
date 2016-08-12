@@ -11,25 +11,44 @@ import Foundation
 public extension NSAttributedString {
 	
 	class func parse(string: String, attributes: [String: AnyObject], separatorSymbols: [String], additionalAttributes: [String: AnyObject]? = nil) -> NSAttributedString {
-		
-		var parts: [String] = [string]
-		separatorSymbols.forEach { (separator) -> Void in
-			parts = parts.flatMap({return $0.componentsSeparatedByString(separator) })
+		var separatorSymbolsAndAttributes: [String: [String: AnyObject]] = [:]
+		for symbol in separatorSymbols {
+			separatorSymbolsAndAttributes[symbol] = additionalAttributes
 		}
+		return self.parse(string, attributes: attributes, separatorsAndAttributesInside: separatorSymbolsAndAttributes)
+	}
+	
+	class func parse(string: String, attributes: [String: AnyObject], separatorsAndAttributesInside: [String: [String: AnyObject]]) -> NSAttributedString {
 		
-		var separatedAttributes = attributes
-		if let additionalAttributes = additionalAttributes {
-			for (attribute, value) in additionalAttributes {
-				separatedAttributes[attribute] = value
+		var parts: [(String, [String: AnyObject])] = [(string, attributes)]
+		
+		for (separator, specialAttributes) in separatorsAndAttributesInside {
+			
+			var newParts: [(String, [String: AnyObject])] = []
+			for i in 0..<parts.count {
+				var stageParts: [(String, [String: AnyObject])] = []
+				
+				let separatedParts = parts[i].0.componentsSeparatedByString(separator)
+				for separatedPart in separatedParts {
+					stageParts.append((separatedPart, parts[i].1))
+				}
+				for i in 0..<stageParts.count {
+					var startingAttributes = stageParts[i].1
+					if i%2 == 1 {
+						for (attribute, value) in specialAttributes {
+							startingAttributes[attribute] = value
+						}
+					}
+					stageParts[i].1 = startingAttributes
+				}
+				newParts.appendContentsOf(stageParts)
 			}
+			parts = newParts
 		}
 		
 		var attributedString = NSMutableAttributedString()
-		
-		for i in 0..<parts.count {
-			let nextPart = parts[i]
-			let nextAttributes = ((i % 2 == 0) ? attributes : separatedAttributes)
-			attributedString.appendAttributedString(NSAttributedString(string: nextPart, attributes: nextAttributes))
+		for (finalString, finalAttributes) in parts {
+			attributedString.appendAttributedString(NSAttributedString(string: finalString, attributes: finalAttributes))
 		}
 		return NSAttributedString(attributedString: attributedString)
 	}
