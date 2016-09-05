@@ -15,9 +15,9 @@ public extension Array {
 
 	- parameter object: The object to be removed
 	*/
-	public mutating func removeObject<U: Equatable>(object: U) {
+	public mutating func removeObject<U: Equatable>(_ object: U) {
 		var index: Int?
-		for (idx, objectToCompare) in self.enumerate() {
+		for (idx, objectToCompare) in self.enumerated() {
 			if let to = objectToCompare as? U {
 				if object == to {
 					index = idx
@@ -25,7 +25,7 @@ public extension Array {
 			}
 		}
 		if index != nil {
-			self.removeAtIndex(index!)
+			self.remove(at: index!)
 		}
 	}
 
@@ -35,7 +35,7 @@ public extension Array {
 	*/
 	public mutating func randomizeOrderInPlace() {
 		for _ in 1...10 {
-			sortInPlace({(_,_) -> Bool in
+			sort(by: {(_,_) -> Bool in
 				arc4random() > arc4random()
 			})
 		}
@@ -49,7 +49,7 @@ public extension Array {
 	public func randomizeOrder() -> Array<Element> {
 		var sorted = self
 		for _ in 0..<10 {
-			sorted = sorted.sort{(_,_) -> Bool in arc4random() > arc4random()}
+			sorted = sorted.sorted{(_,_) -> Bool in arc4random() > arc4random()}
 		}
 		return sorted
 	}
@@ -59,10 +59,10 @@ public extension Array {
 
 	- parameter closure: The closure to run on each element of an array
 	*/
-	public func enumerateWithClosure(closure: (element: Element, index: Int, inout stop: Bool) -> Void) -> Void {
+	public func enumerateWithClosure(_ closure: (_ element: Element, _ index: Int, _ stop: inout Bool) -> Void) -> Void {
 		var stop: Bool = false
 		for i in 0..<self.count {
-			closure(element: self[i], index: i, stop: &stop)
+			closure(self[i], i, &stop)
 			if stop {break}
 		}
 	}
@@ -75,7 +75,7 @@ public extension Array {
 	- returns: The array copy offset by *count*
 	*/
 	@warn_unused_result(mutable_variant="offsetInPlace")
-	public func offset(count: Int) -> [Element] {
+	public func offset(_ count: Int) -> [Element] {
 		var aCopy = self
 		aCopy.offsetInPlace(count)
 		return aCopy
@@ -86,9 +86,9 @@ public extension Array {
 
 	- parameter count: A number to move the 0 index to
 	*/
-	public mutating func offsetInPlace(count: Int) -> Void {
+	public mutating func offsetInPlace(_ count: Int) -> Void {
 		count.times({
-			let element = self.removeAtIndex(0)
+			let element = self.remove(at: 0)
 			self.append(element)
 		})
 	}
@@ -104,7 +104,7 @@ public extension Array where Element: Equatable {
 	- returns: The `index`th element if exists, nil if not
 	*/
 
-	public func elementAtIndex(index: Int) -> Element? {
+	public func elementAtIndex(_ index: Int) -> Element? {
 		if !((0...lastIndex) ~= index) || count == 0 {
 			return nil
 		}
@@ -120,10 +120,8 @@ public extension Array where Element: Equatable {
 	- returns: The element before `elem` if exists, nil if not
 	*/
 
-	public func elementBefore(elem: Element) -> Element? {
-		guard let prevIndex = indexOf(elem)?.predecessor() else {
-			return nil
-		}
+	public func elementBefore(_ elem: Element) -> Element? {
+		let prevIndex = ((index(of: elem))! - 1)
 		return elementAtIndex(prevIndex)
 	}
 
@@ -135,10 +133,8 @@ public extension Array where Element: Equatable {
 	- returns: The element after `elem` if exists, nil if not
 	*/
 
-	public func elementAfter(elem: Element) -> Element? {
-		guard let nextIndex = indexOf(elem)?.successor() else {
-			return nil
-		}
+	public func elementAfter(_ elem: Element) -> Element? {
+		let nextIndex = ((index(of: elem))! + 1)
 		return elementAtIndex(nextIndex)
 	}
 }

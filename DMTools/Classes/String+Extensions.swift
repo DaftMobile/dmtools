@@ -27,8 +27,8 @@ public extension String {
 	
 	- returns: localized string.
 	*/
-	func localizeWithFormat(arguments arguments: CVarArgType..., reverse: Bool = false) -> String {
-		let arguments = (reverse ? arguments.reverse() : arguments)
+	func localizeWithFormat(arguments: CVarArg..., reverse: Bool = false) -> String {
+		let arguments = (reverse ? arguments.reversed() : arguments)
 		return String.init(format: self.localize(), arguments: arguments)
 	}
 
@@ -39,9 +39,9 @@ public extension String {
 	- returns: a String in camelcase
 	*/
 	func underscoreToCamelcase() -> String {
-		return self.componentsSeparatedByString("_").enumerate().map({ (index: Int, element: String) -> String in
-			return index != 0 ? element.capitalizedString : element
-		}).joinWithSeparator("")
+		return self.components(separatedBy: "_").enumerated().map({ (index: Int, element: String) -> String in
+			return index != 0 ? element.capitalized : element
+		}).joined(separator: "")
 	}
 
 	/**
@@ -50,6 +50,6 @@ public extension String {
 	- returns: A provided String's copy without spaces
 	*/
 	func spacelessString() -> String {
-		return self.stringByReplacingOccurrencesOfString(" ", withString: "")
+		return self.replacingOccurrences(of: " ", with: "")
 	}
 }

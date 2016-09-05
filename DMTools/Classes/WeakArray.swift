@@ -19,19 +19,19 @@ private struct Weak<T: AnyObject> {
 }
 
 extension Weak: CustomStringConvertible {
-	private var description: String {
+	fileprivate var description: String {
 		if let value = value { return "\(value)" }
 		return "nil"
 	}
 }
 
-public struct WeakArray<T: AnyObject>: SequenceType, CustomStringConvertible, CustomDebugStringConvertible, ArrayLiteralConvertible {
+public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, CustomDebugStringConvertible, ExpressibleByArrayLiteral {
 	
 	// MARK: Private
 	public typealias Element = T
-	private typealias WeakElement = Weak<Element>
-	private typealias GeneratorType = AnyGenerator<T>
-	private var items = [WeakElement]()
+	fileprivate typealias WeakElement = Weak<Element>
+	fileprivate typealias GeneratorType = AnyIterator<T>
+	fileprivate var items = [WeakElement]()
 	
 	// MARK: Public
 	public var description: String {
@@ -63,10 +63,10 @@ public struct WeakArray<T: AnyObject>: SequenceType, CustomStringConvertible, Cu
 		}
 	}
 	
-	public func generate() -> AnyGenerator<Element> {
+	public func makeIterator() -> AnyIterator<Element> {
 		let values: Array<Element?> = items.map {$0.value}
 		var index = 0
-		return AnyGenerator<Element>(body: {
+		return AnyIterator<Element>( {
 			while index < values.count {
 				let next = values[index]
 				index += 1
@@ -88,16 +88,16 @@ public struct WeakArray<T: AnyObject>: SequenceType, CustomStringConvertible, Cu
 	}
 	
 	
-	public mutating func append(value: Element?) {
+	public mutating func append(_ value: Element?) {
 		items.append(Weak(value))
 	}
 	
-	public mutating func insert(newElement: Element, atIndex i: Int) {
-		items.insert(Weak(newElement), atIndex: i)
+	public mutating func insert(_ newElement: Element, atIndex i: Int) {
+		items.insert(Weak(newElement), at: i)
 	}
 	
-	public mutating func removeAtIndex(index: Int) -> Element? {
-		return items.removeAtIndex(index).value
+	public mutating func removeAtIndex(_ index: Int) -> Element? {
+		return items.remove(at: index).value
 	}
 	
 	/**
@@ -105,9 +105,9 @@ public struct WeakArray<T: AnyObject>: SequenceType, CustomStringConvertible, Cu
 	*/
 	mutating public func consolidate() {
 		var indicesToRemove = [Int]()
-		for (index, element) in items.enumerate() {
+		for (index, element) in items.enumerated() {
 			if element.value == nil {
-				indicesToRemove.insert(index, atIndex: 0)
+				indicesToRemove.insert(index, at: 0)
 			}
 		}
 		for index in indicesToRemove {

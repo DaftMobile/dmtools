@@ -10,7 +10,7 @@ import Foundation
 
 public extension NSAttributedString {
 	
-	class func parse(string: String, attributes: [String: AnyObject], separatorSymbols: [String], additionalAttributes: [String: AnyObject]? = nil) -> NSAttributedString {
+	class func parse(_ string: String, attributes: [String: AnyObject], separatorSymbols: [String], additionalAttributes: [String: AnyObject]? = nil) -> NSAttributedString {
 		var separatorSymbolsAndAttributes: [String: [String: AnyObject]] = [:]
 		for symbol in separatorSymbols {
 			separatorSymbolsAndAttributes[symbol] = additionalAttributes
@@ -18,7 +18,7 @@ public extension NSAttributedString {
 		return self.parse(string, attributes: attributes, separatorsAndAttributesInside: separatorSymbolsAndAttributes)
 	}
 	
-	class func parse(string: String, attributes: [String: AnyObject], separatorsAndAttributesInside: [String: [String: AnyObject]]) -> NSAttributedString {
+	class func parse(_ string: String, attributes: [String: AnyObject], separatorsAndAttributesInside: [String: [String: AnyObject]]) -> NSAttributedString {
 		
 		var parts: [(String, [String: AnyObject])] = [(string, attributes)]
 		
@@ -28,7 +28,7 @@ public extension NSAttributedString {
 			for i in 0..<parts.count {
 				var stageParts: [(String, [String: AnyObject])] = []
 				
-				let separatedParts = parts[i].0.componentsSeparatedByString(separator)
+				let separatedParts = parts[i].0.components(separatedBy: separator)
 				for separatedPart in separatedParts {
 					stageParts.append((separatedPart, parts[i].1))
 				}
@@ -41,14 +41,14 @@ public extension NSAttributedString {
 					}
 					stageParts[i].1 = startingAttributes
 				}
-				newParts.appendContentsOf(stageParts)
+				newParts.append(contentsOf: stageParts)
 			}
 			parts = newParts
 		}
 		
-		var attributedString = NSMutableAttributedString()
+		let attributedString = NSMutableAttributedString()
 		for (finalString, finalAttributes) in parts {
-			attributedString.appendAttributedString(NSAttributedString(string: finalString, attributes: finalAttributes))
+			attributedString.append(NSAttributedString(string: finalString, attributes: finalAttributes))
 		}
 		return NSAttributedString(attributedString: attributedString)
 	}

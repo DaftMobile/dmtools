@@ -57,27 +57,27 @@ class ArrayPermutationsSpec: QuickSpec {
 				}
 
 				it("should contain permutation 1,2,3") {
-					expect(permutations).to(contain([1,2,3]))
+					expect(permutations.contains(where: {$0 == [1,2,3]})).to(beTrue())
 				}
 
 				it("should contain permutation 1,3,2") {
-					expect(permutations).to(contain([1,3,2]))
+					expect(permutations.contains(where: {$0 == [1,3,2]})).to(beTrue())
 				}
 
 				it("should contain permutation 2,1,3") {
-					expect(permutations).to(contain([2,1,3]))
+					expect(permutations.contains(where: {$0 == [2,1,3]})).to(beTrue())
 				}
 
 				it("should contain permutation 2,3,1") {
-					expect(permutations).to(contain([2,3,1]))
+					expect(permutations.contains(where: {$0 == [2,3,1]})).to(beTrue())
 				}
 
 				it("should contain permutation 3,1,2") {
-					expect(permutations).to(contain([3,1,2]))
+					expect(permutations.contains(where: {$0 == [3,1,2]})).to(beTrue())
 				}
 
 				it("should contain permutation 3,2,1") {
-					expect(permutations).to(contain([3,2,1]))
+					expect(permutations.contains(where: {$0 == [3,2,1]})).to(beTrue())
 				}
 			}
 
@@ -98,11 +98,11 @@ class ArrayPermutationsSpec: QuickSpec {
 				}
 
 				it("should have permutation 6,8") {
-					expect(permutations).to(contain([6,8]))
+					expect(permutations.contains(where: {$0 == [6,8]})).to(beTrue())
 				}
 
 				it("should have permutation 8,6") {
-					expect(permutations).to(contain([8,6]))
+					expect(permutations.contains(where: {$0 == [8,6]})).to(beTrue())
 				}
 			}
 

@@ -7,7 +7,7 @@ import Foundation
 
 
 public extension Array {
-	private static func generatePermutation<T>(n: Int, workingArray: [T], inout currentResults: [[T]]) {
+	fileprivate static func generatePermutation<T>(_ n: Int, workingArray: [T], currentResults: inout [[T]]) {
 		var workingArray = workingArray
 		if n == 1 {
 			currentResults.append(workingArray)

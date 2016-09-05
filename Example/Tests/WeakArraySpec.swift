@@ -191,7 +191,7 @@ class WeakArraySpec: QuickSpec {
 				}
 				
 				it("should remove elements correctly") {
-					sut.removeAtIndex(1)
+					_ = sut.removeAtIndex(1)
 					expect(sut[0]).to(equal(n0))
 					expect(sut[1]).to(equal(n2))
 					expect(sut[2]).to(equal(n3))

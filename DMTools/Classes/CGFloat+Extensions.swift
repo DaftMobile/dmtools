@@ -21,20 +21,20 @@ public extension CGFloat {
 	* Converts an angle in degrees to radians.
 	*/
 	public func degreesToRadians() -> CGFloat {
-		return pi * self / 180.0
+		return .pi * self / 180.0
 	}
 
 	/**
 	* Converts an angle in radians to degrees.
 	*/
 	public func radiansToDegrees() -> CGFloat {
-		return self * 180.0 / pi
+		return self * 180.0 / .pi
 	}
 
 	/**
 	* Ensures that the float value stays between the given values, inclusive.
 	*/
-	public func clamped(v1: CGFloat, _ v2: CGFloat) -> CGFloat {
+	public func clamped(_ v1: CGFloat, _ v2: CGFloat) -> CGFloat {
 		let min: CGFloat = v1 < v2 ? v1 : v2
 		let max: CGFloat = v1 > v2 ? v1 : v2
 		return self < min ? min : (self > max ? max : self)
@@ -43,7 +43,7 @@ public extension CGFloat {
 	/**
 	* Ensures that the float value stays between the given values, inclusive.
 	*/
-	public mutating func clamp(v1: CGFloat, _ v2: CGFloat) -> CGFloat {
+	public mutating func clamp(_ v1: CGFloat, _ v2: CGFloat) -> CGFloat {
 		self = clamped(v1, v2)
 		return self
 	}
@@ -71,7 +71,7 @@ public extension CGFloat {
 }
 
 extension CGFloat: Randomable {
-	public static func random(min min: CGFloat, max: CGFloat) -> CGFloat {
+	public static func random(min: CGFloat, max: CGFloat) -> CGFloat {
 		return RandomTools.randomCGFloat(min: min, max: max)
 	}
 }
@@ -80,9 +80,9 @@ extension CGFloat: Randomable {
 * Returns the shortest angle between two angles. The result is always between
 * -π and π.
 */
-public func shortestAngleBetween(angle1: CGFloat, angle2: CGFloat) -> CGFloat {
+public func shortestAngleBetween(_ angle1: CGFloat, angle2: CGFloat) -> CGFloat {
 	let twoπ: CGFloat = pi * 2.0
-	var angle: CGFloat = (angle2 - angle1) % twoπ
+	var angle: CGFloat = (angle2 - angle1).truncatingRemainder(dividingBy: twoπ)
 	if (angle >= pi) {
 		angle = angle - twoπ
 	}
@@ -92,7 +92,7 @@ public func shortestAngleBetween(angle1: CGFloat, angle2: CGFloat) -> CGFloat {
 	return angle
 }
 
-public func sign(value: CGFloat) -> CGFloat {
+public func sign(_ value: CGFloat) -> CGFloat {
 	if value >= 0.0 { return 1.0 }
 	else { return -1.0 }
 }

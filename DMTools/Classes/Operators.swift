@@ -26,20 +26,20 @@ public func - (lhs: CGFloat, rhs: Int) -> CGFloat {
 
 // MARK: NSTimeInterval
 
-public func / (lhs: NSTimeInterval, rhs: Int) -> NSTimeInterval {
-	return NSTimeInterval(Double(lhs) / Double(rhs))
+public func / (lhs: TimeInterval, rhs: Int) -> TimeInterval {
+	return TimeInterval(Double(lhs) / Double(rhs))
 }
 
-public func * (lhs: NSTimeInterval, rhs: Int) -> NSTimeInterval {
-	return NSTimeInterval(Double(lhs) * Double(rhs))
+public func * (lhs: TimeInterval, rhs: Int) -> TimeInterval {
+	return TimeInterval(Double(lhs) * Double(rhs))
 }
 
-public func / (lhs: NSTimeInterval, rhs: CGFloat) -> NSTimeInterval {
-	return NSTimeInterval(Double(lhs) / Double(rhs))
+public func / (lhs: TimeInterval, rhs: CGFloat) -> TimeInterval {
+	return TimeInterval(Double(lhs) / Double(rhs))
 }
 
-public func * (lhs: NSTimeInterval, rhs: CGFloat) -> NSTimeInterval {
-	return NSTimeInterval(Double(lhs) * Double(rhs))
+public func * (lhs: TimeInterval, rhs: CGFloat) -> TimeInterval {
+	return TimeInterval(Double(lhs) * Double(rhs))
 }
 
 //MARK: Exponentiation
@@ -58,6 +58,6 @@ Exponentiation operator
 - returns: lhs to the power of rhs
 */
 public func ** (lhs: UInt, rhs: UInt) -> UInt {
-	return Array(count: Int(rhs), repeatedValue: lhs).reduce(1, combine: *)
+	return Array(repeating: lhs, count: Int(rhs)).reduce(1, *)
 }
 

@@ -20,7 +20,7 @@ extension UIBezierPath {
 	
 	- returns: Smooth Bezier Path
 	*/
-	public class func smoothBezierPathForPoints(points: [CGPoint]) -> UIBezierPath {
+	public class func smoothBezierPathForPoints(_ points: [CGPoint]) -> UIBezierPath {
 		let path = UIBezierPath()
 
 		let midPoint: (CGPoint, CGPoint) -> CGPoint = {(p1, p2) -> CGPoint in
@@ -32,19 +32,19 @@ extension UIBezierPath {
 		case 0:
 			break
 		case 1:
-			path.moveToPoint(points[0])
+			path.move(to: points[0])
 		case 2:
-			path.moveToPoint(points[0])
-			path.addLineToPoint(points[1])
+			path.move(to: points[0])
+			path.addLine(to: points[1])
 		default:
-			path.moveToPoint(points[0])
-			path.addLineToPoint(midPoint(points[0], points[1]))
+			path.move(to: points[0])
+			path.addLine(to: midPoint(points[0], points[1]))
 			
 			for i in 1..<points.count-1 {
-				path.addQuadCurveToPoint(midPoint(points[i], points[i+1]), controlPoint: points[i])
+				path.addQuadCurve(to: midPoint(points[i], points[i+1]), controlPoint: points[i])
 			}
 			
-			path.addLineToPoint(points.last!)
+			path.addLine(to: points.last!)
 		}
 		return path
 	}

@@ -34,7 +34,7 @@ class UIBezierPathSpec: QuickSpec {
 				}
 				
 				it("should return empty bezier path") {
-					expect(sut.empty).to(beTrue())
+					expect(sut.isEmpty).to(beTrue())
 				}
 			}
 			
@@ -44,7 +44,7 @@ class UIBezierPathSpec: QuickSpec {
 				}
 				
 				it("should not be empty") {
-					expect(sut.empty).to(beFalse())
+					expect(sut.isEmpty).to(beFalse())
 				}
 				
 				it("should have just this one point") {
@@ -52,7 +52,7 @@ class UIBezierPathSpec: QuickSpec {
 				}
 				
 				it("should contain point 1,3") {
-					expect(sut.containsPoint(CGPoint(x: 1, y: 3))).to(beTrue())
+					expect(sut.contains(CGPoint(x: 1, y: 3))).to(beTrue())
 				}
 				
 				xit("should contain moveto once") {
@@ -71,13 +71,13 @@ class UIBezierPathSpec: QuickSpec {
 				}
 				
 				it("should not be empty") {
-					expect(sut.empty).to(beFalse())
+					expect(sut.isEmpty).to(beFalse())
 				}
 				
 				it("should contain two points") {
-					expect(sut.containsPoint(twoPoints[0])).to(beTrue())
-					expect(sut.containsPoint(twoPoints[1])).to(beTrue())
-					expect(sut.containsPoint(CGPoint(x: 0, y: 0))).to(beFalse())
+					expect(sut.contains(twoPoints[0])).to(beTrue())
+					expect(sut.contains(twoPoints[1])).to(beTrue())
+					expect(sut.contains(CGPoint(x: 0, y: 0))).to(beFalse())
 				}
 				
 				it("should be at last point") {
@@ -101,32 +101,32 @@ class UIBezierPathSpec: QuickSpec {
 				}
 				
 				it("should not be empty") {
-					expect(sut.empty).to(beFalse())
+					expect(sut.isEmpty).to(beFalse())
 				}
 				
 				it("should contain first point") {
-					expect(sut.containsPoint(fourPoints[0])).to(beTrue())
+					expect(sut.contains(fourPoints[0])).to(beTrue())
 				}
 				
 				it("should contain last point") {
-					expect(sut.containsPoint(fourPoints[3])).to(beTrue())
+					expect(sut.contains(fourPoints[3])).to(beTrue())
 				}
 				
 				it("should not contain middle points") {
-					expect(sut.containsPoint(fourPoints[1])).to(beFalse())
-					expect(sut.containsPoint(fourPoints[2])).to(beFalse())
+					expect(sut.contains(fourPoints[1])).to(beFalse())
+					expect(sut.contains(fourPoints[2])).to(beFalse())
 				}
 				
 				it("should contain middle point between 0 and 1") {
-					expect(sut.containsPoint(CGPoint(x: 5, y: 0))).to(beTrue())
+					expect(sut.contains(CGPoint(x: 5, y: 0))).to(beTrue())
 				}
 				
 				it("should contain middle point between 1 and 2") {
-					expect(sut.containsPoint(CGPoint(x: 10, y: 5))).to(beTrue())
+					expect(sut.contains(CGPoint(x: 10, y: 5))).to(beTrue())
 				}
 				
 				it("should contain middle point between 2 and 3") {
-					expect(sut.containsPoint(CGPoint(x: 5, y: 10))).to(beTrue())
+					expect(sut.contains(CGPoint(x: 5, y: 10))).to(beTrue())
 				}
 				
 				it("should be at last point") {

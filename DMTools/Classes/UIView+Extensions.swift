@@ -15,7 +15,7 @@ public extension UIView {
 	- parameter subviews: The views to be added. After being added, the views appear on top of any other subviews and each other in order.
 	*/
 
-	public func addSubviews(subviews: [UIView]) {
+	public func addSubviews(_ subviews: [UIView]) {
 		for view in subviews {
 			addSubview(view)
 		}
@@ -28,7 +28,7 @@ public extension UIView {
 
 	- parameter subviews: The views to be added. After being added, the views appear on top of any other subviews and each other in order.
 	*/
-	public func addSubviews(subviews: UIView ...) {
+	public func addSubviews(_ subviews: UIView ...) {
 		for view in subviews {
 			addSubview(view)
 		}
@@ -41,7 +41,7 @@ public extension UIView {
 	- returns: A copy of provided `UIView`
 	*/
 	public func viewCopy() -> UIView {
-		return NSKeyedUnarchiver.unarchiveObjectWithData(NSKeyedArchiver.archivedDataWithRootObject(self).copy() as! NSData) as! UIView
+		return NSKeyedUnarchiver.unarchiveObject(with: (NSKeyedArchiver.archivedData(withRootObject: self) as NSData).copy() as! Data) as! UIView
 	}
 	
 	/**
@@ -50,14 +50,14 @@ public extension UIView {
 	- parameter offset:		shake animation max offset. default value 15.0
 	- parameter duration:	entire duration of the animation. Use 0.5 for best effect
 	*/
-	private func shake(offset offset: CGFloat = 15.0, duration duration: CFTimeInterval = 0.5) {
+	fileprivate func shake(offset: CGFloat = 15.0, duration: CFTimeInterval = 0.5) {
 		let shakeOffsets: [CGFloat] = [-1, 1, -1, 1, -0.5, 0.5, -0.25, 0.25, 0]
 		let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
 		animation.duration = duration
 		animation.values = shakeOffsets.map {offset * $0}
-		animation.removedOnCompletion = true
-		layer.removeAnimationForKey("shake")
-		layer.addAnimation(animation, forKey: "shake")
+		animation.isRemovedOnCompletion = true
+		layer.removeAnimation(forKey: "shake")
+		layer.add(animation, forKey: "shake")
 	}
 }
