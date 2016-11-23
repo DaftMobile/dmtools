@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DMTools'
-  s.version          = '0.1.10'
+  s.version          = '0.3.0'
   s.summary          = 'Shared Tools for DaftMobile coding.'
 
 
@@ -28,5 +28,4 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'DMTools/Classes/**/*'
   
- # s.dependency 'AFNetworking', '~> 2.3'
 end

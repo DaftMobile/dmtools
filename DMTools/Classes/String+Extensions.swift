@@ -12,7 +12,14 @@ public extension String {
 
 	- returns: A localized string accordind to current locale
 	*/
+	@available(*, deprecated, message: "use localized computed property instead")
 	func localize() -> String {
+		return localized
+	}
+
+
+	/// Localizes self. Returns a localized string according to current locale
+	var localized: String {
 		let localizedString: String = NSLocalizedString(self, comment: "")
 		if localizedString == self {print("-------- UNLOCALIZED STRING \(self) --------")}
 		return localizedString
@@ -29,7 +36,7 @@ public extension String {
 	*/
 	func localizeWithFormat(arguments: CVarArg..., reverse: Bool = false) -> String {
 		let arguments = (reverse ? arguments.reversed() : arguments)
-		return String.init(format: self.localize(), arguments: arguments)
+		return String.init(format: self.localized, arguments: arguments)
 	}
 
 

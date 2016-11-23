@@ -1,7 +1,7 @@
 use_frameworks!
 target 'DMTools_Tests' do
   pod 'DMTools', :path => '../'
-  pod 'Quick', :git => 'git@github.com:Quick/Quick.git', :branch => 'swift-3.0'
-  pod 'Nimble', :git => 'git@github.com:Quick/Nimble.git', :branch => 'swift-3.0'
+  pod 'Quick', :git => 'git@github.com:Quick/Quick.git'
+  pod 'Nimble', :git => 'git@github.com:Quick/Nimble.git'
 
 end
