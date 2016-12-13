@@ -5,6 +5,17 @@
 
 import Foundation
 
+public class StringLocalizationInjection {
+	public class func setPreferredLanguage(_ language: String) {
+		guard let path = Bundle.main.path(forResource: language, ofType: "lproj") else {
+			fatalError("Did not find injected language \(language)")
+		}
+		StringLocalizationInjection.languageBundle = Bundle(path: path)
+	}
+
+	internal static var languageBundle: Bundle?
+}
+
 public extension String {
 
 	/**
@@ -20,8 +31,15 @@ public extension String {
 
 	/// Localizes self. Returns a localized string according to current locale
 	var localized: String {
-		let localizedString: String = NSLocalizedString(self, comment: "")
-		if localizedString == self {print("-------- UNLOCALIZED STRING \(self) --------")}
+		let localizedString: String
+		if let languageBundle = StringLocalizationInjection.languageBundle {
+			localizedString = languageBundle.localizedString(forKey: self, value: nil, table: nil)
+		} else {
+			localizedString = NSLocalizedString(self, comment: "")
+		}
+		if localizedString == self {
+			print("-------- UNLOCALIZED STRING \(self) --------")
+		}
 		return localizedString
 	}
 	
