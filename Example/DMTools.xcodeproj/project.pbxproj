@@ -13,6 +13,7 @@
 		A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */; };
 		A3A8C41C1D5CCCF400665EDB /* StringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */; };
 		A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C010041D25179F0089D57B /* WeakArraySpec.swift */; };
+		A3C5882A1E54CCF90038793F /* ArrayGenerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */; };
 		A3D340B91D5E221A00489BAE /* AttributedStringParsingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntFactorialSpec.swift; sourceTree = "<group>"; };
 		A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSpec.swift; sourceTree = "<group>"; };
 		A3C010041D25179F0089D57B /* WeakArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArraySpec.swift; sourceTree = "<group>"; };
+		A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayGenerationSpec.swift; sourceTree = "<group>"; };
 		A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringParsingSpec.swift; sourceTree = "<group>"; };
 		BB0C63379BD5B913531B326D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C095926F6C0BAB546C3AEC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */,
 				607FACEB1AFB9204008FA782 /* ArrayPermutationsSpec.swift */,
 				A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */,
 				A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */,
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 53D9E75CA3;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -234,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31CF5541D52487500F9D3F2 /* UIBezierPathSpec.swift in Sources */,
+				A3C5882A1E54CCF90038793F /* ArrayGenerationSpec.swift in Sources */,
 				A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */,
 				A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */,
@@ -339,6 +344,7 @@
 			baseConfigurationReference = 6EC3E337C8831C847028CA01 /* Pods-DMTools_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 53D9E75CA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -360,6 +366,7 @@
 			baseConfigurationReference = 78D743F88C65DF25687B4C0B /* Pods-DMTools_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 53D9E75CA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

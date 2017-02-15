@@ -3,7 +3,7 @@
 //  DMTools
 //
 //  Created by Kajetan Dąbrowski on 11/08/16.
-//  Copyright © 2016 CocoaPods. All rights reserved.
+//  Copyright © 2016 DaftMobile. All rights reserved.
 //
 
 import Foundation
