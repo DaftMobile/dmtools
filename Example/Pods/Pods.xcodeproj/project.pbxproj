@@ -11,6 +11,7 @@
 		088DB598194CE4763B34BB6ECEBFF52C /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = E7CD1BA82CC0A4E6DD2ACD260EF8559B /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		08E07354B623FFEC654CCAC8BDFE0BC7 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22F191AD3018685F6A9A4F2CC2C3E05 /* BeEmpty.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		0E441CAE91DE2FF18C2C1A708A3DB463 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7530EA9B5A7847996BF7FBA507CB9995 /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0E83D33E1E83CBC5000C8087 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83D33D1E83CBC5000C8087 /* Collection+Extension.swift */; };
 		1655A2399F1B44BCEFD0DCB8B6617BE0 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F74D5F116BBA8553B0D86615AB05D2 /* NimbleXCTestHandler.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		176342A787222E1589EBA228CB8DB5A7 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = AF56244C136B67D40B9D963EAFB594A2 /* World.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		185561E4C34769986FAF54BEF1565112 /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC19BE9D69806A8525B039E44071945 /* ContainElementSatisfying.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -169,6 +170,7 @@
 		0B5B03C91B5DA1385E90872CA8A8603E /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		0CF7D7218094D7F6BFDADE0561A68447 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		0CFD2E725732F15D6FC557579489C568 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
+		0E83D33D1E83CBC5000C8087 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		15FA4A6B5D72347AD980EFE78EA744E5 /* UIColorExt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		1670B11024E7B3EDA1016D2F63A32C64 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Utils/Async.swift; sourceTree = "<group>"; };
 		16FE83E78B0F30345C7726EF1A95D7DD /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				44389772A5197588EB22852400D18A63 /* CGFloat+Extensions.swift */,
 				9865C5FA63240415283759E2AF9BFC63 /* CGPoint+Extensions.swift */,
 				2EF7ED09472DD644747A7E9252DA53E2 /* CGVector+Extensions.swift */,
+				0E83D33D1E83CBC5000C8087 /* Collection+Extension.swift */,
 				E51AD1F2393B6BFD972F59B64CE438F1 /* Int+Extensions.swift */,
 				57CDD9B6D8A485AB949E612E0191773F /* Operators.swift */,
 				DDA489B84CFEF70185F20939590D882A /* RandomTools.swift */,
@@ -889,6 +892,7 @@
 				F99E1AD122471F655DDC21B27D11C919 /* CGPoint+Extensions.swift in Sources */,
 				5B6C9F83DA6858D6869801210A589B8C /* CGVector+Extensions.swift in Sources */,
 				9DF578D1714E1B6A5D8B778A7B900A58 /* DMTools-dummy.m in Sources */,
+				0E83D33E1E83CBC5000C8087 /* Collection+Extension.swift in Sources */,
 				186B018E6994C9BDEFB59951AA990F42 /* Int+Extensions.swift in Sources */,
 				F861DAD4E890DD7176ADEE9E91EC18F8 /* Operators.swift in Sources */,
 				1EA6AC605A6195DC98C282C40F43BF15 /* RandomTools.swift in Sources */,

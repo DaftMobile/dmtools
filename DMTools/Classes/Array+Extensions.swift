@@ -104,6 +104,7 @@ public extension Array where Element: Equatable {
 	- returns: The `index`th element if exists, nil if not
 	*/
 
+	@available(*, deprecated, message: "use [safe: index] subscript")
 	public func elementAtIndex(_ index: Int) -> Element? {
 		if !((0...lastIndex) ~= index) || count == 0 {
 			return nil

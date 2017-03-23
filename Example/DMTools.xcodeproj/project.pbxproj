@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA5F1271E83DD8900605089 /* CollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5F1261E83DD8900605089 /* CollectionSpec.swift */; };
 		607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ArrayPermutationsSpec.swift */; };
 		6D9B011106A48AD51FE89616 /* Pods_DMTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408FD32C2378BCC496A78C99 /* Pods_DMTools_Tests.framework */; };
 		A31CF5541D52487500F9D3F2 /* UIBezierPathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CF5531D52487500F9D3F2 /* UIBezierPathSpec.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA5F1261E83DD8900605089 /* CollectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSpec.swift; sourceTree = "<group>"; };
 		1215D827CFDA45E3A21FB9E1 /* DMTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DMTools.podspec; path = ../DMTools.podspec; sourceTree = "<group>"; };
 		408FD32C2378BCC496A78C99 /* Pods_DMTools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMTools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* DMTools_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMTools_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,12 +82,13 @@
 			children = (
 				A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */,
 				607FACEB1AFB9204008FA782 /* ArrayPermutationsSpec.swift */,
+				A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */,
+				0EA5F1261E83DD8900605089 /* CollectionSpec.swift */,
 				A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */,
 				A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-				A3C010041D25179F0089D57B /* WeakArraySpec.swift */,
 				A31CF5531D52487500F9D3F2 /* UIBezierPathSpec.swift */,
-				A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */,
+				A3C010041D25179F0089D57B /* WeakArraySpec.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */,
 				A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */,
 				A3D340B91D5E221A00489BAE /* AttributedStringParsingSpec.swift in Sources */,
+				0EA5F1271E83DD8900605089 /* CollectionSpec.swift in Sources */,
 				A3A8C41C1D5CCCF400665EDB /* StringSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
