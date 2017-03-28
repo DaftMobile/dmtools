@@ -45,7 +45,6 @@ public extension Array {
 	Randomizes the order of elements in array
 	- returns: A randomized copy of the Array
 	*/
-	@warn_unused_result(mutable_variant="randomizeOrderInPlace")
 	public func randomizeOrder() -> Array<Element> {
 		var sorted = self
 		for _ in 0..<10 {
@@ -74,7 +73,6 @@ public extension Array {
 
 	- returns: The array copy offset by *count*
 	*/
-	@warn_unused_result(mutable_variant="offsetInPlace")
 	public func offset(_ count: Int) -> [Element] {
 		var aCopy = self
 		aCopy.offsetInPlace(count)
@@ -123,7 +121,7 @@ public extension Array where Element: Equatable {
 
 	public func elementBefore(_ elem: Element) -> Element? {
 		let prevIndex = ((index(of: elem))! - 1)
-		return elementAtIndex(prevIndex)
+		return self[safe: prevIndex]
 	}
 
 	/**
@@ -136,6 +134,6 @@ public extension Array where Element: Equatable {
 
 	public func elementAfter(_ elem: Element) -> Element? {
 		let nextIndex = ((index(of: elem))! + 1)
-		return elementAtIndex(nextIndex)
+		return self[safe: nextIndex]
 	}
 }

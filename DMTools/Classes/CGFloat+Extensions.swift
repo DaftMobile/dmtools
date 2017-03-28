@@ -5,17 +5,6 @@
 
 import CoreGraphics
 
-public let pi = CGFloat(M_PI)
-public let pi2 = CGFloat(M_PI / Double(2))
-public let pi3 = CGFloat(M_PI / Double(3))
-public let pi4 = CGFloat(M_PI / Double(4))
-public let pi5 = CGFloat(M_PI / Double(5))
-public let pi6 = CGFloat(M_PI / Double(6))
-public let pi7 = CGFloat(M_PI / Double(7))
-public let pi8 = CGFloat(M_PI / Double(8))
-public let pi9 = CGFloat(M_PI / Double(9))
-public let pi10 = CGFloat(M_PI / Double(10))
-
 public extension CGFloat {
 	/**
 	* Converts an angle in degrees to radians.
@@ -81,12 +70,12 @@ extension CGFloat: Randomable {
 * -π and π.
 */
 public func shortestAngleBetween(_ angle1: CGFloat, angle2: CGFloat) -> CGFloat {
-	let twoπ: CGFloat = pi * 2.0
+	let twoπ: CGFloat = .pi * 2.0
 	var angle: CGFloat = (angle2 - angle1).truncatingRemainder(dividingBy: twoπ)
-	if (angle >= pi) {
+	if (angle >= .pi) {
 		angle = angle - twoπ
 	}
-	if (angle <= -pi) {
+	if (angle <= -.pi) {
 		angle = angle + twoπ
 	}
 	return angle

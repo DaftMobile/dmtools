@@ -112,7 +112,7 @@ class ArrayPermutationsSpec: QuickSpec {
 				}
 
 				it("should contain a lot of elements") {
-					expect(sut.generatePermutations().count).to(equal(1*2*3*4*5*6))
+					expect(sut.generatePermutations().count).to(equal(6.factorial()))
 				}
 			}
 		}

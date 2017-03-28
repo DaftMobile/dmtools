@@ -111,7 +111,7 @@ public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, Custom
 			}
 		}
 		for index in indicesToRemove {
-			removeAtIndex(index)
+			_ = removeAtIndex(index)
 		}
 	}
 	

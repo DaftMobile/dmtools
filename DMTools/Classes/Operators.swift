@@ -44,10 +44,7 @@ public func * (lhs: TimeInterval, rhs: CGFloat) -> TimeInterval {
 
 //MARK: Exponentiation
 
-infix operator ** {
-associativity left
-precedence 160
-}
+infix operator **: MultiplicationPrecedence
 
 /**
 Exponentiation operator

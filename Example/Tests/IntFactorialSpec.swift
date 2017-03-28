@@ -10,8 +10,7 @@ import Foundation
 import Quick
 import Nimble
 
-@testable
-import DMTools
+@testable import DMTools
 
 class IntFactorialSpec: QuickSpec {
 	override func spec() {
@@ -33,11 +32,11 @@ class IntFactorialSpec: QuickSpec {
 			}
 
 			it("should return 10! for input 10") {
-				expect(10.factorial()).to(equal(1*2*3*4*5*6*7*8*9*10))
+				expect(10.factorial()).to(equal(3628800))
 			}
 
 			it("should return 7! for input 7") {
-				expect(7.factorial()).to(equal(1*2*3*4*5*6*7))
+				expect(7.factorial()).to(equal(5040))
 			}
 		}
 	}
