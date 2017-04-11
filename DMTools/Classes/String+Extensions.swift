@@ -42,7 +42,25 @@ public extension String {
 		}
 		return localizedString
 	}
-	
+
+	/// Localizes self using provided table
+	///
+	/// - Parameter table: Name of file containing localization
+	/// - Returns: Localized from table using locale
+	func localized(in table: String) -> String {
+		let localizedString: String
+		if let languageBundle = StringLocalizationInjection.languageBundle {
+			localizedString = languageBundle.localizedString(forKey: self, value: nil, table: table)
+		} else {
+			localizedString = NSLocalizedString(self, tableName: table, comment: "")
+		}
+		if localizedString == self {
+			print("-------- UNLOCALIZED STRING \(self) --------")
+		}
+		return localizedString
+	}
+
+
 	/**
 	Localizes with format. Use REVERSE to reverse format array. IE in Japanese when you want 30 out of 10 instead of 10 out of 30
 	Expects format string to be located in localizable.strings with exact number of arguments as provided.
