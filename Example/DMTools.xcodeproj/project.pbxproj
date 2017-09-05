@@ -17,6 +17,7 @@
 		A3C5882A1E54CCF90038793F /* ArrayGenerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */; };
 		A3D340B91D5E221A00489BAE /* AttributedStringParsingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */; };
 		A3EF38441F5EDC41000C8AC6 /* SequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF38431F5EDC41000C8AC6 /* SequenceSpec.swift */; };
+		A3EF38481F5EE7FC000C8AC6 /* OptionalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF38471F5EE7FC000C8AC6 /* OptionalSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayGenerationSpec.swift; sourceTree = "<group>"; };
 		A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringParsingSpec.swift; sourceTree = "<group>"; };
 		A3EF38431F5EDC41000C8AC6 /* SequenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceSpec.swift; sourceTree = "<group>"; };
+		A3EF38471F5EE7FC000C8AC6 /* OptionalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalSpec.swift; sourceTree = "<group>"; };
 		BB0C63379BD5B913531B326D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C095926F6C0BAB546C3AEC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */,
 				0EA5F1261E83DD8900605089 /* CollectionSpec.swift */,
 				A370AA6F1D1AE0E900AB6802 /* IntFactorialSpec.swift */,
+				A3EF38471F5EE7FC000C8AC6 /* OptionalSpec.swift */,
 				A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */,
 				A31CF5531D52487500F9D3F2 /* UIBezierPathSpec.swift */,
 				A3C010041D25179F0089D57B /* WeakArraySpec.swift */,
@@ -255,6 +258,7 @@
 			files = (
 				A3EF38441F5EDC41000C8AC6 /* SequenceSpec.swift in Sources */,
 				A31CF5541D52487500F9D3F2 /* UIBezierPathSpec.swift in Sources */,
+				A3EF38481F5EE7FC000C8AC6 /* OptionalSpec.swift in Sources */,
 				A3C5882A1E54CCF90038793F /* ArrayGenerationSpec.swift in Sources */,
 				A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* ArrayPermutationsSpec.swift in Sources */,
