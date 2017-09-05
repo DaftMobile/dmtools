@@ -16,6 +16,7 @@
 		A3C010051D25179F0089D57B /* WeakArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C010041D25179F0089D57B /* WeakArraySpec.swift */; };
 		A3C5882A1E54CCF90038793F /* ArrayGenerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */; };
 		A3D340B91D5E221A00489BAE /* AttributedStringParsingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */; };
+		A3EF38441F5EDC41000C8AC6 /* SequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EF38431F5EDC41000C8AC6 /* SequenceSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A3C010041D25179F0089D57B /* WeakArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArraySpec.swift; sourceTree = "<group>"; };
 		A3C588291E54CCF90038793F /* ArrayGenerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayGenerationSpec.swift; sourceTree = "<group>"; };
 		A3D340B81D5E221A00489BAE /* AttributedStringParsingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringParsingSpec.swift; sourceTree = "<group>"; };
+		A3EF38431F5EDC41000C8AC6 /* SequenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceSpec.swift; sourceTree = "<group>"; };
 		BB0C63379BD5B913531B326D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C095926F6C0BAB546C3AEC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				A3A8C41B1D5CCCF400665EDB /* StringSpec.swift */,
 				A31CF5531D52487500F9D3F2 /* UIBezierPathSpec.swift */,
 				A3C010041D25179F0089D57B /* WeakArraySpec.swift */,
+				A3EF38431F5EDC41000C8AC6 /* SequenceSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -194,9 +197,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DMTools_Tests/Pods-DMTools_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DMTools/DMTools.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DMTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -209,13 +219,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DMTools_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B2B847C4F9C1FA508FA5433E /* [CP] Copy Pods Resources */ = {
@@ -240,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EF38441F5EDC41000C8AC6 /* SequenceSpec.swift in Sources */,
 				A31CF5541D52487500F9D3F2 /* UIBezierPathSpec.swift in Sources */,
 				A3C5882A1E54CCF90038793F /* ArrayGenerationSpec.swift in Sources */,
 				A370AA701D1AE0E900AB6802 /* IntFactorialSpec.swift in Sources */,
