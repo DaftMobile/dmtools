@@ -1,5 +1,5 @@
 PODS:
-  - DMTools (0.3.6.1)
+  - DMTools (0.3.7)
   - Nimble (6.1.0)
   - Quick (1.1.0)
 
@@ -25,7 +25,7 @@ CHECKOUT OPTIONS:
     :git: git@github.com:Quick/Quick.git
 
 SPEC CHECKSUMS:
-  DMTools: 9506dbf0f8772c7f3a30ada327f2a004b47c0b6c
+  DMTools: d681064b1426a773e34c38958f7b45682b97384e
   Nimble: 46fc2a2c3f2f5bb5e2d7e89756fb710c1457f27a
   Quick: 4700beb8056662b579facd79eaca7f04fb3d48e6
 
