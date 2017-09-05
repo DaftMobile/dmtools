@@ -58,6 +58,36 @@ class SequenceSpec: QuickSpec {
 					expect(grouped[45]?.last).to(equal(45))
 				}
 			}
+
+			describe("Divide") {
+				it("should correctly divide empty array") {
+					let sequence: [Int] = []
+					let (slice, remainder) = sequence.divide { $0 > 0 }
+					expect(slice).to(beEmpty())
+					expect(remainder).to(beEmpty())
+				}
+
+				it("should correctly divie one element array") {
+					let sequence = [1]
+					let (slice, remainder) = sequence.divide { $0 < 0 }
+					expect(slice).to(beEmpty())
+					expect(remainder.count).to(equal(1))
+				}
+
+				it("should correctly divie one element array 2") {
+					let sequence = [1]
+					let (slice, remainder) = sequence.divide { $0 > 0 }
+					expect(slice.count).to(equal(1))
+					expect(remainder).to(beEmpty())
+				}
+
+				it("should correctly split complex array") {
+					let sequence = [0, 45, 23, 7, 234, 7, 23, 7, 9, 5, 4, 1, 456, 657, 4, 5234, 23, 4352]
+					let (slice, remainder) = sequence.divide { $0 >= 100 }
+					expect(slice).to(equal([234, 456, 657, 5234, 4352]))
+					expect(remainder).to(equal([0, 45, 23, 7, 7, 23, 7, 9, 5, 4, 1, 4, 23]))
+				}
+			}
 		}
 	}
 }
