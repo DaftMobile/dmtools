@@ -1,5 +1,5 @@
 PODS:
-  - DMTools (0.3.4)
+  - DMTools (0.3.9)
   - Nimble (6.1.0)
   - Quick (1.1.0)
 
@@ -10,7 +10,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   DMTools:
-    :path: "../"
+    :path: ../
   Nimble:
     :git: git@github.com:Quick/Nimble.git
   Quick:
@@ -25,10 +25,10 @@ CHECKOUT OPTIONS:
     :git: git@github.com:Quick/Quick.git
 
 SPEC CHECKSUMS:
-  DMTools: e4c1f749449212fbcce7837c0a288d2381836af8
+  DMTools: 04b28d9fb158aef933ba64973169f0b7b67530a3
   Nimble: 46fc2a2c3f2f5bb5e2d7e89756fb710c1457f27a
   Quick: 4700beb8056662b579facd79eaca7f04fb3d48e6
 
 PODFILE CHECKSUM: eda2d8c2661ca0d552da92d0d39162e666f87012
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.1
