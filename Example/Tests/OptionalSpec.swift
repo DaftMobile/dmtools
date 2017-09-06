@@ -30,7 +30,7 @@ class OptionalSpec: QuickSpec {
 					value.take { _ in XCTFail() }
 				}
 
-				it("should should correctly take optional value") {
+				it("should correctly take optional value") {
 					let value: Int? = 1
 					expect(value.take { $0 }).to(equal(1))
 				}
@@ -59,6 +59,28 @@ class OptionalSpec: QuickSpec {
 				it("should correctly apply closure with the same type") {
 					let value: Int? = 4
 					expect(value.take { 10 * $0 } ).to(equal(40))
+				}
+			}
+
+			describe("unwrap") {
+
+				let value: Int? = 4
+				let vnil: Int? = nil
+
+				it("should not throw if there is a value") {
+					expect{ try value.unwrap(or: TestError()) }.notTo(throwError())
+				}
+
+				it("should correctly unwrap optional integer") {
+					expect(try? value.unwrap(or: TestError())).to(equal(4))
+				}
+
+				it("should throw error if there is nil") {
+					expect{ try vnil.unwrap(or: TestError()) }.to(throwError())
+				}
+
+				it("should throw correct error if there is nil") {
+					expect{ try vnil.unwrap(or: TestError()) }.to(throwError(errorType: TestError.self))
 				}
 			}
 		}
