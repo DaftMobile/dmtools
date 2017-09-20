@@ -15,9 +15,9 @@ public extension Array {
 			for i in 0..<n-1 {
 				generatePermutation(n-1, workingArray: workingArray, currentResults: &currentResults)
 				if n % 2 == 1 {
-					swap(&workingArray[i], &workingArray[n-1])
+					workingArray.swapAt(i, n-1)
 				} else {
-					swap(&workingArray[0], &workingArray[n-1])
+					workingArray.swapAt(0, n-1)
 				}
 			}
 			generatePermutation(n-1, workingArray: workingArray, currentResults: &currentResults)
