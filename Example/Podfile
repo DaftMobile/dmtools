@@ -1,7 +1,6 @@
 use_frameworks!
 target 'DMTools_Tests' do
   pod 'DMTools', :path => '../'
-  pod 'Quick', :git => 'git@github.com:Quick/Quick.git'
-  pod 'Nimble', :git => 'git@github.com:Quick/Nimble.git'
-
+  pod 'Quick'
+  pod 'Nimble'
 end
