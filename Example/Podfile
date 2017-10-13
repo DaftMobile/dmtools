@@ -3,5 +3,4 @@ target 'DMTools_Tests' do
   pod 'DMTools', :path => '../'
   pod 'Quick'
   pod 'Nimble'
-
 end
