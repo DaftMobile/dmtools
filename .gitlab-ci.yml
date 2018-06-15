@@ -1,0 +1,27 @@
+stages:
+  - prepare
+  - test
+
+cache:
+  untracked: true
+
+install_gems:
+  stage: prepare
+  script:
+    - bundle install
+  tags:
+    - ios
+
+install_pods:
+  stage: prepare
+  script:
+    - bundle exec pod install --project-directory=Example
+  tags:
+    - ios
+
+test:
+  stage: test
+  script:
+    - bundle exec fastlane test
+  tags:
+    - ios
