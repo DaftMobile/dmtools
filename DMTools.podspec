@@ -21,7 +21,7 @@ TODO: Add long description of the pod here.
 
   s.license          = 'COMMERCIAL'
   s.author           = { 'Michal Dabrowski' => 'michal.dabrowski@daftcode.pl' }
-  s.source           = { :git => 'ssh://git@gitlab.app.daftmobile.com:ios/dmtools.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@gitlab.app.daftmobile.com:ios/dmtools.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/DaftMobile'
 
   s.ios.deployment_target = '8.0'
