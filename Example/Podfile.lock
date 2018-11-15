@@ -1,5 +1,5 @@
 PODS:
-  - DMTools (0.4.5)
+  - DMTools (0.5.0)
   - Nimble (7.3.1)
   - Quick (1.3.2)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DMTools: af4f9088025dd4841f8720fc4d7bc7a12f94bd49
+  DMTools: 318195cd0f62d65efa2d5b8c587333a15bcc6b5c
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
 
