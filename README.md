@@ -1,9 +1,8 @@
 # DMTools
 
-[![CI Status](http://img.shields.io/travis/Michal Dabrowski/DMTools.svg?style=flat)](https://travis-ci.org/Michal Dabrowski/DMTools)
-[![Version](https://img.shields.io/cocoapods/v/DMTools.svg?style=flat)](http://cocoapods.org/pods/DMTools)
-[![License](https://img.shields.io/cocoapods/l/DMTools.svg?style=flat)](http://cocoapods.org/pods/DMTools)
-[![Platform](https://img.shields.io/cocoapods/p/DMTools.svg?style=flat)](http://cocoapods.org/pods/DMTools)
+⚠️ To use with Swift 4.0-4.1 please ensure you are using 0.4.x ⚠️
+
+⚠️ To use with Swift 4.2 please ensure you are using 0.5.x ⚠️
 
 ## Example
 
