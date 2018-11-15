@@ -370,7 +370,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EC3E337C8831C847028CA01 /* Pods-DMTools_Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 53D9E75CA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -392,7 +391,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78D743F88C65DF25687B4C0B /* Pods-DMTools_Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 53D9E75CA3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

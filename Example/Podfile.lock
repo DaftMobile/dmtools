@@ -1,7 +1,7 @@
 PODS:
   - DMTools (0.4.5)
-  - Nimble (7.1.2)
-  - Quick (1.3.0)
+  - Nimble (7.3.1)
+  - Quick (1.3.2)
 
 DEPENDENCIES:
   - DMTools (from `../`)
@@ -19,8 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DMTools: af4f9088025dd4841f8720fc4d7bc7a12f94bd49
-  Nimble: 3835ba9f459daa6b347f8a8e110aaae8ca1920a8
-  Quick: 03278013f71aa05fe9ecabc94fbcc6835f1ee76f
+  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
 
 PODFILE CHECKSUM: 5384d7dbdc6d8d09341eef0546e067e673e2b452
 
