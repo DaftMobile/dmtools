@@ -53,7 +53,7 @@ public extension UIView {
 	fileprivate func shake(offset: CGFloat = 15.0, duration: CFTimeInterval = 0.5) {
 		let shakeOffsets: [CGFloat] = [-1, 1, -1, 1, -0.5, 0.5, -0.25, 0.25, 0]
 		let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+		animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
 		animation.duration = duration
 		animation.values = shakeOffsets.map {offset * $0}
 		animation.isRemovedOnCompletion = true

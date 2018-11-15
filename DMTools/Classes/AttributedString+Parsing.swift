@@ -10,23 +10,23 @@ import Foundation
 
 public extension NSAttributedString {
 	
-	class func parse(_ string: String, attributes: [NSAttributedStringKey: Any], separatorSymbols: [String], additionalAttributes: [NSAttributedStringKey: Any]? = nil) -> NSAttributedString {
-		var separatorSymbolsAndAttributes: [String: [NSAttributedStringKey: Any]] = [:]
+	class func parse(_ string: String, attributes: [NSAttributedString.Key: Any], separatorSymbols: [String], additionalAttributes: [NSAttributedString.Key: Any]? = nil) -> NSAttributedString {
+		var separatorSymbolsAndAttributes: [String: [NSAttributedString.Key: Any]] = [:]
 		for symbol in separatorSymbols {
 			separatorSymbolsAndAttributes[symbol] = additionalAttributes
 		}
 		return self.parse(string, attributes: attributes, separatorsAndAttributesInside: separatorSymbolsAndAttributes)
 	}
 	
-	class func parse(_ string: String, attributes: [NSAttributedStringKey: Any], separatorsAndAttributesInside: [String: [NSAttributedStringKey: Any]]) -> NSAttributedString {
+	class func parse(_ string: String, attributes: [NSAttributedString.Key: Any], separatorsAndAttributesInside: [String: [NSAttributedString.Key: Any]]) -> NSAttributedString {
 		
-		var parts: [(String, [NSAttributedStringKey: Any])] = [(string, attributes)]
+		var parts: [(String, [NSAttributedString.Key: Any])] = [(string, attributes)]
 		
 		for (separator, specialAttributes) in separatorsAndAttributesInside {
 			
-			var newParts: [(String, [NSAttributedStringKey: Any])] = []
+			var newParts: [(String, [NSAttributedString.Key: Any])] = []
 			for i in 0..<parts.count {
-				var stageParts: [(String, [NSAttributedStringKey: Any])] = []
+				var stageParts: [(String, [NSAttributedString.Key: Any])] = []
 				
 				let separatedParts = parts[i].0.components(separatedBy: separator)
 				for separatedPart in separatedParts {
