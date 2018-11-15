@@ -1,6 +1,6 @@
 use_frameworks!
 inhibit_all_warnings!
-platform :ios, '8.3'
+platform :ios, '8.0'
 target 'DMTools_Tests' do
   pod 'DMTools', :path => '../'
   pod 'Quick'
