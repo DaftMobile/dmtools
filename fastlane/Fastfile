@@ -4,8 +4,8 @@ platform :ios do
   desc "Description of what the lane does"
   lane :test do
     scan(
-      workspace: "Example/DMTools.xcworkspace",
-      scheme: "DMTools-Example",
+      project: "DMTools.xcodeproj",
+      scheme: "DMTools",
     )
   end
 end
