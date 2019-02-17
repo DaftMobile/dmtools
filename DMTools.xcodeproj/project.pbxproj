@@ -61,6 +61,7 @@
 		A36E93BD2219954B00ABDCD4 /* CollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93B02219954B00ABDCD4 /* CollectionSpec.swift */; };
 		A36E93BE2219954B00ABDCD4 /* LowPassFilterSignalSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */; };
 		A36E93C02219954B00ABDCD4 /* StringSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93B32219954B00ABDCD4 /* StringSpec.swift */; };
+		A36E93C822199A7700ABDCD4 /* ArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93C722199A7700ABDCD4 /* ArraySpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowPassFilterSignalSpec.swift; sourceTree = "<group>"; };
 		A36E93B22219954B00ABDCD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36E93B32219954B00ABDCD4 /* StringSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSpec.swift; sourceTree = "<group>"; };
+		A36E93C722199A7700ABDCD4 /* ArraySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
+				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
 				A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */,
 				A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */,
 				A36E93AA2219954B00ABDCD4 /* AttributedStringParsingSpec.swift */,
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36E93C822199A7700ABDCD4 /* ArraySpec.swift in Sources */,
 				A36E93BD2219954B00ABDCD4 /* CollectionSpec.swift in Sources */,
 				A36E93C02219954B00ABDCD4 /* StringSpec.swift in Sources */,
 				A36E93BB2219954B00ABDCD4 /* UIBezierPathSpec.swift in Sources */,

@@ -10,32 +10,41 @@ public extension Array {
 	/// The last index of the Array
 	public var lastIndex: Int { return self.count - 1 }
 
+	@available(*, deprecated, message: "use remove(value:)")
 	/**
 	Removes object from array
 
 	- parameter object: The object to be removed
 	*/
 	public mutating func removeObject<U: Equatable>(_ object: U) {
-		var index: Int?
-		for (idx, objectToCompare) in self.enumerated() {
-			if let to = objectToCompare as? U {
-				if object == to {
-					index = idx
-				}
-			}
-		}
-		if index != nil {
-			self.remove(at: index!)
+		remove(value: object)
+	}
+
+	/// Removes value from array
+	///
+	/// - Parameter value: value to remove
+	public mutating func remove<U: Equatable>(value: U) {
+		if let index = enumerated().first(where: { ($0.element as? U) == value })?.offset {
+			remove(at: index)
 		}
 	}
 
+	/// Remove value from array and return new array
+	///
+	/// - Parameter value: value to remove
+	/// - Returns: array without the value
+	public func removing<U: Equatable>(value: U) -> [Element] {
+		var new = self
+		new.remove(value: value)
+		return new
+	}
 
 	/**
 	Randomizes the order of elements in array
 	*/
 	public mutating func randomizeOrderInPlace() {
 		for _ in 1...10 {
-			sort(by: {(_,_) -> Bool in
+			sort(by: {_, _ -> Bool in
 				arc4random() > arc4random()
 			})
 		}
@@ -48,7 +57,7 @@ public extension Array {
 	public func randomizeOrder() -> Array<Element> {
 		var sorted = self
 		for _ in 0..<10 {
-			sorted = sorted.sorted{(_,_) -> Bool in arc4random() > arc4random()}
+			sorted = sorted.sorted { _, _ -> Bool in arc4random() > arc4random() }
 		}
 		return sorted
 	}
@@ -58,11 +67,11 @@ public extension Array {
 
 	- parameter closure: The closure to run on each element of an array
 	*/
-	public func enumerateWithClosure(_ closure: (_ element: Element, _ index: Int, _ stop: inout Bool) -> Void) -> Void {
+	public func enumerateWithClosure(_ closure: (_ element: Element, _ index: Int, _ stop: inout Bool) -> Void) {
 		var stop: Bool = false
 		for i in 0..<self.count {
 			closure(self[i], i, &stop)
-			if stop {break}
+			if stop { break }
 		}
 	}
 
@@ -84,7 +93,7 @@ public extension Array {
 
 	- parameter count: A number to move the 0 index to
 	*/
-	public mutating func offsetInPlace(_ count: Int) -> Void {
+	public mutating func offsetInPlace(_ count: Int) {
 		count.times({
 			let element = self.remove(at: 0)
 			self.append(element)
@@ -92,7 +101,6 @@ public extension Array {
 	}
 
 }
-
 
 public extension Array where Element: Equatable {
 
@@ -109,7 +117,6 @@ public extension Array where Element: Equatable {
 		}
 		return self[index]
 	}
-
 
 	/**
 	Access the element before `elem` in parameter if is contained
