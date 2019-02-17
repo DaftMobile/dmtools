@@ -28,7 +28,6 @@ public extension String {
 		return localized
 	}
 
-
 	/// Localizes self. Returns a localized string according to current locale
 	var localized: String {
 		let localizedString: String
@@ -60,7 +59,6 @@ public extension String {
 		return localizedString
 	}
 
-
 	/**
 	Localizes with format. Use REVERSE to reverse format array. IE in Japanese when you want 30 out of 10 instead of 10 out of 30
 	Expects format string to be located in localizable.strings with exact number of arguments as provided.
@@ -72,9 +70,8 @@ public extension String {
 	*/
 	func localizeWithFormat(arguments: CVarArg..., reverse: Bool = false) -> String {
 		let arguments = (reverse ? arguments.reversed() : arguments)
-		return String.init(format: self.localized, arguments: arguments)
+		return String(format: self.localized, arguments: arguments)
 	}
-
 
 	/**
 	Transforms "a_really_really_long_text" to "aReallyReallyLongText"
@@ -84,7 +81,7 @@ public extension String {
 	func underscoreToCamelcase() -> String {
 		return self.components(separatedBy: "_").enumerated().map({ (index: Int, element: String) -> String in
 			return index != 0 ? element.capitalized : element
-		}).joined(separator: "")
+		}).joined()
 	}
 
 	/**

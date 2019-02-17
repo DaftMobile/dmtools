@@ -54,7 +54,7 @@ public extension Array {
 	Randomizes the order of elements in array
 	- returns: A randomized copy of the Array
 	*/
-	public func randomizeOrder() -> Array<Element> {
+	public func randomizeOrder() -> [Element] {
 		var sorted = self
 		for _ in 0..<10 {
 			sorted = sorted.sorted { _, _ -> Bool in arc4random() > arc4random() }
@@ -69,8 +69,8 @@ public extension Array {
 	*/
 	public func enumerateWithClosure(_ closure: (_ element: Element, _ index: Int, _ stop: inout Bool) -> Void) {
 		var stop: Bool = false
-		for i in 0..<self.count {
-			closure(self[i], i, &stop)
+		for index in 0..<self.count {
+			closure(self[index], index, &stop)
 			if stop { break }
 		}
 	}

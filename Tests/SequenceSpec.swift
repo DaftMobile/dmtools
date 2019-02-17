@@ -1,18 +1,8 @@
-//
-//  SequenceSpec.swift
-//  DMTools
-//
-//  Created by Kajetan Dąbrowski on 05/09/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
+//swiftlint:disable function_body_length
 import Foundation
-
 import Quick
 import Nimble
-
-@testable
-import DMTools
+@testable import DMTools
 
 class SequenceSpec: QuickSpec {
 	override func spec() {

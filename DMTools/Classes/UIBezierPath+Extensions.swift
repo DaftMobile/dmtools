@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIBezierPath {
-	
+
 	/**
 	Creates smooth Bezier Path guided by passed points. Smoothing the Bezier Path requires minimal number of 3 points.
 	The path is guaranteed to contain the first point and the last points, but all the points in between will not be included in the actual path.
@@ -23,9 +23,9 @@ extension UIBezierPath {
 	public class func smoothBezierPathForPoints(_ points: [CGPoint]) -> UIBezierPath {
 		let path = UIBezierPath()
 
-		let midPoint: (CGPoint, CGPoint) -> CGPoint = {(p1, p2) -> CGPoint in
+		let midPoint: (CGPoint, CGPoint) -> CGPoint = { point1, point2 -> CGPoint in
 			//średnia arytmetyczna punktów to środek
-			return CGPoint(x: 0.5*(p1.x + p2.x), y: 0.5*(p1.y + p2.y))
+			return CGPoint(x: 0.5 * (point1.x + point2.x), y: 0.5 * (point1.y + point2.y))
 		}
 
 		switch points.count {
@@ -39,11 +39,11 @@ extension UIBezierPath {
 		default:
 			path.move(to: points[0])
 			path.addLine(to: midPoint(points[0], points[1]))
-			
-			for i in 1..<points.count-1 {
-				path.addQuadCurve(to: midPoint(points[i], points[i+1]), controlPoint: points[i])
+
+			for index in 1..<points.count - 1 {
+				path.addQuadCurve(to: midPoint(points[index], points[index + 1]), controlPoint: points[index])
 			}
-			
+
 			path.addLine(to: points.last!)
 		}
 		return path

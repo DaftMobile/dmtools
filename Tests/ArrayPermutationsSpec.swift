@@ -1,16 +1,14 @@
+//swiftlint:disable function_body_length
 import Foundation
-
 import Quick
 import Nimble
-
-@testable
-import DMTools
+@testable import DMTools
 
 class ArrayPermutationsSpec: QuickSpec {
 	override func spec() {
 		describe("ArrayPerumations") {
 
-			var sut: Array<Int>!
+			var sut: [Int]!
 
 			afterEach {
 				sut = nil
@@ -57,27 +55,27 @@ class ArrayPermutationsSpec: QuickSpec {
 				}
 
 				it("should contain permutation 1,2,3") {
-					expect(permutations.contains(where: {$0 == [1,2,3]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [1, 2, 3] })).to(beTrue())
 				}
 
 				it("should contain permutation 1,3,2") {
-					expect(permutations.contains(where: {$0 == [1,3,2]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [1, 3, 2] })).to(beTrue())
 				}
 
 				it("should contain permutation 2,1,3") {
-					expect(permutations.contains(where: {$0 == [2,1,3]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [2, 1, 3] })).to(beTrue())
 				}
 
 				it("should contain permutation 2,3,1") {
-					expect(permutations.contains(where: {$0 == [2,3,1]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [2, 3, 1] })).to(beTrue())
 				}
 
 				it("should contain permutation 3,1,2") {
-					expect(permutations.contains(where: {$0 == [3,1,2]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [3, 1, 2] })).to(beTrue())
 				}
 
 				it("should contain permutation 3,2,1") {
-					expect(permutations.contains(where: {$0 == [3,2,1]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [3, 2, 1] })).to(beTrue())
 				}
 			}
 
@@ -85,7 +83,7 @@ class ArrayPermutationsSpec: QuickSpec {
 				var permutations: [[Int]]!
 
 				beforeEach {
-					sut = [6,8]
+					sut = [6, 8]
 					permutations = sut.generatePermutations()
 				}
 
@@ -98,17 +96,17 @@ class ArrayPermutationsSpec: QuickSpec {
 				}
 
 				it("should have permutation 6,8") {
-					expect(permutations.contains(where: {$0 == [6,8]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [6, 8] })).to(beTrue())
 				}
 
 				it("should have permutation 8,6") {
-					expect(permutations.contains(where: {$0 == [8,6]})).to(beTrue())
+					expect(permutations.contains(where: { $0 == [8, 6] })).to(beTrue())
 				}
 			}
 
 			context("when array has 6 elements") {
 				beforeEach {
-					sut = [1,2,3,4,5,6]
+					sut = [1, 2, 3, 4, 5, 6]
 				}
 
 				it("should contain a lot of elements") {

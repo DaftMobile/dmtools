@@ -1,8 +1,4 @@
-//
-//  Created by DaftMobile Sp z o. o.
-//  Copyright (c) 2015 DaftMobile. All rights reserved.
-//
-
+//swiftlint:disable identifier_name
 import CoreGraphics
 
 public extension CGVector {
@@ -75,51 +71,53 @@ public extension CGVector {
 	public var angle: CGFloat {
 		return atan2(dy, dx)
 	}
-	
+
 	var isZero: Bool {
 		return self.dx.isZero && self.dy.isZero
 	}
 }
 
+//swiftlint:disable shorthand_operator
+
 /**
 * Adds two CGVector values and returns the result as a new CGVector.
 */
-public func +(left: CGVector, right: CGVector) -> CGVector {
+public func + (left: CGVector, right: CGVector) -> CGVector {
 	return CGVector(dx: left.dx + right.dx, dy: left.dy + right.dy)
 }
 
 /**
 * Increments a CGVector with the value of another.
 */
-public func +=(left: inout CGVector, right: CGVector) {
+public func += (left: inout CGVector, right: CGVector) {
 	left = left + right
 }
 
 /**
 * Subtracts two CGVector values and returns the result as a new CGVector.
 */
-public func -(left: CGVector, right: CGVector) -> CGVector {
+public func - (left: CGVector, right: CGVector) -> CGVector {
 	return CGVector(dx: left.dx - right.dx, dy: left.dy - right.dy)
 }
 
 /**
 * Decrements a CGVector with the value of another.
 */
-public func -=(left: inout CGVector, right: CGVector) {
+public func -= (left: inout CGVector, right: CGVector) {
 	left = left - right
 }
 
 /**
 * Multiplies two CGVector values and returns the result as a new CGVector.
 */
-public func *(left: CGVector, right: CGVector) -> CGVector {
+public func * (left: CGVector, right: CGVector) -> CGVector {
 	return CGVector(dx: left.dx * right.dx, dy: left.dy * right.dy)
 }
 
 /**
 * Multiplies a CGVector with another.
 */
-public func *=(left: inout CGVector, right: CGVector) {
+public func *= (left: inout CGVector, right: CGVector) {
 	left = left * right
 }
 
@@ -127,28 +125,28 @@ public func *=(left: inout CGVector, right: CGVector) {
 * Multiplies the x and y fields of a CGVector with the same scalar value and
 * returns the result as a new CGVector.
 */
-public func *(vector: CGVector, scalar: CGFloat) -> CGVector {
+public func * (vector: CGVector, scalar: CGFloat) -> CGVector {
 	return CGVector(dx: vector.dx * scalar, dy: vector.dy * scalar)
 }
 
 /**
 * Multiplies the x and y fields of a CGVector with the same scalar value.
 */
-public func *=(vector: inout CGVector, scalar: CGFloat) {
+public func *= (vector: inout CGVector, scalar: CGFloat) {
 	vector = vector * scalar
 }
 
 /**
 * Divides two CGVector values and returns the result as a new CGVector.
 */
-public func /(left: CGVector, right: CGVector) -> CGVector {
+public func / (left: CGVector, right: CGVector) -> CGVector {
 	return CGVector(dx: left.dx / right.dx, dy: left.dy / right.dy)
 }
 
 /**
 * Divides a CGVector by another.
 */
-public func /=(left: inout CGVector, right: CGVector) {
+public func /= (left: inout CGVector, right: CGVector) {
 	left = left / right
 }
 
@@ -156,29 +154,38 @@ public func /=(left: inout CGVector, right: CGVector) {
 * Divides the dx and dy fields of a CGVector by the same scalar value and
 * returns the result as a new CGVector.
 */
-public func /(vector: CGVector, scalar: CGFloat) -> CGVector {
+public func / (vector: CGVector, scalar: CGFloat) -> CGVector {
 	return CGVector(dx: vector.dx / scalar, dy: vector.dy / scalar)
 }
 
 /**
 * Divides the dx and dy fields of a CGVector by the same scalar value.
 */
-public func /=(vector: inout CGVector, scalar: CGFloat) {
+public func /= (vector: inout CGVector, scalar: CGFloat) {
 	vector = vector / scalar
 }
 
 /**
 * Performs a linear interpolation between two CGVector values.
 */
+public func lerp(start: CGVector, end: CGVector, percentage: CGFloat) -> CGVector {
+	return start + (end - start) * percentage
+}
+
+//swiftlint:enable shorthand_operator
+
+/**
+* Performs a linear interpolation between two CGVector values.
+*/
+
 public func lerp(start: CGVector, end: CGVector, t: CGFloat) -> CGVector {
-	return start + (end - start) * t
+	return lerp(start: start, end: end, percentage: t)
 }
 
 /**
 * Inverts the vector
 */
-public prefix func -(right: CGVector) -> CGVector
-{
+public prefix func - (right: CGVector) -> CGVector {
     return right * -1.0
 }
 
@@ -186,8 +193,7 @@ public func CGVectorMake(angle: CGFloat, length: CGFloat) -> CGVector {
 	return CGVector(dx: length * cos(angle), dy: length * sin(angle))
 }
 
-extension CGVector: CustomStringConvertible
-{
+extension CGVector: CustomStringConvertible {
 	public var description: String {
 		return "[\(self.dx) , \(self.dy)]"
 	}

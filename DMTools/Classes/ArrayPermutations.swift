@@ -5,22 +5,21 @@
 
 import Foundation
 
-
 public extension Array {
-	fileprivate static func generatePermutation<T>(_ n: Int, workingArray: [T], currentResults: inout [[T]]) {
+	fileprivate static func generatePermutation<T>(_ identifier: Int, workingArray: [T], currentResults: inout [[T]]) {
 		var workingArray = workingArray
-		if n == 1 {
+		if identifier == 1 {
 			currentResults.append(workingArray)
 		} else {
-			for i in 0..<n-1 {
-				generatePermutation(n-1, workingArray: workingArray, currentResults: &currentResults)
-				if n % 2 == 1 {
-					workingArray.swapAt(i, n-1)
+			for counter in 0 ..< identifier - 1 {
+				generatePermutation(identifier - 1, workingArray: workingArray, currentResults: &currentResults)
+				if identifier % 2 == 1 {
+					workingArray.swapAt(counter, identifier - 1)
 				} else {
-					workingArray.swapAt(0, n-1)
+					workingArray.swapAt(0, identifier - 1)
 				}
 			}
-			generatePermutation(n-1, workingArray: workingArray, currentResults: &currentResults)
+			generatePermutation(identifier - 1, workingArray: workingArray, currentResults: &currentResults)
 		}
 	}
 

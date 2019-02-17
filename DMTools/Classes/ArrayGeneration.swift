@@ -25,8 +25,8 @@ public extension Int {
 	/// - Returns: array of consecutive naturals
 	public func naturals() -> [Int] {
 		var values: [Int] = self.zeros()
-		for i in 0..<self {
-			values[i] = i
+		for index in 0..<self {
+			values[index] = index
 		}
 		return values
 	}

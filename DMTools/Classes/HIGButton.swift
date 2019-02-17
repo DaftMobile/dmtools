@@ -20,7 +20,7 @@ open class HIGButton: UIButton {
 	override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
 		let widthToAdd = max(minimumHitArea.width - bounds.size.width, 0)
 		let heightToAdd = max(minimumHitArea.height - bounds.size.height, 0)
-		let enlargedArea = bounds.insetBy(dx: -widthToAdd/2, dy: -heightToAdd/2)
+		let enlargedArea = bounds.insetBy(dx: -widthToAdd / 2, dy: -heightToAdd / 2)
 		return enlargedArea.contains(point)
 	}
 }

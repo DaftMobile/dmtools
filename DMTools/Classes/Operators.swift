@@ -42,7 +42,7 @@ public func * (lhs: TimeInterval, rhs: CGFloat) -> TimeInterval {
 	return TimeInterval(Double(lhs) * Double(rhs))
 }
 
-//MARK: Exponentiation
+// MARK: Exponentiation
 
 infix operator **: MultiplicationPrecedence
 
@@ -57,4 +57,3 @@ Exponentiation operator
 public func ** (lhs: UInt, rhs: UInt) -> UInt {
 	return Array(repeating: lhs, count: Int(rhs)).reduce(1, *)
 }
-

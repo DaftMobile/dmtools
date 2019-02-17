@@ -1,8 +1,4 @@
-//
-//  Created by DaftMobile Sp z o. o.
-//  Copyright (c) 2015 DaftMobile. All rights reserved.
-//
-
+//swiftlint:disable identifier_name
 import CoreGraphics
 
 public extension CGFloat {
@@ -72,16 +68,11 @@ extension CGFloat: Randomable {
 public func shortestAngleBetween(_ angle1: CGFloat, angle2: CGFloat) -> CGFloat {
 	let twoπ: CGFloat = .pi * 2.0
 	var angle: CGFloat = (angle2 - angle1).truncatingRemainder(dividingBy: twoπ)
-	if (angle >= .pi) {
-		angle = angle - twoπ
-	}
-	if (angle <= -.pi) {
-		angle = angle + twoπ
-	}
+	if angle >= .pi { angle -= twoπ }
+	if angle <= -.pi { angle += twoπ }
 	return angle
 }
 
 public func sign(_ value: CGFloat) -> CGFloat {
-	if value >= 0.0 { return 1.0 }
-	else { return -1.0 }
+	if value >= 0.0 { return 1.0 } else { return -1.0 }
 }

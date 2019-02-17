@@ -34,7 +34,6 @@ public extension UIView {
 		}
 	}
 
-
 	/**
 	Copies the data to a new `UIView`
 
@@ -43,7 +42,7 @@ public extension UIView {
 	public func viewCopy() -> UIView {
 		return NSKeyedUnarchiver.unarchiveObject(with: (NSKeyedArchiver.archivedData(withRootObject: self) as NSData).copy() as! Data) as! UIView
 	}
-	
+
 	/**
 	Adds shake animation to the receiver
 	
@@ -55,7 +54,7 @@ public extension UIView {
 		let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
 		animation.duration = duration
-		animation.values = shakeOffsets.map {offset * $0}
+		animation.values = shakeOffsets.map { offset * $0 }
 		animation.isRemovedOnCompletion = true
 		layer.removeAnimation(forKey: "shake")
 		layer.add(animation, forKey: "shake")

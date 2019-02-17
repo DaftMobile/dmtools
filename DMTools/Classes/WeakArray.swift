@@ -8,11 +8,11 @@
 
 import Foundation
 
-//MARK: Internal struct used to store weak references
+// MARK: Internal struct used to store weak references
 
 private struct Weak<T: AnyObject> {
-	weak var value : T?
-	
+	weak var value: T?
+
 	init (_ value: T?) {
 		self.value = value
 	}
@@ -26,13 +26,13 @@ extension Weak: CustomStringConvertible {
 }
 
 public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, CustomDebugStringConvertible, ExpressibleByArrayLiteral {
-	
+
 	// MARK: Private
 	public typealias Element = T
 	fileprivate typealias WeakElement = Weak<Element>
 	fileprivate typealias GeneratorType = AnyIterator<T>
 	fileprivate var items = [WeakElement]()
-	
+
 	// MARK: Public
 	public var description: String {
 		return items.description
@@ -52,21 +52,21 @@ public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, Custom
 	public var last: Element? {
 		return items.last?.value
 	}
-	
+
 	// MARK: Methods
-	
+
 	public init() {}
-	
+
 	public init(arrayLiteral elements: Element...) {
 		for element in elements {
 			append(element)
 		}
 	}
-	
+
 	public func makeIterator() -> AnyIterator<Element> {
-		let values: Array<Element?> = items.map {$0.value}
+		let values = items.map { $0.value }
 		var index = 0
-		return AnyIterator<Element>( {
+		return AnyIterator<Element>({
 			while index < values.count {
 				let next = values[index]
 				index += 1
@@ -77,7 +77,7 @@ public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, Custom
 			return nil
 		})
 	}
-	
+
 	public subscript(index: Int) -> Element? {
 		get {
 			return items[index].value
@@ -86,33 +86,29 @@ public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, Custom
 			items[index] = Weak(value)
 		}
 	}
-	
-	
+
 	public mutating func append(_ value: Element?) {
 		items.append(Weak(value))
 	}
-	
-	public mutating func insert(_ newElement: Element, atIndex i: Int) {
-		items.insert(Weak(newElement), at: i)
+
+	public mutating func insert(_ newElement: Element, atIndex index: Int) {
+		items.insert(Weak(newElement), at: index)
 	}
-	
+
 	public mutating func removeAtIndex(_ index: Int) -> Element? {
 		return items.remove(at: index).value
 	}
-	
+
 	/**
 	Removes all nil values. Changes count
 	*/
 	mutating public func consolidate() {
 		var indicesToRemove = [Int]()
-		for (index, element) in items.enumerated() {
-			if element.value == nil {
-				indicesToRemove.insert(index, at: 0)
-			}
+		for (index, element) in items.enumerated() where element.value == nil {
+			indicesToRemove.insert(index, at: 0)
 		}
 		for index in indicesToRemove {
 			_ = removeAtIndex(index)
 		}
 	}
-	
 }

@@ -24,17 +24,17 @@ public extension Int {
 	/**
 	* Ensures that the integer value stays between the given values, inclusive.
 	*/
-	public func clamped(_ v1: Int, _ v2: Int) -> Int {
-		let min: Int = v1 < v2 ? v1 : v2
-		let max: Int = v1 > v2 ? v1 : v2
+	public func clamped(_ value1: Int, _ value2: Int) -> Int {
+		let min = value1 < value2 ? value1 : value2
+		let max = value1 > value2 ? value1 : value2
 		return self < min ? min : (self > max ? max : self)
 	}
 
 	/**
 	* Ensures that the integer value stays between the given values, inclusive.
 	*/
-	public mutating func clamp(_ v1: Int, _ v2: Int) -> Int {
-		self = clamped(v1, v2)
+	public mutating func clamp(_ value1: Int, _ value2: Int) -> Int {
+		self = clamped(value1, value2)
 		return self
 	}
 
@@ -47,12 +47,12 @@ public extension Int {
 
 	/**
 	- parameter n: Top limit of return value
-	 - returns: Random integer between 0 and n-1.
+	 - returns: Random integer between 0 and upper-1.
 	*/
-	public static func random(_ n: Int) -> Int {
-		return Int(arc4random_uniform(UInt32(n)))
+	public static func random(_ upper: Int) -> Int {
+		return Int(arc4random_uniform(UInt32(upper)))
 	}
-	
+
 	/**
 	* Randomly returns either 1 or -1.
 	*/
@@ -64,10 +64,8 @@ public extension Int {
 		Runs a closure number of times
 		- parameter closure: A closure to be performed
 	*/
-	func times(_ closure: (Int) -> Void) -> Void {
-		for i in 0..<self {
-			closure(i)
-		}
+	func times(_ closure: (Int) -> Void) {
+		for index in 0..<self { closure(index) }
 	}
 
 	/**
@@ -75,10 +73,8 @@ public extension Int {
 	- parameter closure:A closure to be performed
 	*/
 
-	func times(_ closure: () -> Void) -> Void {
-		for _ in 0..<self {
-			closure()
-		}
+	func times(_ closure: () -> Void) {
+		for _ in 0..<self { closure() }
 	}
 }
 

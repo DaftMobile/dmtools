@@ -16,7 +16,7 @@ public extension UITableView {
 		if numberOfSections == 0 {
 			return nil
 		}
-		let numberOfRowsInLastSection = numberOfRows(inSection: numberOfSections-1)
-		return IndexPath(row: numberOfRowsInLastSection-1, section: numberOfSections-1)
+		let numberOfRowsInLastSection = numberOfRows(inSection: numberOfSections - 1)
+		return IndexPath(row: numberOfRowsInLastSection - 1, section: numberOfSections - 1)
 	}
 }
