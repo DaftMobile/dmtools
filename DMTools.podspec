@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DMTools'
-  s.version          = '0.5.0'
+  s.version          = '0.5.2'
   s.summary          = 'Shared Tools for DaftMobile coding.'
 
 
