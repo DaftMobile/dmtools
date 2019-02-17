@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A36E93C2221997A300ABDCD4 /* Lint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A36E93C3221997A300ABDCD4 /* Build configuration list for PBXAggregateTarget "Lint" */;
+			buildPhases = (
+				A36E93C6221997AA00ABDCD4 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Lint;
+			productName = Lint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
 		A323BBEB21FB5CC000169DD4 /* DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A323BBDD21FB5CC000169DD4 /* DMTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -287,6 +301,9 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
+					A36E93C2221997A300ABDCD4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = A323BBD421FB5CC000169DD4 /* Build configuration list for PBXProject "DMTools" */;
@@ -303,6 +320,7 @@
 			targets = (
 				A323BBD921FB5CC000169DD4 /* DMTools */,
 				A323BBE221FB5CC000169DD4 /* DMToolsTests */,
+				A36E93C2221997A300ABDCD4 /* Lint */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +341,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A36E93C6221997AA00ABDCD4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint --config .swiftlint.yml\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A323BBD621FB5CC000169DD4 /* Sources */ = {
@@ -608,6 +646,22 @@
 			};
 			name = Release;
 		};
+		A36E93C4221997A300ABDCD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A36E93C5221997A300ABDCD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,6 +688,15 @@
 			buildConfigurations = (
 				A323BBF221FB5CC000169DD4 /* Debug */,
 				A323BBF321FB5CC000169DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A36E93C3221997A300ABDCD4 /* Build configuration list for PBXAggregateTarget "Lint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A36E93C4221997A300ABDCD4 /* Debug */,
+				A36E93C5221997A300ABDCD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
