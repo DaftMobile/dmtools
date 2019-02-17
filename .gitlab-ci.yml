@@ -1,11 +1,9 @@
 stages:
   - prepare
+  - lint
   - test
 
-cache:
-  untracked: true
-
-install_gems:
+prepare:
   stage: prepare
   script:
     - brew bundle
@@ -13,13 +11,26 @@ install_gems:
     - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
   tags:
     - ios
+  cache:
+    key: dmpods-cache
+    paths:
+      - Carthage/
+    policy: pull-push
 
-install_pods:
-  stage: prepare
+lint:
+  stage: lint
   script:
-    - bundle exec pod install --project-directory=Example
+    - mkdir -p ./lint_output
+    - swiftlint --config .swiftlint_ci.yml > lint_output/lint.html
   tags:
     - ios
+  cache: {}
+  artifacts:
+    when: always
+    expire_in: 4 weeks
+    paths:
+      - lint_output/lint.html
+
 
 test:
   stage: test
@@ -27,3 +38,8 @@ test:
     - bundle exec fastlane test
   tags:
     - ios
+  cache:
+    key: dmpods-cache
+    paths:
+      - Carthage/
+    policy: pull
