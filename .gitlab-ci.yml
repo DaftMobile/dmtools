@@ -21,7 +21,7 @@ lint:
   stage: lint
   script:
     - mkdir -p ./lint_output
-    - swiftlint --config .swiftlint_ci.yml > lint_output/lint.html
+    - swiftlint --config .swiftlint.yml > lint_output/lint.html
   tags:
     - ios
   cache: {}
