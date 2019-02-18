@@ -49,6 +49,7 @@
 		A3257B8E22172EE60060307E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3257B8C22172EE60060307E /* Quick.framework */; };
 		A3257B9022172EF60060307E /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A3257B8B22172EE60060307E /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3257B9122172EF60060307E /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A3257B8C22172EE60060307E /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A36AB15E221B6E5300EF4772 /* UICollectionView+DequeueSupplemenntaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36AB15D221B6E2200EF4772 /* UICollectionView+DequeueSupplemenntaryView.swift */; };
 		A36E93B42219954B00ABDCD4 /* WeakArraySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */; };
 		A36E93B52219954B00ABDCD4 /* SequenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */; };
 		A36E93B62219954B00ABDCD4 /* ColorParsingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */; };
@@ -79,6 +80,7 @@
 		A36E93EE2219A89200ABDCD4 /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93E62219A89200ABDCD4 /* UIView+Reusable.swift */; };
 		A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */; };
 		A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */; };
+		A371A79A221B364900BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,7 @@
 		A323BC0921FB5D1000169DD4 /* LowPassValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LowPassValue.swift; path = ../DMTools/Classes/LowPassValue.swift; sourceTree = "<group>"; };
 		A3257B8B22172EE60060307E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		A3257B8C22172EE60060307E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		A36AB15D221B6E2200EF4772 /* UICollectionView+DequeueSupplemenntaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueSupplemenntaryView.swift"; sourceTree = "<group>"; };
 		A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArraySpec.swift; sourceTree = "<group>"; };
 		A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceSpec.swift; sourceTree = "<group>"; };
 		A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParsingSpec.swift; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		A36E93E62219A89200ABDCD4 /* UIView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
 		A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
 		A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryView.swift"; sourceTree = "<group>"; };
+		A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +291,7 @@
 				A36E93CB2219A85300ABDCD4 /* UICollectionView+RegisterCellSpec.swift */,
 				A36E93CC2219A85300ABDCD4 /* UICollectionView+DequeueCellSpec.swift */,
 				A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */,
+				A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				A36E93DD2219A89200ABDCD4 /* UICollectionView+DequeueCell.swift */,
 				A36E93DE2219A89200ABDCD4 /* UICollectionView+RegisterCell.swift */,
 				A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */,
+				A36AB15D221B6E2200EF4772 /* UICollectionView+DequeueSupplemenntaryView.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				A36E93E92219A89200ABDCD4 /* UITableView+DequeueTableHeaderFooter.swift in Sources */,
 				A323BC1121FB5D1000169DD4 /* CGPoint+Extensions.swift in Sources */,
 				A323BC1521FB5D1000169DD4 /* ArrayPermutations.swift in Sources */,
+				A36AB15E221B6E5300EF4772 /* UICollectionView+DequeueSupplemenntaryView.swift in Sources */,
 				A323BC1021FB5D1000169DD4 /* Operators.swift in Sources */,
 				A323BC1321FB5D1000169DD4 /* UITableView+Extensions.swift in Sources */,
 				A36E93E82219A89200ABDCD4 /* UICollectionView+RegisterCell.swift in Sources */,
@@ -544,6 +551,7 @@
 				A36E93B82219954B00ABDCD4 /* ArrayGenerationSpec.swift in Sources */,
 				A36E93D52219A85300ABDCD4 /* UICollectionView+DequeueCellSpec.swift in Sources */,
 				A36E93B52219954B00ABDCD4 /* SequenceSpec.swift in Sources */,
+				A371A79A221B364900BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift in Sources */,
 				A36E93BE2219954B00ABDCD4 /* LowPassFilterSignalSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
