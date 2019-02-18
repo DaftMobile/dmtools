@@ -115,7 +115,14 @@ class AttributedStringParsingSpec: QuickSpec {
 
 				beforeEach {
 					let startString = "<red>0<red><blue>1<blue>"
-					sut = NSAttributedString.parse(startString, attributes: [:], separatorsAndAttributesInside: ["<red>": [NSAttributedString.Key.foregroundColor: UIColor.red], "<blue>": [NSAttributedString.Key.foregroundColor: UIColor.blue]])
+					sut = NSAttributedString.parse(
+						startString,
+						attributes: [:],
+						separatorsAndAttributesInside: [
+							"<red>": [.foregroundColor: UIColor.red],
+							 "<blue>": [.foregroundColor: UIColor.blue]
+						]
+					)
 				}
 
 				it("have the same string inside") {
@@ -139,7 +146,16 @@ class AttributedStringParsingSpec: QuickSpec {
 
 				beforeEach {
 					let startString = "<red>0<red><blue>1<blue><green>2<green><red>3<red><bold>4<bold>"
-					sut = NSAttributedString.parse(startString, attributes: baseAttributes, separatorsAndAttributesInside: ["<red>": [NSAttributedString.Key.foregroundColor: UIColor.red], "<blue>": [NSAttributedString.Key.foregroundColor: UIColor.blue], "<green>": [NSAttributedString.Key.foregroundColor: UIColor.green], "<bold>": [NSAttributedString.Key.font: boldFont]])
+					sut = NSAttributedString.parse(
+						startString,
+						attributes: baseAttributes,
+						separatorsAndAttributesInside: [
+							"<red>": [.foregroundColor: UIColor.red],
+							"<blue>": [.foregroundColor: UIColor.blue],
+							"<green>": [.foregroundColor: UIColor.green],
+							"<bold>": [.font: boldFont]
+						]
+					)
 				}
 
 				it("have the same string inside") {

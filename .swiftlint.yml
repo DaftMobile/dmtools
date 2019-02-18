@@ -34,9 +34,6 @@ quick_discouraged_pending_test: error
 
 disabled_rules:
   - line_length
-  - nesting
-  - force_cast
-  - force_try
 
 identifier_name:
   excluded:

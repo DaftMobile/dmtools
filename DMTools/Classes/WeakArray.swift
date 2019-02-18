@@ -25,7 +25,7 @@ extension Weak: CustomStringConvertible {
 	}
 }
 
-public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, CustomDebugStringConvertible, ExpressibleByArrayLiteral {
+public struct WeakArray<T: AnyObject>: Sequence, ExpressibleByArrayLiteral {
 
 	// MARK: Private
 	public typealias Element = T
@@ -34,12 +34,6 @@ public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, Custom
 	fileprivate var items = [WeakElement]()
 
 	// MARK: Public
-	public var description: String {
-		return items.description
-	}
-	public var debugDescription: String {
-		return items.debugDescription
-	}
 	public var count: Int {
 		return items.count
 	}
@@ -110,5 +104,14 @@ public struct WeakArray<T: AnyObject>: Sequence, CustomStringConvertible, Custom
 		for index in indicesToRemove {
 			_ = removeAtIndex(index)
 		}
+	}
+}
+
+extension WeakArray: CustomStringConvertible, CustomDebugStringConvertible {
+	public var description: String {
+		return items.description
+	}
+	public var debugDescription: String {
+		return items.debugDescription
 	}
 }
