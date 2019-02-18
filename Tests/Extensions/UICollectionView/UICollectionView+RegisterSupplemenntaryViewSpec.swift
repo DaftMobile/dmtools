@@ -6,7 +6,7 @@ import DMTools
 class UICollectionView_RegisterSupplementaryViewSpec: QuickSpec {
 
 	override func spec() {
-		describe("UICollectionView+RegisterCell") {
+		describe("UICollectionView+RegisterSupplementaryView") {
 			var sut: UICollectionView!
 			let kind1 = "KIND1"
 			let kind2 = "KIND2"
