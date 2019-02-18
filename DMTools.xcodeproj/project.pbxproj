@@ -77,6 +77,8 @@
 		A36E93EC2219A89200ABDCD4 /* UITableViewHeaderFooterView+RegisterHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93E32219A89200ABDCD4 /* UITableViewHeaderFooterView+RegisterHeaderFooter.swift */; };
 		A36E93ED2219A89200ABDCD4 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93E52219A89200ABDCD4 /* Reusable.swift */; };
 		A36E93EE2219A89200ABDCD4 /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E93E62219A89200ABDCD4 /* UIView+Reusable.swift */; };
+		A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */; };
+		A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,8 @@
 		A36E93E32219A89200ABDCD4 /* UITableViewHeaderFooterView+RegisterHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+RegisterHeaderFooter.swift"; sourceTree = "<group>"; };
 		A36E93E52219A89200ABDCD4 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A36E93E62219A89200ABDCD4 /* UIView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
+		A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
+		A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +286,7 @@
 			children = (
 				A36E93CB2219A85300ABDCD4 /* UICollectionView+RegisterCellSpec.swift */,
 				A36E93CC2219A85300ABDCD4 /* UICollectionView+DequeueCellSpec.swift */,
+				A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			children = (
 				A36E93DD2219A89200ABDCD4 /* UICollectionView+DequeueCell.swift */,
 				A36E93DE2219A89200ABDCD4 /* UICollectionView+RegisterCell.swift */,
+				A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				A36E93E72219A89200ABDCD4 /* UICollectionView+DequeueCell.swift in Sources */,
 				A323BC0E21FB5D1000169DD4 /* UIColorExt.swift in Sources */,
 				A36E93EB2219A89200ABDCD4 /* UITableView+RegisterCell.swift in Sources */,
+				A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */,
 				A323BC1621FB5D1000169DD4 /* WeakArray.swift in Sources */,
 				A323BC1C21FB5D1000169DD4 /* CGVector+Extensions.swift in Sources */,
 				A323BC0D21FB5D1000169DD4 /* ArrayGeneration.swift in Sources */,
@@ -522,6 +529,7 @@
 				A36E93D92219A85300ABDCD4 /* UITableView+RegisterCellSpec.swift in Sources */,
 				A36E93D82219A85300ABDCD4 /* UITableView+DequeueTableHeaderFooterSpec.swift in Sources */,
 				A36E93BD2219954B00ABDCD4 /* CollectionSpec.swift in Sources */,
+				A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */,
 				A36E93D62219A85300ABDCD4 /* UITableView+DequeueCellSpec.swift in Sources */,
 				A36E93DA2219A85300ABDCD4 /* UIView+ReusableSpec.swift in Sources */,
 				A36E93D72219A85300ABDCD4 /* UITableView+RegisterHeaderFooterSpec.swift in Sources */,
