@@ -40,7 +40,11 @@ public extension UIView {
 	- returns: A copy of provided `UIView`
 	*/
 	public func viewCopy() -> UIView {
-		return NSKeyedUnarchiver.unarchiveObject(with: (NSKeyedArchiver.archivedData(withRootObject: self) as NSData).copy() as! Data) as! UIView
+		let archivedView = NSKeyedArchiver.archivedData(withRootObject: self)
+		guard let newView = NSKeyedUnarchiver.unarchiveObject(with: archivedView) as? UIView else {
+			fatalError("Could not unarchive view")
+		}
+		return newView
 	}
 
 	/**
