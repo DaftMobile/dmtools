@@ -3,7 +3,7 @@ import Nimble
 import Quick
 import DMTools
 
-class UITableViewRegisterCellSpec: QuickSpec {
+class UITableView_RegisterCellSpec: QuickSpec {
 
 	override func spec() {
 		describe("UITableView+RegisterCell") {

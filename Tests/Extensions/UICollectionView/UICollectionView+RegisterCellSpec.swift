@@ -3,7 +3,7 @@ import Quick
 import UIKit
 import DMTools
 
-class UICollectionViewRegisterCellSpec: QuickSpec {
+class UICollectionView_RegisterCellSpec: QuickSpec {
 
 	override func spec() {
 		describe("UICollectionView+RegisterCell") {

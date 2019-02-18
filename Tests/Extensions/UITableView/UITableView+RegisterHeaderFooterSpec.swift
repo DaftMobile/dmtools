@@ -3,7 +3,7 @@ import Nimble
 import Quick
 import DMTools
 
-class UITableViewRegisterHeaderFooterSpec: QuickSpec {
+class UITableView_RegisterHeaderFooterSpec: QuickSpec {
 
 	override func spec() {
 		describe("UITableView+RegisterHeaderFooter") {

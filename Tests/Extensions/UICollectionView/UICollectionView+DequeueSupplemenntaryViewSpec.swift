@@ -1,4 +1,3 @@
-//swiftlint:disable type_name
 import Nimble
 import Quick
 import UIKit
@@ -32,7 +31,7 @@ class UICollectionView_DequeueSupplementaryViewSpec: QuickSpec {
 				}
 
 				it("should not dequeue supplementary view of different kind") {
-					expect{
+					expect {
 						_ = sut.dequeueSupplementaryView(UICollectionReusableView.self, ofKind: kind2, for: .init())
 					}.to(raiseException())
 				}

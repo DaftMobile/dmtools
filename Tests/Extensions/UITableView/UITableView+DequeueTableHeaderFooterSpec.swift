@@ -2,7 +2,7 @@ import Nimble
 import Quick
 import DMTools
 
-class UITableViewDequeueTableHeaderFooterSpec: QuickSpec {
+class UITableView_DequeueTableHeaderFooterSpec: QuickSpec {
 
 	override func spec() {
 		describe("UITableView+DequeueTableHeaderFooter") {

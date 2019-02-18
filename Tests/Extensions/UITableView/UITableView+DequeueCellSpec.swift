@@ -3,7 +3,7 @@ import Nimble
 import Quick
 import DMTools
 
-class UITableViewDequeueCellSpec: QuickSpec {
+class UITableView_DequeueCellSpec: QuickSpec {
 
 	override func spec() {
 		describe("UITableView+DequeueCell") {

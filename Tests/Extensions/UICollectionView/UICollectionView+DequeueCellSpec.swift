@@ -3,7 +3,7 @@ import Quick
 import UIKit
 import DMTools
 
-class UICollectionViewDequeueCellSpec: QuickSpec {
+class UICollectionView_DequeueCellSpec: QuickSpec {
 
 	override func spec() {
 		describe("UICollectionView+DequeueCell") {

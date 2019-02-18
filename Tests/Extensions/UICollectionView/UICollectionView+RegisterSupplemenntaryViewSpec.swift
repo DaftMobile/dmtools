@@ -1,4 +1,3 @@
-//swiftlint:disable type_name
 import Nimble
 import Quick
 import UIKit
@@ -13,7 +12,7 @@ class UICollectionView_RegisterSupplementaryViewSpec: QuickSpec {
 			let kind2 = "KIND2"
 
 			beforeEach {
-				sut = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+				sut = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
 			}
 
 			afterEach {
@@ -32,7 +31,7 @@ class UICollectionView_RegisterSupplementaryViewSpec: QuickSpec {
 				}
 
 				it("should not dequeue supplementary view of different kind") {
-					expect{
+					expect {
 						_ = sut.dequeueReusableSupplementaryView(ofKind: kind2, withReuseIdentifier: "UICollectionReusableView", for: .init())
 					}.to(raiseException())
 				}

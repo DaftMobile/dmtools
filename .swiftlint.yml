@@ -30,7 +30,7 @@ opt_in_rules:
   - yoda_condition
 
 quick_discouraged_focused_test: error
-quick_discouraged_pending_test: warning
+quick_discouraged_pending_test: error
 
 disabled_rules:
   - line_length

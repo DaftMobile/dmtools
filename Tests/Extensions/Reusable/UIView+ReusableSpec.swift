@@ -2,7 +2,7 @@ import Nimble
 import Quick
 import DMTools
 
-class UIViewReusableSpec: QuickSpec {
+class UIView_ReusableSpec: QuickSpec {
 
 	override func spec() {
 		describe("UIView+Reusable") {
