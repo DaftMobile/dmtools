@@ -15,7 +15,7 @@ public extension UIView {
 	- parameter subviews: The views to be added. After being added, the views appear on top of any other subviews and each other in order.
 	*/
 	@available(*, deprecated, message: "don't use the array version as it slows compile times")
-    func addSubviews(_ subviews: [UIView]) {
+	func addSubviews(_ subviews: [UIView]) {
 		for view in subviews {
 			addSubview(view)
 		}
@@ -28,7 +28,7 @@ public extension UIView {
 
 	- parameter subviews: The views to be added. After being added, the views appear on top of any other subviews and each other in order.
 	*/
-    func addSubviews(_ subviews: UIView ...) {
+	func addSubviews(_ subviews: UIView ...) {
 		for view in subviews {
 			addSubview(view)
 		}
@@ -39,7 +39,7 @@ public extension UIView {
 
 	- returns: A copy of provided `UIView`
 	*/
-    func viewCopy() -> UIView {
+	func viewCopy() -> UIView {
 		let archivedView = NSKeyedArchiver.archivedData(withRootObject: self)
 		guard let newView = NSKeyedUnarchiver.unarchiveObject(with: archivedView) as? UIView else {
 			fatalError("Could not unarchive view")

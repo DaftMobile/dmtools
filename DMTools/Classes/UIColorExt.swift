@@ -8,12 +8,12 @@ import UIKit
 public extension UIColor {
 	/**
 	Returns a `UIColor` with the specified hex value
-
+	
 	- parameter rgba: The hex of color in rgba `String` starting with `"#"`
-
+	
 	- returns: The desired color
 	*/
-    convenience init(rgba: String) {
+	convenience init(rgba: String) {
 		var red: CGFloat = 0.0
 		var green: CGFloat = 0.0
 		var blue: CGFloat = 0.0

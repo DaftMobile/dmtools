@@ -20,7 +20,7 @@ public extension String {
 
 	/**
 	Localizes the provided string
-
+	
 	- returns: A localized string accordind to current locale
 	*/
 	@available(*, deprecated, message: "use localized computed property instead")
@@ -75,7 +75,7 @@ public extension String {
 
 	/**
 	Transforms "a_really_really_long_text" to "aReallyReallyLongText"
-
+	
 	- returns: a String in camelcase
 	*/
 	func underscoreToCamelcase() -> String {
@@ -86,7 +86,7 @@ public extension String {
 
 	/**
 	Removes spaces from the String
-
+	
 	- returns: A provided String's copy without spaces
 	*/
 	func spacelessString() -> String {

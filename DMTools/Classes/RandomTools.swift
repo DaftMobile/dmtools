@@ -109,16 +109,16 @@ open class RandomTools {
 }
 
 public extension Array {
-    func randomElement() -> Element? {
+	func randomElement() -> Element? {
 		if self.isEmpty { return nil }
 		return self[RandomTools.randomInt(min: 0, max: lastIndex)]
 	}
 
-    func randomElementWithCorespondingProbabilities(_ probabilities: [Double]) -> Element {
+	func randomElementWithCorespondingProbabilities(_ probabilities: [Double]) -> Element {
 		return RandomTools.randomElementFromArray(self, withCorespondingProbabilities: probabilities)
 	}
 
-    func randomElements(count: Int) -> [Element] {
+	func randomElements(count: Int) -> [Element] {
 		if count == 0 { return [Element]() }
 		assert(self.count >= count, "Cannot draw \(count) elements from an array with \(self.count) element!")
 		return [Element]((self.randomizeOrder())[0..<count])

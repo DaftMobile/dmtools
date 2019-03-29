@@ -23,7 +23,7 @@ public extension Int {
 	/// For example 3.naturals() generates [0, 1, 2]
 	///
 	/// - Returns: array of consecutive naturals
-    func naturals() -> [Int] {
+	func naturals() -> [Int] {
 		var values: [Int] = self.zeros()
 		for index in 0..<self {
 			values[index] = index

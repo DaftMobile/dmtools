@@ -12,7 +12,7 @@ public extension Collection {
 
 	/**
 	Access the `index`th element safely
-
+	
 	- returns: The `index`th element if exists, nil if not
 	*/
 

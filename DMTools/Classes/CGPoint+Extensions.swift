@@ -59,7 +59,7 @@ public extension CGPoint {
 	/**
 	* Normalizes the vector described by the CGPoint to length 1.0.
 	*/
-    mutating func normalize() -> CGPoint {
+	mutating func normalize() -> CGPoint {
 		self = normalized()
 		return self
 	}
