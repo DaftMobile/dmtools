@@ -12,7 +12,7 @@ public extension Optional {
 	/// - Parameter closure: closure to map a wrapped value
 	/// - Returns: mapped value or nil
 	/// - Throws: rethrows if closure throws
-	public func take<U>(_ closure: (Wrapped) throws -> U) rethrows -> U? {
+    func take<U>(_ closure: (Wrapped) throws -> U) rethrows -> U? {
 		switch self {
 		case .some(let wrapped): return try closure(wrapped)
 		case .none: return nil
@@ -24,7 +24,7 @@ public extension Optional {
 	/// - Parameter error: error that will be thrown iff value is nil
 	/// - Returns: wrapped value
 	/// - Throws: passed error, if optional contains nil
-	public func unwrap(or error: Error) throws -> Wrapped {
+    func unwrap(or error: Error) throws -> Wrapped {
 		switch self {
 		case .some(let wrapped): return wrapped
 		case .none: throw error

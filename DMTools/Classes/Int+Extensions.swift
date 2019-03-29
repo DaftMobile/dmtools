@@ -9,14 +9,14 @@ public extension Int {
 	/**
 	* Ensures that the integer value stays with the specified range.
 	*/
-	public func clamped(_ range: Range<Int>) -> Int {
+	func clamped(_ range: Range<Int>) -> Int {
 		return (self < range.lowerBound) ? range.lowerBound : ((self >= range.upperBound) ? range.upperBound - 1 : self)
 	}
 
 	/**
 	* Ensures that the integer value stays with the specified range.
 	*/
-	public mutating func clamp(_ range: Range<Int>) -> Int {
+    mutating func clamp(_ range: Range<Int>) -> Int {
 		self = clamped(range)
 		return self
 	}
@@ -24,7 +24,7 @@ public extension Int {
 	/**
 	* Ensures that the integer value stays between the given values, inclusive.
 	*/
-	public func clamped(_ value1: Int, _ value2: Int) -> Int {
+	func clamped(_ value1: Int, _ value2: Int) -> Int {
 		let min = value1 < value2 ? value1 : value2
 		let max = value1 > value2 ? value1 : value2
 		return self < min ? min : (self > max ? max : self)
@@ -33,7 +33,7 @@ public extension Int {
 	/**
 	* Ensures that the integer value stays between the given values, inclusive.
 	*/
-	public mutating func clamp(_ value1: Int, _ value2: Int) -> Int {
+    mutating func clamp(_ value1: Int, _ value2: Int) -> Int {
 		self = clamped(value1, value2)
 		return self
 	}
@@ -41,7 +41,7 @@ public extension Int {
 	/**
 	* Returns a random integer in the specified range.
 	*/
-	public static func random(_ range: Range<Int>) -> Int {
+    static func random(_ range: Range<Int>) -> Int {
 		return Int(arc4random_uniform(UInt32(range.upperBound - range.lowerBound))) + range.lowerBound
 	}
 
@@ -49,14 +49,14 @@ public extension Int {
 	- parameter n: Top limit of return value
 	 - returns: Random integer between 0 and upper-1.
 	*/
-	public static func random(_ upper: Int) -> Int {
+    static func random(_ upper: Int) -> Int {
 		return Int(arc4random_uniform(UInt32(upper)))
 	}
 
 	/**
 	* Randomly returns either 1 or -1.
 	*/
-	public static func randomSign() -> Int {
+    static func randomSign() -> Int {
 		return (arc4random_uniform(2) == 0) ? 1 : -1
 	}
 
@@ -85,7 +85,7 @@ extension Int: Randomable {
 }
 
 public extension Int {
-	public func factorial() -> Int {
+    func factorial() -> Int {
 		assert(self >= 0, "Cannot compute factorial of a negative number :(")
 		var toReturn = 1
 		var counter = self

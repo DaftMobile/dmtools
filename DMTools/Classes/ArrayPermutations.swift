@@ -23,7 +23,7 @@ public extension Array {
 		}
 	}
 
-	public func generatePermutations() -> [[Element]] {
+	func generatePermutations() -> [[Element]] {
 		if isEmpty { return [[Element]]() }
 		var toReturn = [[Element]]()
 		Array.generatePermutation(self.count, workingArray: self, currentResults: &toReturn)

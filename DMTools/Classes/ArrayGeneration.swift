@@ -15,7 +15,7 @@ public extension Int {
 	/// Don't use it on negative numbers - it will crash.
 	///
 	/// - Returns: array of zeroes
-	public func zeros() -> [Int] {
+	func zeros() -> [Int] {
 		return [Int](repeating: 0, count: self)
 	}
 
@@ -23,7 +23,7 @@ public extension Int {
 	/// For example 3.naturals() generates [0, 1, 2]
 	///
 	/// - Returns: array of consecutive naturals
-	public func naturals() -> [Int] {
+    func naturals() -> [Int] {
 		var values: [Int] = self.zeros()
 		for index in 0..<self {
 			values[index] = index

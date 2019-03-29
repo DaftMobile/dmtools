@@ -21,6 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		77271169224E553A00011BBD /* JSONEncoder+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */; };
+		7727116A224E553A00011BBD /* JSONDecoder+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */; };
+		77943BAC224E51C300B08DC5 /* JSONDecoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */; };
+		77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */; };
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
 		A323BBEB21FB5CC000169DD4 /* DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A323BBDD21FB5CC000169DD4 /* DMTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A323BC0A21FB5D1000169DD4 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323BBF421FB5D0F00169DD4 /* Collection+Extension.swift */; };
@@ -110,6 +114,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Serialization.swift"; sourceTree = "<group>"; };
+		77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Serialization.swift"; sourceTree = "<group>"; };
+		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
+		77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SerializationSpec.swift"; sourceTree = "<group>"; };
 		A323BBDA21FB5CC000169DD4 /* DMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A323BBDD21FB5CC000169DD4 /* DMTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
 		A323BBDE21FB5CC000169DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -195,6 +203,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77271166224E553A00011BBD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */,
+				77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		77943BA5224E51BF00B08DC5 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */,
+				77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		A323BBD021FB5CC000169DD4 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +321,7 @@
 		A36E93C92219A85300ABDCD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77943BA5224E51BF00B08DC5 /* JSON */,
 				A36E93D22219A85300ABDCD4 /* Reusable */,
 				A36AB161221B756300EF4772 /* UIView */,
 				A36E93CA2219A85300ABDCD4 /* UICollectionView */,
@@ -336,6 +363,7 @@
 		A36E93DB2219A89200ABDCD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77271166224E553A00011BBD /* JSON */,
 				A36E93E42219A89200ABDCD4 /* Reusable */,
 				A36AB15F221B754F00EF4772 /* UIView */,
 				A36E93DF2219A89200ABDCD4 /* UITableView */,
@@ -439,11 +467,11 @@
 				TargetAttributes = {
 					A323BBD921FB5CC000169DD4 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					A323BBE221FB5CC000169DD4 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					A36E93C2221997A300ABDCD4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -511,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77271169224E553A00011BBD /* JSONEncoder+Serialization.swift in Sources */,
 				A323BC1D21FB5D1000169DD4 /* String+Extensions.swift in Sources */,
 				A323BC1821FB5D1000169DD4 /* RandomTools.swift in Sources */,
 				A36E93EA2219A89200ABDCD4 /* UITableView+DequeueCell.swift in Sources */,
@@ -541,6 +570,7 @@
 				A323BC0F21FB5D1000169DD4 /* UILayoutPriority+Extensions.swift in Sources */,
 				A36E93EE2219A89200ABDCD4 /* UIView+Reusable.swift in Sources */,
 				A36E93EC2219A89200ABDCD4 /* UITableViewHeaderFooterView+RegisterHeaderFooter.swift in Sources */,
+				7727116A224E553A00011BBD /* JSONDecoder+Serialization.swift in Sources */,
 				A36E93ED2219A89200ABDCD4 /* Reusable.swift in Sources */,
 				A323BC1E21FB5D1000169DD4 /* HIGButton.swift in Sources */,
 			);
@@ -554,6 +584,7 @@
 				A36E93C822199A7700ABDCD4 /* ArraySpec.swift in Sources */,
 				A36E93D92219A85300ABDCD4 /* UITableView+RegisterCellSpec.swift in Sources */,
 				A36E93D82219A85300ABDCD4 /* UITableView+DequeueTableHeaderFooterSpec.swift in Sources */,
+				77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */,
 				A36E93BD2219954B00ABDCD4 /* CollectionSpec.swift in Sources */,
 				A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */,
 				A36E93D62219A85300ABDCD4 /* UITableView+DequeueCellSpec.swift in Sources */,
@@ -568,6 +599,7 @@
 				A36E93B42219954B00ABDCD4 /* WeakArraySpec.swift in Sources */,
 				A36AB164221B756800EF4772 /* UIView+ExtensionsSpec.swift in Sources */,
 				A36E93B72219954B00ABDCD4 /* AttributedStringParsingSpec.swift in Sources */,
+				77943BAC224E51C300B08DC5 /* JSONDecoder+SerializationSpec.swift in Sources */,
 				A36E93B82219954B00ABDCD4 /* ArrayGenerationSpec.swift in Sources */,
 				A36E93D52219A85300ABDCD4 /* UICollectionView+DequeueCellSpec.swift in Sources */,
 				A36E93B52219954B00ABDCD4 /* SequenceSpec.swift in Sources */,
@@ -731,7 +763,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -757,7 +789,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daftmobile.DMTools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -782,7 +814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daftmobile.DMToolsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -806,7 +838,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daftmobile.DMToolsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

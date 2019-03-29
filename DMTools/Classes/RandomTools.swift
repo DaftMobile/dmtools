@@ -85,7 +85,7 @@ open class RandomTools {
 		let randomValue = randomDouble(0.0, max: 1.0)
 		let value = probabilities.first(where: { $0 >= randomValue })!
 
-		let index = probabilities.index(of: value)!
+		let index = probabilities.firstIndex(of: value)!
 
 		return tuples[index].0
 	}
@@ -109,16 +109,16 @@ open class RandomTools {
 }
 
 public extension Array {
-	public func randomElement() -> Element? {
+    func randomElement() -> Element? {
 		if self.isEmpty { return nil }
 		return self[RandomTools.randomInt(min: 0, max: lastIndex)]
 	}
 
-	public func randomElementWithCorespondingProbabilities(_ probabilities: [Double]) -> Element {
+    func randomElementWithCorespondingProbabilities(_ probabilities: [Double]) -> Element {
 		return RandomTools.randomElementFromArray(self, withCorespondingProbabilities: probabilities)
 	}
 
-	public func randomElements(count: Int) -> [Element] {
+    func randomElements(count: Int) -> [Element] {
 		if count == 0 { return [Element]() }
 		assert(self.count >= count, "Cannot draw \(count) elements from an array with \(self.count) element!")
 		return [Element]((self.randomizeOrder())[0..<count])

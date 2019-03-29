@@ -12,7 +12,7 @@ public extension UITableView {
 
 	- returns: indexPath for last row in table view, nil if table view is empty
 	*/
-	public func indexPathForLastRow() -> IndexPath? {
+	func indexPathForLastRow() -> IndexPath? {
 		if numberOfSections == 0 {
 			return nil
 		}
