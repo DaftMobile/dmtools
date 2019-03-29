@@ -1,10 +1,3 @@
-//
-//  UILayoutPriority+Extensions.swift
-//  DMTools
-//
-//  Created by Bartosz Kamiński on 07/02/2018.
-//
-
 import UIKit
 
 public extension UILayoutPriority {

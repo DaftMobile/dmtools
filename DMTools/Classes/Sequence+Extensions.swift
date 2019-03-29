@@ -1,11 +1,3 @@
-//
-//  Sequence+Extensions.swift
-//  Pods
-//
-//  Created by Kajetan Dąbrowski on 05/09/2017.
-//
-//
-
 import Foundation
 
 public extension Sequence {

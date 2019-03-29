@@ -1,11 +1,3 @@
-//
-//  AttributedString+Parsing.swift
-//  Pods
-//
-//  Created by Kajetan Dąbrowski on 12/08/16.
-//
-//
-
 import Foundation
 
 public extension NSAttributedString {

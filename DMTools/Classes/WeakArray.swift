@@ -1,11 +1,3 @@
-//
-//  WeakArray.swift
-//  DMTools
-//
-//  Created by Kajetan Dąbrowski on 30/06/16.
-//	Copyright DaftMobile. All rights reserved
-//
-
 import Foundation
 
 // MARK: Internal struct used to store weak references

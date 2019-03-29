@@ -1,15 +1,6 @@
-//
-//  LowPassFilterSignalSpec.swift
-//  DMTools_Tests
-//
-//  Created by Kajetan Dąbrowski on 06/10/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import Foundation
 import Quick
 import Nimble
-
 @testable import DMTools
 
 class LowPassFilterSignalSpec: QuickSpec {

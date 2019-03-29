@@ -1,15 +1,6 @@
-//
-//  IntFactorialSpec.swift
-//  DMTools
-//
-//  Copyright © 2016 DaftMobile. All rights reserved.
-//
-
 import Foundation
-
 import Quick
 import Nimble
-
 @testable import DMTools
 
 class IntFactorialSpec: QuickSpec {

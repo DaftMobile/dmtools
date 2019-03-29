@@ -1,13 +1,4 @@
-//
-//  ColorParsingSpec.swift
-//  DMTools
-//
-//  Created by Kajetan Dąbrowski on 11/08/16.
-//  Copyright © 2016 DaftMobile. All rights reserved.
-//
-
 import Foundation
-
 import Quick
 import Nimble
 

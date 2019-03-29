@@ -1,10 +1,3 @@
-//
-//  HIGButton.swift
-//  DMTools
-//
-//  Created by Bartosz Kamiński on 13/10/2017.
-//
-
 import Foundation
 import UIKit
 

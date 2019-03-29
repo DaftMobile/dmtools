@@ -1,16 +1,6 @@
-//
-//  ArrayGenerationSpec.swift
-//  DMTools
-//
-//  Created by Kajetan Dąbrowski on 15/02/2017.
-//  Copyright © 2017 DaftMobile. All rights reserved.
-//
-
 import Foundation
-
 import Quick
 import Nimble
-
 @testable import DMTools
 
 class ArrayGenerationSpec: QuickSpec {

@@ -1,11 +1,3 @@
-//
-//  ArrayGeneration.swift
-//  Pods
-//
-//  Created by Kajetan Dąbrowski on 15/02/2017.
-//
-//
-
 import Foundation
 
 public extension Int {

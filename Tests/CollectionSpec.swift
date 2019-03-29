@@ -1,13 +1,4 @@
-//
-//  CollectionSpec.swift
-//  DMTools
-//
-//  Created by Bartosz Kamiński on 23/03/2017.
-//  Copyright © 2017 DaftMobile. All rights reserved.
-//
-
 import Foundation
-
 import Quick
 import Nimble
 

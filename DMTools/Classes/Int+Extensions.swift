@@ -1,9 +1,4 @@
-//
-//  Created by DaftMobile Sp z o. o.
-//  Copyright (c) 2015 DaftMobile. All rights reserved.
-//
-
-import CoreGraphics
+import Foundation
 
 public extension Int {
 	/**
@@ -86,7 +81,7 @@ extension Int: Randomable {
 
 public extension Int {
 	func factorial() -> Int {
-		assert(self >= 0, "Cannot compute factorial of a negative number :(")
+		assert(self >= 0, "Cannot compute factorial of a negative number")
 		var toReturn = 1
 		var counter = self
 		while counter > 1 {

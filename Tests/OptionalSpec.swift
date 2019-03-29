@@ -1,18 +1,7 @@
-//
-//  SequenceSpec.swift
-//  DMTools
-//
-//  Created by Kajetan Dąbrowski on 05/09/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import Foundation
-
 import Quick
 import Nimble
-
-@testable
-import DMTools
+@testable import DMTools
 
 private struct TestError: Error {}
 

@@ -1,16 +1,9 @@
-//
-//  Created by DaftMobile Sp z o. o.
-//  Copyright (c) 2015 DaftMobile. All rights reserved.
-//
-
 import UIKit
 
 public extension UIColor {
 	/**
 	Returns a `UIColor` with the specified hex value
-	
 	- parameter rgba: The hex of color in rgba `String` starting with `"#"`
-	
 	- returns: The desired color
 	*/
 	convenience init(rgba: String) {

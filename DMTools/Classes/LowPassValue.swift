@@ -1,10 +1,3 @@
-//
-//  LowPassValue.swift
-//  DMTools
-//
-//  Created by Kajetan Dąbrowski on 06/10/2017.
-//
-
 import Foundation
 
 public struct LowPassFilterSignal<T: FloatingPoint> {
