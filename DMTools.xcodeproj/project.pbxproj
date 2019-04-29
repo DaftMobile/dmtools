@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		77271169224E553A00011BBD /* JSONEncoder+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */; };
 		7727116A224E553A00011BBD /* JSONDecoder+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */; };
+		77812DC4227713AE0066648C /* Array+Uniq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77812DC3227713AE0066648C /* Array+Uniq.swift */; };
+		77812DC7227713CA0066648C /* Array+UniqSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77812DC6227713CA0066648C /* Array+UniqSpec.swift */; };
 		77943BAC224E51C300B08DC5 /* JSONDecoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */; };
 		77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */; };
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
@@ -116,6 +118,8 @@
 /* Begin PBXFileReference section */
 		77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Serialization.swift"; sourceTree = "<group>"; };
 		77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Serialization.swift"; sourceTree = "<group>"; };
+		77812DC3227713AE0066648C /* Array+Uniq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Uniq.swift"; sourceTree = "<group>"; };
+		77812DC6227713CA0066648C /* Array+UniqSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UniqSpec.swift"; sourceTree = "<group>"; };
 		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
 		77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SerializationSpec.swift"; sourceTree = "<group>"; };
 		A323BBDA21FB5CC000169DD4 /* DMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +214,22 @@
 				77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		77812DC2227713A30066648C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				77812DC3227713AE0066648C /* Array+Uniq.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		77812DC5227713B70066648C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				77812DC6227713CA0066648C /* Array+UniqSpec.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 		77943BA5224E51BF00B08DC5 /* JSON */ = {
@@ -321,6 +341,7 @@
 		A36E93C92219A85300ABDCD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77812DC5227713B70066648C /* Array */,
 				77943BA5224E51BF00B08DC5 /* JSON */,
 				A36E93D22219A85300ABDCD4 /* Reusable */,
 				A36AB161221B756300EF4772 /* UIView */,
@@ -363,6 +384,7 @@
 		A36E93DB2219A89200ABDCD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77812DC2227713A30066648C /* Array */,
 				77271166224E553A00011BBD /* JSON */,
 				A36E93E42219A89200ABDCD4 /* Reusable */,
 				A36AB15F221B754F00EF4772 /* UIView */,
@@ -483,6 +505,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = A323BBD021FB5CC000169DD4;
@@ -561,6 +584,7 @@
 				A36E93E72219A89200ABDCD4 /* UICollectionView+DequeueCell.swift in Sources */,
 				A323BC0E21FB5D1000169DD4 /* UIColorExt.swift in Sources */,
 				A36E93EB2219A89200ABDCD4 /* UITableView+RegisterCell.swift in Sources */,
+				77812DC4227713AE0066648C /* Array+Uniq.swift in Sources */,
 				A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */,
 				A323BC1621FB5D1000169DD4 /* WeakArray.swift in Sources */,
 				A323BC1C21FB5D1000169DD4 /* CGVector+Extensions.swift in Sources */,
@@ -605,6 +629,7 @@
 				A36E93B52219954B00ABDCD4 /* SequenceSpec.swift in Sources */,
 				A371A79A221B364900BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift in Sources */,
 				A36E93BE2219954B00ABDCD4 /* LowPassFilterSignalSpec.swift in Sources */,
+				77812DC7227713CA0066648C /* Array+UniqSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
