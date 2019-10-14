@@ -27,6 +27,8 @@
 		77812DC7227713CA0066648C /* Array+UniqSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77812DC6227713CA0066648C /* Array+UniqSpec.swift */; };
 		77943BAC224E51C300B08DC5 /* JSONDecoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */; };
 		77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */; };
+		77CACF612354FC5200BEA20C /* Mutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CACF602354FC5200BEA20C /* Mutable.swift */; };
+		77CACF652354FC5D00BEA20C /* MutableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CACF632354FC5800BEA20C /* MutableSpec.swift */; };
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
 		A323BBEB21FB5CC000169DD4 /* DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A323BBDD21FB5CC000169DD4 /* DMTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A323BC0A21FB5D1000169DD4 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323BBF421FB5D0F00169DD4 /* Collection+Extension.swift */; };
@@ -122,6 +124,8 @@
 		77812DC6227713CA0066648C /* Array+UniqSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UniqSpec.swift"; sourceTree = "<group>"; };
 		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
 		77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SerializationSpec.swift"; sourceTree = "<group>"; };
+		77CACF602354FC5200BEA20C /* Mutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutable.swift; sourceTree = "<group>"; };
+		77CACF632354FC5800BEA20C /* MutableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableSpec.swift; sourceTree = "<group>"; };
 		A323BBDA21FB5CC000169DD4 /* DMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A323BBDD21FB5CC000169DD4 /* DMTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
 		A323BBDE21FB5CC000169DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,6 +245,23 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		77CACF5F2354FC5200BEA20C /* Lenses */ = {
+			isa = PBXGroup;
+			children = (
+				77CACF602354FC5200BEA20C /* Mutable.swift */,
+			);
+			name = Lenses;
+			path = Classes/Lenses;
+			sourceTree = "<group>";
+		};
+		77CACF622354FC5800BEA20C /* Lenses */ = {
+			isa = PBXGroup;
+			children = (
+				77CACF632354FC5800BEA20C /* MutableSpec.swift */,
+			);
+			path = Lenses;
+			sourceTree = "<group>";
+		};
 		A323BBD021FB5CC000169DD4 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +284,7 @@
 		A323BBDC21FB5CC000169DD4 /* DMTools */ = {
 			isa = PBXGroup;
 			children = (
+				77CACF5F2354FC5200BEA20C /* Lenses */,
 				A36E93DB2219A89200ABDCD4 /* Extensions */,
 				A323BC0521FB5D1000169DD4 /* Array+Extensions.swift */,
 				A323BBF721FB5D0F00169DD4 /* ArrayGeneration.swift */,
@@ -319,6 +341,7 @@
 		A36E93A62219954B00ABDCD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				77CACF622354FC5800BEA20C /* Lenses */,
 				A36E93C92219A85300ABDCD4 /* Extensions */,
 				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
 				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
@@ -572,6 +595,7 @@
 				A36AB165221B764300EF4772 /* UIView+Extensions.swift in Sources */,
 				A323BC0C21FB5D1000169DD4 /* Int+Extensions.swift in Sources */,
 				A323BC0A21FB5D1000169DD4 /* Collection+Extension.swift in Sources */,
+				77CACF612354FC5200BEA20C /* Mutable.swift in Sources */,
 				A36E93E92219A89200ABDCD4 /* UITableView+DequeueTableHeaderFooter.swift in Sources */,
 				A323BC1121FB5D1000169DD4 /* CGPoint+Extensions.swift in Sources */,
 				A323BC1521FB5D1000169DD4 /* ArrayPermutations.swift in Sources */,
@@ -609,6 +633,7 @@
 				A36E93D92219A85300ABDCD4 /* UITableView+RegisterCellSpec.swift in Sources */,
 				A36E93D82219A85300ABDCD4 /* UITableView+DequeueTableHeaderFooterSpec.swift in Sources */,
 				77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */,
+				77CACF652354FC5D00BEA20C /* MutableSpec.swift in Sources */,
 				A36E93BD2219954B00ABDCD4 /* CollectionSpec.swift in Sources */,
 				A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */,
 				A36E93D62219A85300ABDCD4 /* UITableView+DequeueCellSpec.swift in Sources */,
