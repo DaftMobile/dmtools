@@ -1,5 +1,3 @@
-// swiftlint:disable file_length function_body_length type_body_length
-
 import Foundation
 import Quick
 import Nimble
@@ -23,7 +21,7 @@ private final class TestedClass: Mutable, Equatable {
 		self.another = another
 	}
 
-	static func ==(lhs: TestedClass, rhs: TestedClass) -> Bool {
+	static func == (lhs: TestedClass, rhs: TestedClass) -> Bool {
 		return lhs.int == rhs.int && lhs.string == rhs.string && (lhs.another === rhs.another || lhs.another == rhs.another)
 	}
 }
@@ -40,7 +38,7 @@ class MutableSpec: QuickSpec {
 				}
 
 				it("should not mutate when not asked to") {
-					expect(sut.mutate { _ in } ).to(equal(sut))
+					expect(sut.mutate { _ in }).to(equal(sut))
 				}
 
 				it("should be able to mutate one") {
@@ -52,7 +50,7 @@ class MutableSpec: QuickSpec {
 				}
 
 				it("should be able to mutate multiple") {
-					let mutated = sut.mutate{
+					let mutated = sut.mutate {
 						$0.string = "New"
 						$0.int = 22
 					}
@@ -68,7 +66,7 @@ class MutableSpec: QuickSpec {
 				}
 
 				it("should not mutate when not asked to") {
-					expect(sut.mutate { _ in } ).to(equal(sut))
+					expect(sut.mutate { _ in }).to(equal(sut))
 				}
 
 				it("should be able to mutate one") {
@@ -80,7 +78,7 @@ class MutableSpec: QuickSpec {
 				}
 
 				it("should be able to mutate multiple") {
-					let mutated = sut.mutate{
+					let mutated = sut.mutate {
 						$0.string = "New"
 						$0.int = 22
 					}
@@ -88,7 +86,7 @@ class MutableSpec: QuickSpec {
 				}
 
 				it("should be mutate the same instance when mutating") {
-					let mutated = sut.mutate{
+					let mutated = sut.mutate {
 						$0.string = "New"
 						$0.int = 22
 					}
