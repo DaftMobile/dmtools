@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "dmtools",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v9),
+        .macOS(.v10_10)
     ],
     products: [
         .library(name: "DMTools", targets: ["DMTools"]),
