@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "DMTools",
+    name: "dmtools",
     platforms: [
         .iOS(.v9)
     ],
