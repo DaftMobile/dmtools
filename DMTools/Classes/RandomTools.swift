@@ -66,7 +66,7 @@ open class RandomTools {
 	}
 
 	open class func randomObjectWithProbpabilities(_ tuples: [(Any, Double)]) -> Any {
-		var tuples = tuples.sorted { $0.1 < $1.1 }
+		let tuples = tuples.sorted { $0.1 < $1.1 }
 
 		let probabilitySum: Double = tuples.reduce(0.0, { $0 + $1.1 })
 		var previousProb: Double = 0.0
