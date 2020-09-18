@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -49,3 +50,5 @@ class UIView_ExtensionSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

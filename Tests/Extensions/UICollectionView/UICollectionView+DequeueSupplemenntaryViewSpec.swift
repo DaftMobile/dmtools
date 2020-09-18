@@ -1,4 +1,5 @@
 import Nimble
+#if os(iOS)
 import Quick
 import UIKit
 import DMTools
@@ -51,3 +52,5 @@ class UICollectionView_DequeueSupplementaryViewSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

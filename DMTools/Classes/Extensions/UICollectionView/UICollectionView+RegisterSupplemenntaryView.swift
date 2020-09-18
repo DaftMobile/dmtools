@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UICollectionView {
@@ -5,3 +6,5 @@ extension UICollectionView {
 		register(viewType, forSupplementaryViewOfKind: kind, withReuseIdentifier: viewType.reuseIdentifier)
 	}
 }
+
+#endif

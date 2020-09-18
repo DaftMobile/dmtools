@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UITableView {
@@ -15,3 +16,5 @@ extension UITableView {
 		return cell
 	}
 }
+
+#endif

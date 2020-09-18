@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 public extension UILayoutPriority {
@@ -12,3 +13,5 @@ public extension UILayoutPriority {
 		return UILayoutPriority(lhs.rawValue - rhs)
 	}
 }
+
+#endif

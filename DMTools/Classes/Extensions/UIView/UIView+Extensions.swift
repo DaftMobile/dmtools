@@ -3,6 +3,7 @@
 //  Copyright (c) 2015 DaftMobile. All rights reserved.
 //
 
+#if os(iOS)
 import Foundation
 import UIKit
 
@@ -78,3 +79,5 @@ public extension UIView {
 		layer.add(animation, forKey: "shake")
 	}
 }
+
+#endif

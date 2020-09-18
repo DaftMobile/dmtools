@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 import Nimble
 import Quick
@@ -35,3 +36,5 @@ class UITableView_RegisterCellSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

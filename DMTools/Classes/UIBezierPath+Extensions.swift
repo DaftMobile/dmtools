@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 public extension UIBezierPath {
@@ -40,3 +41,5 @@ public extension UIBezierPath {
 		return path
 	}
 }
+
+#endif

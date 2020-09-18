@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 import Quick
 import Nimble
@@ -65,3 +66,5 @@ class ColorParsingSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

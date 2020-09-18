@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 import Nimble
 import Quick
@@ -39,3 +40,5 @@ class UITableView_DequeueCellSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

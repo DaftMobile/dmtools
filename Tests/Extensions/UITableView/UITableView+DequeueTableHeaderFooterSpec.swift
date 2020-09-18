@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import DMTools
@@ -35,3 +36,5 @@ class UITableView_DequeueTableHeaderFooterSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

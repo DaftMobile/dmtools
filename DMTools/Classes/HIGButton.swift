@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 import UIKit
 
@@ -10,3 +11,5 @@ open class HIGButton: UIButton {
 		return tappableArea().contains(point)
 	}
 }
+
+#endif

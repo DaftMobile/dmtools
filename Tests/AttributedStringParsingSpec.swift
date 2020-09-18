@@ -1,3 +1,4 @@
+#if os(iOS)
 //swiftlint:disable function_body_length
 import Foundation
 import UIKit
@@ -195,3 +196,5 @@ class AttributedStringParsingSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

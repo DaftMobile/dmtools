@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -41,3 +42,5 @@ class UICollectionView_RegisterCellSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

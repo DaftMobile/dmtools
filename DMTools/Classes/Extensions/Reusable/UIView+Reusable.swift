@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension Reusable where Self: UIView {
@@ -9,3 +10,5 @@ extension Reusable where Self: UIView {
 extension UITableViewCell: Reusable {}
 extension UITableViewHeaderFooterView: Reusable {}
 extension UICollectionReusableView: Reusable {}
+
+#endif
