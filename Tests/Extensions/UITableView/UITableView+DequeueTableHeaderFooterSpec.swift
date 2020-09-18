@@ -1,6 +1,7 @@
 import Nimble
 import Quick
 import DMTools
+import UIKit
 
 class UITableView_DequeueTableHeaderFooterSpec: QuickSpec {
 

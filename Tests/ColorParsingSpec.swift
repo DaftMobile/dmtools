@@ -1,6 +1,8 @@
 import Foundation
 import Quick
 import Nimble
+import UIKit
+import CoreGraphics
 
 @testable import DMTools
 
