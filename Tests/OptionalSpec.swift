@@ -26,7 +26,7 @@ class OptionalSpec: QuickSpec {
 
 				it("should be able to work with throwing functions") {
 					let value: Int? = 1
-					expect { try value.take({ value in
+					expect { try value.take({ value -> Int in
 						if value > 0 { throw TestError() } else { return value }
 						})
 					}.to(throwError())
@@ -34,9 +34,9 @@ class OptionalSpec: QuickSpec {
 
 				it("should not throw error in valid cases") {
 					let value: Int? = 1
-					expect { try value.take {
-						if $0 > 10 { throw TestError() }
-						return $0
+					expect { try value.take { value -> Int in
+						if value > 10 { throw TestError() }
+						return value
 					}
 					}.notTo(throwError())
 				}
