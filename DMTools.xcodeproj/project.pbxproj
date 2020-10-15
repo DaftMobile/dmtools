@@ -27,6 +27,8 @@
 		77812DC7227713CA0066648C /* Array+UniqSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77812DC6227713CA0066648C /* Array+UniqSpec.swift */; };
 		77943BAC224E51C300B08DC5 /* JSONDecoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */; };
 		77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */; };
+		8DDBF0F125385EBD002A36E6 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */; };
+		8DDBF0F425386148002A36E6 /* UIStackView+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */; };
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
 		A323BBEB21FB5CC000169DD4 /* DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A323BBDD21FB5CC000169DD4 /* DMTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A323BC0A21FB5D1000169DD4 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323BBF421FB5D0F00169DD4 /* Collection+Extension.swift */; };
@@ -122,6 +124,8 @@
 		77812DC6227713CA0066648C /* Array+UniqSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UniqSpec.swift"; sourceTree = "<group>"; };
 		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
 		77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SerializationSpec.swift"; sourceTree = "<group>"; };
+		8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		A323BBDA21FB5CC000169DD4 /* DMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A323BBDD21FB5CC000169DD4 /* DMTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
 		A323BBDE21FB5CC000169DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,6 +245,22 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		8DDBF0EF25385E93002A36E6 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
+		8DDBF0F2253860DB002A36E6 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
 		A323BBD021FB5CC000169DD4 = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +361,7 @@
 		A36E93C92219A85300ABDCD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8DDBF0F2253860DB002A36E6 /* UIStackView */,
 				77812DC5227713B70066648C /* Array */,
 				77943BA5224E51BF00B08DC5 /* JSON */,
 				A36E93D22219A85300ABDCD4 /* Reusable */,
@@ -388,6 +409,7 @@
 				77271166224E553A00011BBD /* JSON */,
 				A36E93E42219A89200ABDCD4 /* Reusable */,
 				A36AB15F221B754F00EF4772 /* UIView */,
+				8DDBF0EF25385E93002A36E6 /* UIStackView */,
 				A36E93DF2219A89200ABDCD4 /* UITableView */,
 				A36E93DC2219A89200ABDCD4 /* UICollectionView */,
 			);
@@ -567,6 +589,7 @@
 				A323BC1821FB5D1000169DD4 /* RandomTools.swift in Sources */,
 				A36E93EA2219A89200ABDCD4 /* UITableView+DequeueCell.swift in Sources */,
 				A323BC1B21FB5D1000169DD4 /* Array+Extensions.swift in Sources */,
+				8DDBF0F125385EBD002A36E6 /* UIStackView+Extensions.swift in Sources */,
 				A323BC1F21FB5D1000169DD4 /* LowPassValue.swift in Sources */,
 				A323BC1221FB5D1000169DD4 /* AttributedString+Parsing.swift in Sources */,
 				A36AB165221B764300EF4772 /* UIView+Extensions.swift in Sources */,
@@ -604,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDBF0F425386148002A36E6 /* UIStackView+ExtensionsSpec.swift in Sources */,
 				A36E93D42219A85300ABDCD4 /* UICollectionView+RegisterCellSpec.swift in Sources */,
 				A36E93C822199A7700ABDCD4 /* ArraySpec.swift in Sources */,
 				A36E93D92219A85300ABDCD4 /* UITableView+RegisterCellSpec.swift in Sources */,
