@@ -29,6 +29,24 @@ class UIStackView_ExtensionSpec: QuickSpec {
 					expect(sut.arrangedSubviews).to(equal(views))
 				}
 
+				context("when addArrangedSubviews called one more time") {
+					var additionalViews: [UIView]!
+
+					beforeEach {
+						additionalViews = [UIButton(), UIControl(), UITableView()]
+						sut.addArrangedSubviews(views: additionalViews)
+					}
+
+					afterEach {
+						additionalViews = nil
+					}
+
+					it("should add new arranged views and not remove old") {
+						expect(sut.arrangedSubviews).to(equal(views + additionalViews))
+					}
+
+				}
+
 				context("when removeArrangedSubviews called") {
 					beforeEach {
 						sut.removeAllArrangedSubviews()
