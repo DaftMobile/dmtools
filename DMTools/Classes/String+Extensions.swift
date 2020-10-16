@@ -118,4 +118,22 @@ public extension String {
 		let rect = self.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: fontAtributes, context: nil)
 		return CGSize(width: rect.width, height: rect.height)
 	}
+
+	/**
+	Removes white spacing from the string
+
+	- returns: string without white spacings
+	*/
+	func removeWhiteSpaces() -> String {
+		return self.replacingOccurrences(of: " ", with: "")
+	}
+
+	/**
+	Make capitalized first letter only in first word
+
+	- returns: string with capitalized first letter in first word
+	*/
+	func capitalizedFirstLetter() -> String {
+		return prefix(1).capitalized + dropFirst().lowercased()
+	}
 }

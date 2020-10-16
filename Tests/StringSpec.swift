@@ -23,5 +23,101 @@ class StringExtensionSpec: QuickSpec {
 			}
 
 		}
+
+		describe("removeWhiteSpaces") {
+			var sut: String!
+
+			afterEach {
+				sut = nil
+			}
+
+			describe("string with white spaces") {
+				beforeEach {
+					sut = "Ala ma   kota"
+				}
+
+				it("should return string witout white spaces") {
+					expect(sut.removeWhiteSpaces()).to(equal("Alamakota"))
+				}
+			}
+
+			describe("string without white spaces") {
+				beforeEach {
+					sut = "~BllalarbtbvfdfHDefrfko"
+				}
+
+				it("should not change string") {
+					expect(sut.removeWhiteSpaces()).to(equal("~BllalarbtbvfdfHDefrfko"))
+				}
+			}
+		}
+
+		describe("capitalizedFirstLetter") {
+			var sut: String!
+
+			afterEach {
+				sut = nil
+			}
+
+			describe("string where every word has lowercased letters") {
+				beforeEach {
+					sut = "one, two, three"
+				}
+
+				it("should return string with capitalized first letter in first word") {
+					expect(sut.capitalizedFirstLetter()).to(equal("One, two, three"))
+				}
+			}
+
+			describe("string with every word capitalized") {
+				beforeEach {
+					sut = "One, Two, Three"
+				}
+
+				it("should return string with capitalized first letter in first word") {
+					expect(sut.capitalizedFirstLetter()).to(equal("One, two, three"))
+				}
+			}
+
+			describe("string with lowercased letters") {
+				beforeEach {
+					sut = "alamakota"
+				}
+
+				it("should return string with capitalized first letter in first word") {
+					expect(sut.capitalizedFirstLetter()).to(equal("Alamakota"))
+				}
+			}
+
+			describe("capitalized string") {
+				beforeEach {
+					sut = "Alamakota"
+				}
+
+				it("should return string with capitalized first letter in first word") {
+					expect(sut.capitalizedFirstLetter()).to(equal("Alamakota"))
+				}
+			}
+
+			describe("string with first word capitalized") {
+				beforeEach {
+					sut = "One, two, three"
+				}
+
+				it("should return string with capitalized first letter in first word") {
+					expect(sut.capitalizedFirstLetter()).to(equal("One, two, three"))
+				}
+			}
+
+			describe("string upercased letters in the middle") {
+				beforeEach {
+					sut = "alaMaKota"
+				}
+
+				it("should return string with capitalized first letter in first word") {
+					expect(sut.capitalizedFirstLetter()).to(equal("Alamakota"))
+				}
+			}
+		}
 	}
 }
