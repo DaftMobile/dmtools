@@ -26,7 +26,7 @@ prepare:
   script:
     - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
   cache:
-    policy: push
+    policy: pull-push
 
 lint:
   stage: lint
