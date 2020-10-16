@@ -88,5 +88,55 @@ class ArrayExtensionsSpec: QuickSpec {
 				expect(sut).to(equal([EquatableClass(value: 2), EquatableClass(value: 3)]))
 			}
 		}
+
+		describe("appending") {
+			describe("int") {
+				var intArray: [Int]!
+				var appendingNewElementArray: [Int]!
+
+				beforeEach {
+					intArray = [2, 8, 7, 5, 9, 3]
+					appendingNewElementArray = intArray.appending(10)
+				}
+
+				afterEach {
+					intArray = nil
+					appendingNewElementArray = nil
+				}
+
+				it("should be correct new array") {
+					expect(appendingNewElementArray).to(equal([2, 8, 7, 5, 9, 3, 10]))
+				}
+
+				it("should be not changed old array") {
+					expect(intArray).to(equal([2, 8, 7, 5, 9, 3]))
+				}
+			}
+
+			describe("string") {
+				var stringArray: [String]!
+				var appendingNewElementArray: [String]!
+
+				beforeEach {
+					stringArray = ["ala", "ma", "kota"]
+					appendingNewElementArray = stringArray.appending("rudego")
+				}
+
+				afterEach {
+					stringArray = nil
+					appendingNewElementArray = nil
+				}
+
+				it("should be correct new array") {
+					expect(appendingNewElementArray).to(equal(["ala", "ma", "kota", "rudego"]))
+				}
+
+				it("should be not changed old array") {
+					expect(stringArray).to(equal(["ala", "ma", "kota"]))
+				}
+			}
+
+
+		}
 	}
 }

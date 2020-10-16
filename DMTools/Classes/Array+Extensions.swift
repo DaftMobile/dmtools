@@ -35,6 +35,17 @@ public extension Array {
 	}
 
 	/**
+	Apppends value to Array and return new array
+
+	- parameter element: element to append
+
+	- returns: with new element from parameter
+	*/
+	func appending(_ element: Element) -> Array {
+        return self + [element]
+    }
+
+	/**
 	Randomizes the order of elements in array
 	*/
 	mutating func randomizeOrderInPlace() {
