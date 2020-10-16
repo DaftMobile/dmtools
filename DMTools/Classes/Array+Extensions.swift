@@ -42,8 +42,8 @@ public extension Array {
 	- returns: with new element from parameter
 	*/
 	func appending(_ element: Element) -> Array {
-        return self + [element]
-    }
+		return self + [element]
+	}
 
 	/**
 	Randomizes the order of elements in array
