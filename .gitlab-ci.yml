@@ -39,6 +39,8 @@ lint:
     expire_in: 4 weeks
     paths:
       - lint_output/lint.html
+  tags:
+    - swiftlint
 
 
 test:
