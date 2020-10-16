@@ -30,6 +30,8 @@
 		8DD6E6C5253973530040E595 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6C4253973530040E595 /* UIControl+Extensions.swift */; };
 		8DD6E6C9253975C80040E595 /* UIControl+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6C7253975540040E595 /* UIControl+ExtensionsSpec.swift */; };
 		8DD6E6CC25397A0E0040E595 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6CB25397A0E0040E595 /* UIImageView+Extensions.swift */; };
+		8DD6E6D22539988E0040E595 /* TimeInterval+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */; };
+		8DD6E6D3253998930040E595 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6CF253997030040E595 /* TimeInterval+Extensions.swift */; };
 		8DDBF0F125385EBD002A36E6 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */; };
 		8DDBF0F425386148002A36E6 /* UIStackView+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */; };
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
@@ -130,6 +132,8 @@
 		8DD6E6C4253973530040E595 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
 		8DD6E6C7253975540040E595 /* UIControl+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		8DD6E6CB25397A0E0040E595 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		8DD6E6CF253997030040E595 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		A323BBDA21FB5CC000169DD4 /* DMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +338,7 @@
 				A323BBF821FB5D0F00169DD4 /* UIColorExt.swift */,
 				A323BBF921FB5D0F00169DD4 /* UILayoutPriority+Extensions.swift */,
 				A323BBFD21FB5D0F00169DD4 /* UITableView+Extensions.swift */,
+				8DD6E6CF253997030040E595 /* TimeInterval+Extensions.swift */,
 				A323BC0021FB5D1000169DD4 /* WeakArray.swift */,
 				A323BBDD21FB5CC000169DD4 /* DMTools.h */,
 				A323BBDE21FB5CC000169DD4 /* Info.plist */,
@@ -384,6 +389,7 @@
 				A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */,
 				A36E93B22219954B00ABDCD4 /* Info.plist */,
 				A36E93B32219954B00ABDCD4 /* StringSpec.swift */,
+				8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -639,6 +645,7 @@
 				A323BC0B21FB5D1000169DD4 /* Optional+Extensions.swift in Sources */,
 				A36E93E72219A89200ABDCD4 /* UICollectionView+DequeueCell.swift in Sources */,
 				A323BC0E21FB5D1000169DD4 /* UIColorExt.swift in Sources */,
+				8DD6E6D3253998930040E595 /* TimeInterval+Extensions.swift in Sources */,
 				A36E93EB2219A89200ABDCD4 /* UITableView+RegisterCell.swift in Sources */,
 				77812DC4227713AE0066648C /* Array+Uniq.swift in Sources */,
 				8DD6E6CC25397A0E0040E595 /* UIImageView+Extensions.swift in Sources */,
@@ -689,6 +696,7 @@
 				A36E93B52219954B00ABDCD4 /* SequenceSpec.swift in Sources */,
 				A371A79A221B364900BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift in Sources */,
 				A36E93BE2219954B00ABDCD4 /* LowPassFilterSignalSpec.swift in Sources */,
+				8DD6E6D22539988E0040E595 /* TimeInterval+ExtensionsSpec.swift in Sources */,
 				77812DC7227713CA0066648C /* Array+UniqSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
