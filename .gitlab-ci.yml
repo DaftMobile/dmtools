@@ -1,21 +1,34 @@
+
 stages:
   - prepare
   - lint
   - test
 
-prepare:
-  stage: prepare
-  script:
-    - brew bundle
-    - bundle install
-    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
+.xcode:
   tags:
-    - ios
+    - xcode.11.6
+
+.carthage:
+  extends:
+    - .xcode
+  before_script:
+    - bundle install
   cache:
     key: dmpods-cache
     paths:
       - Carthage/
-    policy: pull-push
+    policy: pull
+
+prepare:
+  stage: prepare
+  extends:
+    - .carthage
+  script:
+    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
+  tags:
+    - ios
+  cache:
+    policy: push
 
 lint:
   stage: lint
@@ -34,12 +47,9 @@ lint:
 
 test:
   stage: test
+  extends:
+    - .carthage
   script:
     - bundle exec fastlane test
   tags:
     - ios
-  cache:
-    key: dmpods-cache
-    paths:
-      - Carthage/
-    policy: pull
