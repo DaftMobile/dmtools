@@ -27,6 +27,8 @@
 		77812DC7227713CA0066648C /* Array+UniqSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77812DC6227713CA0066648C /* Array+UniqSpec.swift */; };
 		77943BAC224E51C300B08DC5 /* JSONDecoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */; };
 		77943BAD224E51C300B08DC5 /* JSONEncoder+SerializationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */; };
+		8DD6E6C5253973530040E595 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6C4253973530040E595 /* UIControl+Extensions.swift */; };
+		8DD6E6C9253975C80040E595 /* UIControl+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6E6C7253975540040E595 /* UIControl+ExtensionsSpec.swift */; };
 		8DDBF0F125385EBD002A36E6 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */; };
 		8DDBF0F425386148002A36E6 /* UIStackView+ExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */; };
 		A323BBE421FB5CC000169DD4 /* DMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A323BBDA21FB5CC000169DD4 /* DMTools.framework */; };
@@ -124,6 +126,8 @@
 		77812DC6227713CA0066648C /* Array+UniqSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UniqSpec.swift"; sourceTree = "<group>"; };
 		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
 		77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+SerializationSpec.swift"; sourceTree = "<group>"; };
+		8DD6E6C4253973530040E595 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
+		8DD6E6C7253975540040E595 /* UIControl+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		8DDBF0F025385EBD002A36E6 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		8DDBF0F325386148002A36E6 /* UIStackView+ExtensionsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ExtensionsSpec.swift"; sourceTree = "<group>"; };
 		A323BBDA21FB5CC000169DD4 /* DMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +247,22 @@
 				77943BA9224E51BF00B08DC5 /* JSONEncoder+SerializationSpec.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		8DD6E6C32539731E0040E595 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				8DD6E6C4253973530040E595 /* UIControl+Extensions.swift */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		8DD6E6C62539752D0040E595 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				8DD6E6C7253975540040E595 /* UIControl+ExtensionsSpec.swift */,
+			);
+			path = UIControl;
 			sourceTree = "<group>";
 		};
 		8DDBF0EF25385E93002A36E6 /* UIStackView */ = {
@@ -367,6 +387,7 @@
 				A36E93D22219A85300ABDCD4 /* Reusable */,
 				A36AB161221B756300EF4772 /* UIView */,
 				A36E93CA2219A85300ABDCD4 /* UICollectionView */,
+				8DD6E6C62539752D0040E595 /* UIControl */,
 				A36E93CD2219A85300ABDCD4 /* UITableView */,
 			);
 			path = Extensions;
@@ -411,6 +432,7 @@
 				A36AB15F221B754F00EF4772 /* UIView */,
 				8DDBF0EF25385E93002A36E6 /* UIStackView */,
 				A36E93DF2219A89200ABDCD4 /* UITableView */,
+				8DD6E6C32539731E0040E595 /* UIControl */,
 				A36E93DC2219A89200ABDCD4 /* UICollectionView */,
 			);
 			name = Extensions;
@@ -611,6 +633,7 @@
 				A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */,
 				A323BC1621FB5D1000169DD4 /* WeakArray.swift in Sources */,
 				A323BC1C21FB5D1000169DD4 /* CGVector+Extensions.swift in Sources */,
+				8DD6E6C5253973530040E595 /* UIControl+Extensions.swift in Sources */,
 				A323BC0D21FB5D1000169DD4 /* ArrayGeneration.swift in Sources */,
 				A323BC1721FB5D1000169DD4 /* UIBezierPath+Extensions.swift in Sources */,
 				A323BC1A21FB5D1000169DD4 /* CGFloat+Extensions.swift in Sources */,
@@ -641,6 +664,7 @@
 				A36E93C02219954B00ABDCD4 /* StringSpec.swift in Sources */,
 				A36E93BB2219954B00ABDCD4 /* UIBezierPathSpec.swift in Sources */,
 				A36E93BA2219954B00ABDCD4 /* ArrayPermutationsSpec.swift in Sources */,
+				8DD6E6C9253975C80040E595 /* UIControl+ExtensionsSpec.swift in Sources */,
 				A36E93BC2219954B00ABDCD4 /* IntFactorialSpec.swift in Sources */,
 				A36E93B92219954B00ABDCD4 /* OptionalSpec.swift in Sources */,
 				A36E93B62219954B00ABDCD4 /* ColorParsingSpec.swift in Sources */,
