@@ -23,7 +23,8 @@ prepare:
   extends:
     - .carthage
   script:
-    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
+    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS --no-build
+    - ./carthage-build.sh bootstrap --platform iOS --configuration Release --cache-builds --no-use-binarie
   cache:
     policy: pull-push
 
@@ -33,6 +34,7 @@ lint:
     - mkdir -p ./lint_output
     - swiftlint --config .swiftlint.yml > lint_output/lint.html
   cache: {}
+  needs: []
   artifacts:
     when: always
     expire_in: 4 weeks
@@ -41,10 +43,26 @@ lint:
   tags:
     - swiftlint
 
-
-test:
+test:ios:
   stage: test
   extends:
     - .carthage
   script:
     - bundle exec fastlane test
+  needs:
+    - job: prepare
+      artifacts: false
+    - job: lint
+      artifacts: false
+
+test:linux:
+  stage: test
+  tags:
+    - docker
+  image: swift:5.3
+  cache: {}
+  script:
+    - swift test
+  needs:
+    - job: lint
+      artifacts: false
