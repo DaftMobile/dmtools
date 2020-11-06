@@ -125,6 +125,7 @@
 /* Begin PBXFileReference section */
 		77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Serialization.swift"; sourceTree = "<group>"; };
 		77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Serialization.swift"; sourceTree = "<group>"; };
+		775A191C2555BA2100C6C920 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		77812DC3227713AE0066648C /* Array+Uniq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Uniq.swift"; sourceTree = "<group>"; };
 		77812DC6227713CA0066648C /* Array+UniqSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UniqSpec.swift"; sourceTree = "<group>"; };
 		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
@@ -228,6 +229,29 @@
 				77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		775A191D2555BA3800C6C920 /* DMToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A36E93B22219954B00ABDCD4 /* Info.plist */,
+				A36E93C92219A85300ABDCD4 /* Extensions */,
+				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
+				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
+				A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */,
+				A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */,
+				A36E93AA2219954B00ABDCD4 /* AttributedStringParsingSpec.swift */,
+				A36E93AB2219954B00ABDCD4 /* ArrayGenerationSpec.swift */,
+				A36E93AC2219954B00ABDCD4 /* OptionalSpec.swift */,
+				A36E93AD2219954B00ABDCD4 /* ArrayPermutationsSpec.swift */,
+				A36E93AE2219954B00ABDCD4 /* UIBezierPathSpec.swift */,
+				A36E93AF2219954B00ABDCD4 /* IntFactorialSpec.swift */,
+				A36E93B02219954B00ABDCD4 /* CollectionSpec.swift */,
+				A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */,
+				A36E93B32219954B00ABDCD4 /* StringSpec.swift */,
+				8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */,
+			);
+			path = DMToolsTests;
 			sourceTree = "<group>";
 		};
 		77812DC2227713A30066648C /* Array */ = {
@@ -374,22 +398,8 @@
 		A36E93A62219954B00ABDCD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A36E93C92219A85300ABDCD4 /* Extensions */,
-				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
-				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
-				A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */,
-				A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */,
-				A36E93AA2219954B00ABDCD4 /* AttributedStringParsingSpec.swift */,
-				A36E93AB2219954B00ABDCD4 /* ArrayGenerationSpec.swift */,
-				A36E93AC2219954B00ABDCD4 /* OptionalSpec.swift */,
-				A36E93AD2219954B00ABDCD4 /* ArrayPermutationsSpec.swift */,
-				A36E93AE2219954B00ABDCD4 /* UIBezierPathSpec.swift */,
-				A36E93AF2219954B00ABDCD4 /* IntFactorialSpec.swift */,
-				A36E93B02219954B00ABDCD4 /* CollectionSpec.swift */,
-				A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */,
-				A36E93B22219954B00ABDCD4 /* Info.plist */,
-				A36E93B32219954B00ABDCD4 /* StringSpec.swift */,
-				8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */,
+				775A191D2555BA3800C6C920 /* DMToolsTests */,
+				775A191C2555BA2100C6C920 /* LinuxMain.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
