@@ -1,3 +1,4 @@
+import UIKit
 import AVFoundation
 
 public extension UIImageView {
