@@ -1,3 +1,5 @@
+#if os(macOS) || os(iOS)
+
 //swiftlint:disable identifier_name
 import CoreGraphics
 
@@ -198,3 +200,5 @@ extension CGVector: CustomStringConvertible {
 		return "[\(self.dx) , \(self.dy)]"
 	}
 }
+
+#endif
