@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 import AVFoundation
 
@@ -10,3 +11,5 @@ public extension UIImageView {
 		return AVMakeRect(aspectRatio: image?.size ?? .zero, insideRect: frame)
 	}
 }
+
+#endif

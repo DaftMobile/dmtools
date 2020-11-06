@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -60,3 +61,5 @@ class UIStackView_ExtensionSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

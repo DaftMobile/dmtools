@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 import UIKit
 
@@ -17,3 +18,5 @@ public extension UIControl {
 	}
 	
 }
+
+#endif
