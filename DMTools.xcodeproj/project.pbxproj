@@ -352,7 +352,7 @@
 		"CwlPreconditionTesting::CwlPosixPreconditionTesting::Product" /* CwlPosixPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CwlPosixPreconditionTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CwlPreconditionTesting::CwlPreconditionTesting::Product" /* CwlPreconditionTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CwlPreconditionTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DMTools::DMTools::Product" /* DMTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"DMTools::DMToolsTests::Product" /* DMToolsTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DMToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"DMTools::DMToolsTests::Product" /* DMToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DMToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Nimble::Nimble::Product" /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_100 /* WeakArraySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakArraySpec.swift; sourceTree = "<group>"; };
@@ -2375,9 +2375,9 @@
 					"$(SRCROOT)/DMTools.xcodeproj/GeneratedModuleMap/QuickObjCRuntime",
 				);
 				INFOPLIST_FILE = DMTools.xcodeproj/DMToolsTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/DMTools.xcodeproj/GeneratedModuleMap/CwlCatchExceptionSupport/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/DMTools.xcodeproj/GeneratedModuleMap/QuickObjCRuntime/module.modulemap";
@@ -2407,9 +2407,9 @@
 					"$(SRCROOT)/DMTools.xcodeproj/GeneratedModuleMap/QuickObjCRuntime",
 				);
 				INFOPLIST_FILE = DMTools.xcodeproj/DMToolsTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/DMTools.xcodeproj/GeneratedModuleMap/CwlCatchExceptionSupport/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/DMTools.xcodeproj/GeneratedModuleMap/QuickObjCRuntime/module.modulemap";
