@@ -1,6 +1,5 @@
 
 stages:
-  - prepare
   - lint
   - test
 
@@ -11,22 +10,6 @@ stages:
 .carthage:
   extends:
     - .xcode
-  before_script:
-    - bundle install
-  cache:
-    key: dmpods-cache
-    paths:
-      - Carthage/
-    policy: pull
-
-prepare:
-  stage: prepare
-  extends:
-    - .carthage
-  script:
-    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
-  cache:
-    policy: pull-push
 
 lint:
   stage: lint
