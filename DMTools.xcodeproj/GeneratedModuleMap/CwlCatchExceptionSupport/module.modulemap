@@ -1,0 +1,4 @@
+module CwlCatchExceptionSupport {
+    umbrella "/Users/ilyapiatrenka/Documents/dmtools/.build/checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include"
+    export *
+}
