@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public class StringLocalizationInjection {
 	public class func setPreferredLanguage(_ language: String) {

@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 @available(iOS 9.0, *)
 public extension UIStackView {
