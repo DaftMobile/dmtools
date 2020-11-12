@@ -95,6 +95,7 @@
 		A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */; };
 		A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */; };
 		A371A79A221B364900BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */; };
+		AEE10BAB255D8CE30044828C /* RadnomTools+CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE10BAA255D8CE30044828C /* RadnomTools+CoreGraphics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
 		A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryView.swift"; sourceTree = "<group>"; };
 		A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
+		AEE10BAA255D8CE30044828C /* RadnomTools+CoreGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RadnomTools+CoreGraphics.swift"; path = "Classes/RadnomTools+CoreGraphics.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +236,6 @@
 		775A191D2555BA3800C6C920 /* DMToolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A36E93B22219954B00ABDCD4 /* Info.plist */,
 				A36E93C92219A85300ABDCD4 /* Extensions */,
 				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
 				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
@@ -356,6 +357,7 @@
 				A323BBFA21FB5D0F00169DD4 /* Operators.swift */,
 				A323BBF521FB5D0F00169DD4 /* Optional+Extensions.swift */,
 				A323BC0221FB5D1000169DD4 /* RandomTools.swift */,
+				AEE10BAA255D8CE30044828C /* RadnomTools+CoreGraphics.swift */,
 				A323BC0321FB5D1000169DD4 /* Sequence+Extensions.swift */,
 				A323BC0721FB5D1000169DD4 /* String+Extensions.swift */,
 				A323BC0121FB5D1000169DD4 /* UIBezierPath+Extensions.swift */,
@@ -398,6 +400,7 @@
 		A36E93A62219954B00ABDCD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A36E93B22219954B00ABDCD4 /* Info.plist */,
 				775A191D2555BA3800C6C920 /* DMToolsTests */,
 				775A191C2555BA2100C6C920 /* LinuxMain.swift */,
 			);
@@ -633,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE10BAB255D8CE30044828C /* RadnomTools+CoreGraphics.swift in Sources */,
 				77271169224E553A00011BBD /* JSONEncoder+Serialization.swift in Sources */,
 				A323BC1D21FB5D1000169DD4 /* String+Extensions.swift in Sources */,
 				A323BC1821FB5D1000169DD4 /* RandomTools.swift in Sources */,
