@@ -6,7 +6,7 @@ stages:
 
 .xcode:
   tags:
-    - xcode.11.6
+    - xcode.12
 
 .carthage:
   extends:
