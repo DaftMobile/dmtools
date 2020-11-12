@@ -1,6 +1,7 @@
 import Quick
 import Nimble
 @testable import DMTools
+import Foundation
 
 class JSONEncoder_SerializationSpec: QuickSpec {
 

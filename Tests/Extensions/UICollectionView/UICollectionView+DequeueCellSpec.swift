@@ -27,11 +27,11 @@ class UICollectionView_DequeueCellSpec: QuickSpec {
 				}
 			}
 
-			context("when the cell is NOT registered") {
-				it("should raise exception when dequeuing the cell") {
-					expect { _ = sut.dequeueCell(UICollectionViewCell.self, for: .init()) }.to(raiseException())
-				}
-			}
+//			context("when the cell is NOT registered") {
+//				it("should raise exception when dequeuing the cell") {
+//					expect { _ = sut.dequeueCell(UICollectionViewCell.self, for: .init()) }.to(throwAssertion())
+//				}
+//			}
 		}
 	}
 }

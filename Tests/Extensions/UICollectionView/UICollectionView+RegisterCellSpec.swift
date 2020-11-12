@@ -29,13 +29,13 @@ class UICollectionView_RegisterCellSpec: QuickSpec {
 				}
 			}
 
-			context("when not register UICollectionViewCell") {
-				it("should throw assertion when dequeuing the cell") {
-					expect {
-						_ = sut.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: .init())
-					}.to(raiseException())
-				}
-			}
+//			context("when not register UICollectionViewCell") {
+//				it("should throw assertion when dequeuing the cell") {
+//					expect {
+//						_ = sut.dequeueReusableCell(withReuseIdentifier: "UICollectionViewCell", for: .init())
+//					}.to(throwAssertion())
+//				}
+//			}
 		}
 	}
 }

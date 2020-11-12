@@ -1,6 +1,7 @@
 import Nimble
 import Quick
 import DMTools
+import UIKit
 
 class UIView_ReusableSpec: QuickSpec {
 

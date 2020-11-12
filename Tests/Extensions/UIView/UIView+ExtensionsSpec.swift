@@ -19,7 +19,7 @@ class UIView_ExtensionSpec: QuickSpec {
 				}
 
 				it("should correctly copy a view") {
-					expect { _ = sut.viewCopy() }.notTo(raiseException())
+					expect { _ = sut.viewCopy() }.notTo(throwError())
 				}
 
 				it("should have the same frame") {
