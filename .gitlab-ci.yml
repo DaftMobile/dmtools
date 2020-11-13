@@ -23,8 +23,7 @@ prepare:
   extends:
     - .carthage
   script:
-    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS --no-build
-    - ./carthage-build.sh bootstrap --platform iOS --configuration Release --cache-builds --no-use-binaries
+    - ./conf.sh bootstrap --platform iOS --configuration Release --cache-builds --no-use-binaries
   cache:
     policy: pull-push
 
