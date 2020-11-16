@@ -6,7 +6,7 @@ stages:
 
 .xcode:
   tags:
-    - xcode.11.6
+    - xcode.12.1
 
 .carthage:
   extends:
@@ -24,7 +24,7 @@ prepare:
   extends:
     - .carthage
   script:
-    - carthage bootstrap --no-use-binaries --cache-builds --platform iOS
+    - ./conf.sh bootstrap --no-use-binaries --cache-builds --platform iOS
   cache:
     policy: pull-push
 

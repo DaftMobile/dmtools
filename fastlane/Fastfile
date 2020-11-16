@@ -5,7 +5,7 @@ platform :ios do
   lane :test do
     scan(
       project: "DMTools.xcodeproj",
-      scheme: "DMTools",
+      scheme: "DMTools-Package",
     )
   end
 end
