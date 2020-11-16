@@ -14,7 +14,7 @@ stages:
   before_script:
     - bundle install
   cache:
-    key: dmpods-cache
+    key: dmpods-cache-12-1
     paths:
       - Carthage/
     policy: pull
