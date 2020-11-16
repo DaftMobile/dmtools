@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		D152D6F825626C7C0067FDCF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D152D6F725626C7C0067FDCF /* Quick.framework */; };
 		D152D6FE25626C7F0067FDCF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D152D6FD25626C7F0067FDCF /* Nimble.framework */; };
+		D188ECE525629EB600F0C24A /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D152D6F725626C7C0067FDCF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D188ECE92562A06000F0C24A /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D152D6FD25626C7F0067FDCF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		OBJ_121 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Array+Extensions.swift */; };
 		OBJ_122 /* ArrayGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ArrayGeneration.swift */; };
 		OBJ_123 /* ArrayPermutations.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ArrayPermutations.swift */; };
@@ -111,6 +113,20 @@
 			remoteInfo = DMToolsTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D188ECE125629D8700F0C24A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D188ECE92562A06000F0C24A /* Nimble.framework in CopyFiles */,
+				D188ECE525629EB600F0C24A /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D152D6E325626B520067FDCF /* Nimble */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Nimble; path = Carthage/Checkouts/Nimble; sourceTree = "<group>"; };
@@ -547,6 +563,7 @@
 			buildPhases = (
 				OBJ_176 /* Sources */,
 				OBJ_206 /* Frameworks */,
+				D188ECE125629D8700F0C24A /* CopyFiles */,
 			);
 			buildRules = (
 			);
