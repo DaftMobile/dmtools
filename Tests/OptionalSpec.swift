@@ -24,22 +24,22 @@ class OptionalSpec: QuickSpec {
 					expect(value.take { $0 }).to(equal(1))
 				}
 
-				it("should be able to work with throwing functions") {
-					let value: Int? = 1
-					expect { try value.take({ value in
-						if value > 0 { throw TestError() } else { return value }
-						})
-					}.to(throwError())
-				}
-
-				it("should not throw error in valid cases") {
-					let value: Int? = 1
-					expect { try value.take {
-						if $0 > 10 { throw TestError() }
-						return $0
-					}
-					}.notTo(throwError())
-				}
+//				it("should be able to work with throwing functions") {
+//					let value: Int? = 1
+//					expect { try value.take({ value in
+//						if value > 0 { throw TestError() } else { return value }
+//						})
+//					}.to(throwError())
+//				}
+//
+//				it("should not throw error in valid cases") {
+//					let value: Int? = 1
+//					expect { try value.take {
+//						if $0 > 10 { throw TestError() }
+//						return $0
+//					}
+//					}.notTo(throwError())
+//				}
 
 				it("should correctly apply closure with different type") {
 					let value: Int? = 4
