@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -19,7 +20,10 @@ class UIView_ExtensionSpec: QuickSpec {
 				}
 
 				it("should correctly copy a view") {
+					expect { _ = sut.viewCopy() }.notTo(throwAssertion())
+					#if !SWIFT_PACKAGE
 					expect { _ = sut.viewCopy() }.notTo(raiseException())
+					#endif
 				}
 
 				it("should have the same frame") {
@@ -46,3 +50,5 @@ class UIView_ExtensionSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

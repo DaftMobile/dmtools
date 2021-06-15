@@ -1,6 +1,9 @@
+#if os(iOS)
 import Foundation
 import Quick
 import Nimble
+import UIKit
+import CoreGraphics
 
 @testable import DMTools
 
@@ -63,3 +66,5 @@ class ColorParsingSpec: QuickSpec {
 		}
 	}
 }
+
+#endif

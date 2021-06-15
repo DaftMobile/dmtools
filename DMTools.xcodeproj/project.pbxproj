@@ -95,6 +95,7 @@
 		A371A796221B33ED00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */; };
 		A371A798221B353000BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */; };
 		A371A79A221B364900BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */; };
+		AEE10BAB255D8CE30044828C /* RadnomTools+CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE10BAA255D8CE30044828C /* RadnomTools+CoreGraphics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 /* Begin PBXFileReference section */
 		77271167224E553A00011BBD /* JSONEncoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Serialization.swift"; sourceTree = "<group>"; };
 		77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Serialization.swift"; sourceTree = "<group>"; };
+		775A191C2555BA2100C6C920 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		77812DC3227713AE0066648C /* Array+Uniq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Uniq.swift"; sourceTree = "<group>"; };
 		77812DC6227713CA0066648C /* Array+UniqSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UniqSpec.swift"; sourceTree = "<group>"; };
 		77943BA8224E51BF00B08DC5 /* JSONDecoder+SerializationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+SerializationSpec.swift"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		A371A795221B2C4D00BE9EDA /* UICollectionView+RegisterSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
 		A371A797221B351D00BE9EDA /* UICollectionView+RegisterSupplemenntaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterSupplemenntaryView.swift"; sourceTree = "<group>"; };
 		A371A799221B363E00BE9EDA /* UICollectionView+DequeueSupplemenntaryViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueSupplemenntaryViewSpec.swift"; sourceTree = "<group>"; };
+		AEE10BAA255D8CE30044828C /* RadnomTools+CoreGraphics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RadnomTools+CoreGraphics.swift"; path = "Classes/RadnomTools+CoreGraphics.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +231,28 @@
 				77271168224E553A00011BBD /* JSONDecoder+Serialization.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		775A191D2555BA3800C6C920 /* DMToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A36E93C92219A85300ABDCD4 /* Extensions */,
+				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
+				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
+				A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */,
+				A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */,
+				A36E93AA2219954B00ABDCD4 /* AttributedStringParsingSpec.swift */,
+				A36E93AB2219954B00ABDCD4 /* ArrayGenerationSpec.swift */,
+				A36E93AC2219954B00ABDCD4 /* OptionalSpec.swift */,
+				A36E93AD2219954B00ABDCD4 /* ArrayPermutationsSpec.swift */,
+				A36E93AE2219954B00ABDCD4 /* UIBezierPathSpec.swift */,
+				A36E93AF2219954B00ABDCD4 /* IntFactorialSpec.swift */,
+				A36E93B02219954B00ABDCD4 /* CollectionSpec.swift */,
+				A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */,
+				A36E93B32219954B00ABDCD4 /* StringSpec.swift */,
+				8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */,
+			);
+			path = DMToolsTests;
 			sourceTree = "<group>";
 		};
 		77812DC2227713A30066648C /* Array */ = {
@@ -332,6 +357,7 @@
 				A323BBFA21FB5D0F00169DD4 /* Operators.swift */,
 				A323BBF521FB5D0F00169DD4 /* Optional+Extensions.swift */,
 				A323BC0221FB5D1000169DD4 /* RandomTools.swift */,
+				AEE10BAA255D8CE30044828C /* RadnomTools+CoreGraphics.swift */,
 				A323BC0321FB5D1000169DD4 /* Sequence+Extensions.swift */,
 				A323BC0721FB5D1000169DD4 /* String+Extensions.swift */,
 				A323BC0121FB5D1000169DD4 /* UIBezierPath+Extensions.swift */,
@@ -374,22 +400,9 @@
 		A36E93A62219954B00ABDCD4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A36E93C92219A85300ABDCD4 /* Extensions */,
-				A36E93A72219954B00ABDCD4 /* WeakArraySpec.swift */,
-				A36E93C722199A7700ABDCD4 /* ArraySpec.swift */,
-				A36E93A82219954B00ABDCD4 /* SequenceSpec.swift */,
-				A36E93A92219954B00ABDCD4 /* ColorParsingSpec.swift */,
-				A36E93AA2219954B00ABDCD4 /* AttributedStringParsingSpec.swift */,
-				A36E93AB2219954B00ABDCD4 /* ArrayGenerationSpec.swift */,
-				A36E93AC2219954B00ABDCD4 /* OptionalSpec.swift */,
-				A36E93AD2219954B00ABDCD4 /* ArrayPermutationsSpec.swift */,
-				A36E93AE2219954B00ABDCD4 /* UIBezierPathSpec.swift */,
-				A36E93AF2219954B00ABDCD4 /* IntFactorialSpec.swift */,
-				A36E93B02219954B00ABDCD4 /* CollectionSpec.swift */,
-				A36E93B12219954B00ABDCD4 /* LowPassFilterSignalSpec.swift */,
 				A36E93B22219954B00ABDCD4 /* Info.plist */,
-				A36E93B32219954B00ABDCD4 /* StringSpec.swift */,
-				8DD6E6D12539988E0040E595 /* TimeInterval+ExtensionsSpec.swift */,
+				775A191D2555BA3800C6C920 /* DMToolsTests */,
+				775A191C2555BA2100C6C920 /* LinuxMain.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -623,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE10BAB255D8CE30044828C /* RadnomTools+CoreGraphics.swift in Sources */,
 				77271169224E553A00011BBD /* JSONEncoder+Serialization.swift in Sources */,
 				A323BC1D21FB5D1000169DD4 /* String+Extensions.swift in Sources */,
 				A323BC1821FB5D1000169DD4 /* RandomTools.swift in Sources */,
@@ -764,7 +778,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -822,7 +836,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -847,6 +861,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DMTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -874,6 +889,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DMTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

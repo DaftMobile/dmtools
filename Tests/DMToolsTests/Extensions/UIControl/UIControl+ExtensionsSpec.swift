@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -72,3 +73,5 @@ class UIControl_ExtensionSpec: QuickSpec {
 	}
 	
 }
+
+#endif

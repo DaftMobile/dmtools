@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UITableView {
@@ -5,3 +6,5 @@ extension UITableView {
 		register(cellType, forCellReuseIdentifier: cellType.reuseIdentifier)
 	}
 }
+
+#endif

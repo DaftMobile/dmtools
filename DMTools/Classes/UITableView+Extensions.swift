@@ -1,4 +1,5 @@
-import Foundation
+#if os(iOS)
+import UIKit
 
 public extension UITableView {
 
@@ -15,3 +16,5 @@ public extension UITableView {
 		return IndexPath(row: numberOfRowsInLastSection - 1, section: numberOfSections - 1)
 	}
 }
+
+#endif

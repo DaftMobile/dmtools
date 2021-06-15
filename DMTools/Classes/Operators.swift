@@ -1,3 +1,4 @@
+#if os(macOS) || os(iOS)
 import Foundation
 import CoreGraphics
 
@@ -52,3 +53,5 @@ Exponentiation operator
 public func ** (lhs: UInt, rhs: UInt) -> UInt {
 	return Array(repeating: lhs, count: Int(rhs)).reduce(1, *)
 }
+
+#endif

@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -30,20 +31,26 @@ class UICollectionView_RegisterSupplementaryViewSpec: QuickSpec {
 					}.toNot(throwAssertion())
 				}
 
+				#if !SWIFT_PACKAGE
 				it("should not dequeue supplementary view of different kind") {
 					expect {
 						_ = sut.dequeueReusableSupplementaryView(ofKind: kind2, withReuseIdentifier: "UICollectionReusableView", for: .init())
 					}.to(raiseException())
 				}
+				#endif
 			}
 
 			context("when UICollectionViewReusableView is not registered") {
+				#if !SWIFT_PACKAGE
 				it("should throw assertion when dequeuing the cell") {
 					expect {
 						_ = sut.dequeueReusableSupplementaryView(ofKind: kind1, withReuseIdentifier: "UICollectionReusableView", for: .init())
 					}.to(raiseException())
 				}
+				#endif
 			}
 		}
 	}
 }
+
+#endif

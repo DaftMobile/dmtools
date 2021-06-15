@@ -1,3 +1,5 @@
+#if os(macOS) || os(iOS)
+
 //swiftlint:disable identifier_name
 import CoreGraphics
 
@@ -252,3 +254,5 @@ public extension CGPoint {
 		return (p0 + p1) * CGFloat(0.5)
 	}
 }
+
+#endif

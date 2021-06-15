@@ -1,9 +1,6 @@
-//
-//  Created by DaftMobile Sp z o. o.
-//  Copyright © 2020 DaftMobile. All rights reserved.
-//
-
+#if os(iOS)
 import Foundation
+import UIKit
 
 @available(iOS 9.0, *)
 public extension UIStackView {
@@ -28,3 +25,5 @@ public extension UIStackView {
 		}
 	}
 }
+
+#endif

@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -29,6 +30,7 @@ class UICollectionView_RegisterCellSpec: QuickSpec {
 				}
 			}
 
+			#if !SWIFT_PACKAGE
 			context("when not register UICollectionViewCell") {
 				it("should throw assertion when dequeuing the cell") {
 					expect {
@@ -36,6 +38,9 @@ class UICollectionView_RegisterCellSpec: QuickSpec {
 					}.to(raiseException())
 				}
 			}
+			#endif
 		}
 	}
 }
+
+#endif

@@ -1,3 +1,4 @@
+#if os(iOS)
 import Nimble
 import Quick
 import UIKit
@@ -27,11 +28,15 @@ class UICollectionView_DequeueCellSpec: QuickSpec {
 				}
 			}
 
+			#if !SWIFT_PACKAGE
 			context("when the cell is NOT registered") {
 				it("should raise exception when dequeuing the cell") {
 					expect { _ = sut.dequeueCell(UICollectionViewCell.self, for: .init()) }.to(raiseException())
 				}
 			}
+			#endif
 		}
 	}
 }
+
+#endif

@@ -1,5 +1,4 @@
 import Foundation
-import CoreGraphics
 
 open class RandomTools {
 
@@ -25,11 +24,6 @@ open class RandomTools {
 
 	open class func randomElementFromArray<T>(_ array: [T]) -> T {
 		return array.randomElement()!
-	}
-
-	open class func randomCGFloat(min: CGFloat, max: CGFloat) -> CGFloat {
-		let result = randomDouble(Double(min), max: Double(max))
-		return CGFloat(result)
 	}
 
 	open class func randomTimeInterval(_ min: TimeInterval, max: TimeInterval) -> TimeInterval {
@@ -66,7 +60,7 @@ open class RandomTools {
 	}
 
 	open class func randomObjectWithProbpabilities(_ tuples: [(Any, Double)]) -> Any {
-		var tuples = tuples.sorted { $0.1 < $1.1 }
+		let tuples = tuples.sorted { $0.1 < $1.1 }
 
 		let probabilitySum: Double = tuples.reduce(0.0, { $0 + $1.1 })
 		var previousProb: Double = 0.0
@@ -83,23 +77,6 @@ open class RandomTools {
 		let index = probabilities.firstIndex(of: value)!
 
 		return tuples[index].0
-	}
-
-	open class func randomCGSize(_ minSide: CGFloat, maxSide: CGFloat) -> CGSize {
-		assert(maxSide >= minSide, "Max should be greater than min")
-		let width: CGFloat = randomCGFloat(min: minSide, max: maxSide)
-		let height: CGFloat = randomCGFloat(min: minSide, max: maxSide)
-		return CGSize(width: width, height: height)
-	}
-
-	open class func randomPointInRect(_ rect: CGRect) -> CGPoint {
-		let xCoordinate = randomCGFloat(min: rect.minX, max: rect.maxX)
-		let yCoordinate = randomCGFloat(min: rect.minY, max: rect.maxY)
-		return CGPoint(x: xCoordinate, y: yCoordinate)
-	}
-
-	open class func randomPointInSize(_ size: CGSize) -> CGPoint {
-		return randomPointInRect(CGRect(origin: CGPoint.zero, size: size))
 	}
 }
 

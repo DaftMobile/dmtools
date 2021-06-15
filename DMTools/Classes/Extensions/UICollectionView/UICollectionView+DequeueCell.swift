@@ -1,3 +1,4 @@
+#if os(iOS)
 import UIKit
 
 extension UICollectionView {
@@ -8,3 +9,5 @@ extension UICollectionView {
 		return cell
 	}
 }
+
+#endif

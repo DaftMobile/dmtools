@@ -1,3 +1,4 @@
+#if os(macOS) || os(iOS)
 //swiftlint:disable identifier_name
 import CoreGraphics
 
@@ -76,3 +77,5 @@ public func shortestAngleBetween(_ angle1: CGFloat, angle2: CGFloat) -> CGFloat 
 public func sign(_ value: CGFloat) -> CGFloat {
 	if value >= 0.0 { return 1.0 } else { return -1.0 }
 }
+
+#endif
